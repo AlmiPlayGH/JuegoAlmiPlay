@@ -8,7 +8,7 @@ Public Class login
         cambioColoresLogin()
         regAct = 0
         'INSTANCIAMOS DEL DATASET
-        dataSetAP = New DataSet()
+        dataSetAP = New DataSet() ''hooooo
         'CREAMOS LA CONEXION
         conexionAP = New MySqlConnection("server=62.117.137.221;database=almi;user id=almi;password=Almi123;port=3306;characterset=UTF8")
         'CREAMOS EL DATA ADAPTER
