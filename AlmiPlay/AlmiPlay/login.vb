@@ -36,7 +36,6 @@ Public Class login
             dataSetAP = New DataSet
             dataAdapterAP.Fill(dataSetAP, "Usuarios")
             lista = dataSetAP.Tables("Usuarios").Rows().Count()
-            MsgBox("Rellene lodddds campos correspondientes por favor.")
         Else MsgBox("Rellene los campos correspondientes por favor.")
         End If
 
