@@ -29,7 +29,7 @@ Public Class login
 
         Dim consulta As String
         Dim lista As Byte
-        'SI USU Y PASS NO ESTAN VACIOS, SE LE PASA LA CONSULTA AL DATADAPTER. DE AHI SE LE PASA EL DATASET A USUARIOS.    
+        'SI USU Y PASS NO ESTAN VACIOS, SE LE PASA LA CONSULTA AL DATADAPTER. DE AHI SE LE PASA EL DATASET A USUARIOS..    
         If txtUsuLog.Text <> "" And txtPass.Text <> "" Then
             consulta = "select * from Usuarios where usuario='" & txtUsuLog.Text & "' and pass='" & txtPass.Text & "'"
             dataAdapterAP = New MySqlDataAdapter(consulta, conexionAP)
