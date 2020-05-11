@@ -8,7 +8,7 @@ Public Class login
         cambioColoresLogin()
         regAct = 0
         'INSTANCIAMOS DEL DATASET
-        dataSetAP = New DataSet() ''hooooo
+        dataSetAP = New DataSet() 
         'CREAMOS LA CONEXION
         conexionAP = New MySqlConnection("server=62.117.137.221;database=almi;user id=almi;password=Almi123;port=3306;characterset=UTF8")
         'CREAMOS EL DATA ADAPTER
@@ -22,7 +22,7 @@ Public Class login
             MsgBox("Conexion exitosa")
         End If
 
-
+        
     End Sub
 
     Private Sub btnJugar_Click(sender As Object, e As EventArgs) Handles btnJugar.Click
@@ -36,6 +36,7 @@ Public Class login
             dataSetAP = New DataSet
             dataAdapterAP.Fill(dataSetAP, "Usuarios")
             lista = dataSetAP.Tables("Usuarios").Rows().Count()
+            MsgBox("Rellene lodddds campos correspondientes por favor.")
         Else MsgBox("Rellene los campos correspondientes por favor.")
         End If
 
