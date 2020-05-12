@@ -2,7 +2,8 @@
 Imports System.Net.Http
 Imports System.Net.Http.Headers
 Imports System.ComponentModel
-
+Imports Newtonsoft.Json.Linq
+Imports Newtonsoft.Json
 
 
 Public Class AlmiPlay
@@ -10,6 +11,7 @@ Public Class AlmiPlay
     Public response As HttpResponseMessage
     Public ServerUrl As String
     Public cliente As HttpClient
+
     Private Sub AlmiPLay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cambioColoresAP()
         timerLabel.Start()
@@ -22,19 +24,39 @@ Public Class AlmiPlay
     End Sub
 
     Public Async Sub data()
+        'Campos JSON: pregunta, respuestas, pista, imagen
         Try
+            Dim contId As Integer
+            Dim cont As String
             Dim responseBody As String
-            Dim response = Await cliente.GetAsync("http://62.117.137.221:8181/api/preguntas")
+            Dim jsonWeb As String
+            contId = 1
+            cont = contId.ToString
+
+            Dim response = Await cliente.GetAsync("http://62.117.137.221:8181/api/preguntas/1")
             response.EnsureSuccessStatusCode()
             responseBody = Await response.Content.ReadAsStringAsync()
-            MsgBox(responseBody)
+
+            Dim json As JObject = JObject.Parse(responseBody)
+            jsonWeb = JsonConvert.SerializeObject(json, Formatting.Indented, New JsonSerializerSettings())
+
+            MsgBox(jsonWeb)
+
+            MsgBox(json.SelectToken("pista"))
+
+
         Catch ex As Exception
+            MsgBox(ex.Message) '
             MsgBox("\nException Caught!")
-            MsgBox("Message :{0} ")
+            MsgBox("Message :{0}")
         End Try
+
+
     End Sub
 
+    Private Function bd()
 
+    End Function
 
     Private Sub pbVolver_Click(sender As Object, e As EventArgs) Handles pbVolver.Click
         Me.Close()

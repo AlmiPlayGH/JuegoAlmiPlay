@@ -33,7 +33,7 @@ Partial Class imagen
         '
         'timeImagen
         '
-        Me.timeImagen.Interval = 8000
+        Me.timeImagen.Interval = 2000
         '
         'lblUsu
         '

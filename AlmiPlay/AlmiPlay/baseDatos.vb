@@ -11,4 +11,5 @@ Module baseDatos
     Public regAct As Integer
     Public regTotal As Integer
     Public dataReaderAP As MySqlDataReader
+
 End Module
