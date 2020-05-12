@@ -1,9 +1,40 @@
-﻿Public Class AlmiPlay
+﻿Imports System.Web.Services
+Imports System.Net.Http
+Imports System.Net.Http.Headers
+Imports System.ComponentModel
 
+
+
+Public Class AlmiPlay
+
+    Public response As HttpResponseMessage
+    Public ServerUrl As String
+    Public cliente As HttpClient
     Private Sub AlmiPLay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cambioColoresAP()
         timerLabel.Start()
+        ServerUrl = "http://62.117.137.221:8181/api/preguntas"
+        cliente = New HttpClient()
+        cliente.BaseAddress = New Uri(ServerUrl)
+        cliente.DefaultRequestHeaders.Accept.Add(New MediaTypeWithQualityHeaderValue("application/json"))
+        data()
+
     End Sub
+
+    Public Async Sub data()
+        Try
+            Dim responseBody As String
+            Dim response = Await cliente.GetAsync("http://62.117.137.221:8181/api/preguntas")
+            response.EnsureSuccessStatusCode()
+            responseBody = Await response.Content.ReadAsStringAsync()
+            MsgBox(responseBody)
+        Catch ex As Exception
+            MsgBox("\nException Caught!")
+            MsgBox("Message :{0} ")
+        End Try
+    End Sub
+
+
 
     Private Sub pbVolver_Click(sender As Object, e As EventArgs) Handles pbVolver.Click
         Me.Close()
