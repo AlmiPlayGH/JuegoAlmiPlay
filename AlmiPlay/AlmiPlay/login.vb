@@ -41,7 +41,7 @@ Public Class login
 
         If lista <> 0 Then
             MsgBox("¡Hola " & txtUsuLog.Text & "!" & " Pulsa en Aceptar para empezar tu partida.")
-            imagen.Show()
+            AlmiPlay.Show()
             Me.Hide()
             conexionAP.Close()
         Else MsgBox("Intentelo de nuevo")
@@ -67,17 +67,9 @@ Public Class login
 
     End Function
 
-    Private Sub txtUsuLog_TextChanged(sender As Object, e As EventArgs) Handles txtUsuLog.TextChanged
-        'txtUsuLog.CharacterCasing = CharacterCasing.Upper
-
-    End Sub
-
     Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
         ' txtPass.CharacterCasing = CharacterCasing.Upper
         txtPass.PasswordChar = "*"
-
-
-
     End Sub
 
     Private Sub btnOjo_Click(sender As Object, e As EventArgs) Handles btnOjo.Click

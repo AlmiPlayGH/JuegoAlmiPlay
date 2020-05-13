@@ -28,11 +28,6 @@ Partial Class AlmiPlay
         Me.pbLlamada = New System.Windows.Forms.PictureBox()
         Me.pbPublico = New System.Windows.Forms.PictureBox()
         Me.pbMitad = New System.Windows.Forms.PictureBox()
-        Me.txtPregunta = New System.Windows.Forms.TextBox()
-        Me.txtA = New System.Windows.Forms.TextBox()
-        Me.txtC = New System.Windows.Forms.TextBox()
-        Me.txtB = New System.Windows.Forms.TextBox()
-        Me.txtD = New System.Windows.Forms.TextBox()
         Me.lblTiempo = New System.Windows.Forms.Label()
         Me.timerLabel = New System.Windows.Forms.Timer(Me.components)
         Me.pbVolver = New System.Windows.Forms.PictureBox()
@@ -40,6 +35,17 @@ Partial Class AlmiPlay
         Me.lblSig = New System.Windows.Forms.Label()
         Me.lblPerdido = New System.Windows.Forms.Label()
         Me.lblGanado = New System.Windows.Forms.Label()
+        Me.lblPregunta = New System.Windows.Forms.Label()
+        Me.lblA = New System.Windows.Forms.Label()
+        Me.lblB = New System.Windows.Forms.Label()
+        Me.lblC = New System.Windows.Forms.Label()
+        Me.lblD = New System.Windows.Forms.Label()
+        Me.lblPista = New System.Windows.Forms.Label()
+        Me.lblNomPista = New System.Windows.Forms.Label()
+        Me.pbFoto = New System.Windows.Forms.PictureBox()
+        Me.timerFotoStart = New System.Windows.Forms.Timer(Me.components)
+        Me.timerFotoStop = New System.Windows.Forms.Timer(Me.components)
+        Me.timerEspera = New System.Windows.Forms.Timer(Me.components)
         CType(Me.pbRespuestas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPregunta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLlamada, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +53,7 @@ Partial Class AlmiPlay
         CType(Me.pbMitad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbVolver, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbRespuestas
@@ -94,51 +101,6 @@ Partial Class AlmiPlay
         Me.pbMitad.TabIndex = 4
         Me.pbMitad.TabStop = False
         '
-        'txtPregunta
-        '
-        Me.txtPregunta.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPregunta.Location = New System.Drawing.Point(87, 418)
-        Me.txtPregunta.Multiline = True
-        Me.txtPregunta.Name = "txtPregunta"
-        Me.txtPregunta.Size = New System.Drawing.Size(810, 75)
-        Me.txtPregunta.TabIndex = 5
-        '
-        'txtA
-        '
-        Me.txtA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtA.Location = New System.Drawing.Point(117, 562)
-        Me.txtA.Multiline = True
-        Me.txtA.Name = "txtA"
-        Me.txtA.Size = New System.Drawing.Size(335, 33)
-        Me.txtA.TabIndex = 6
-        '
-        'txtC
-        '
-        Me.txtC.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtC.Location = New System.Drawing.Point(117, 654)
-        Me.txtC.Multiline = True
-        Me.txtC.Name = "txtC"
-        Me.txtC.Size = New System.Drawing.Size(335, 33)
-        Me.txtC.TabIndex = 7
-        '
-        'txtB
-        '
-        Me.txtB.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtB.Location = New System.Drawing.Point(573, 562)
-        Me.txtB.Multiline = True
-        Me.txtB.Name = "txtB"
-        Me.txtB.Size = New System.Drawing.Size(335, 33)
-        Me.txtB.TabIndex = 8
-        '
-        'txtD
-        '
-        Me.txtD.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtD.Location = New System.Drawing.Point(573, 654)
-        Me.txtD.Multiline = True
-        Me.txtD.Name = "txtD"
-        Me.txtD.Size = New System.Drawing.Size(335, 33)
-        Me.txtD.TabIndex = 9
-        '
         'lblTiempo
         '
         Me.lblTiempo.AutoSize = True
@@ -147,7 +109,7 @@ Partial Class AlmiPlay
         Me.lblTiempo.Name = "lblTiempo"
         Me.lblTiempo.Size = New System.Drawing.Size(87, 63)
         Me.lblTiempo.TabIndex = 10
-        Me.lblTiempo.Text = "20"
+        Me.lblTiempo.Text = "30"
         '
         'timerLabel
         '
@@ -201,23 +163,107 @@ Partial Class AlmiPlay
         Me.lblGanado.TabIndex = 15
         Me.lblGanado.Text = "¡Has ganado!"
         '
+        'lblPregunta
+        '
+        Me.lblPregunta.AutoSize = True
+        Me.lblPregunta.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPregunta.Location = New System.Drawing.Point(66, 445)
+        Me.lblPregunta.Name = "lblPregunta"
+        Me.lblPregunta.Size = New System.Drawing.Size(0, 20)
+        Me.lblPregunta.TabIndex = 16
+        '
+        'lblA
+        '
+        Me.lblA.AutoSize = True
+        Me.lblA.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblA.Location = New System.Drawing.Point(114, 570)
+        Me.lblA.Name = "lblA"
+        Me.lblA.Size = New System.Drawing.Size(0, 15)
+        Me.lblA.TabIndex = 17
+        '
+        'lblB
+        '
+        Me.lblB.AutoSize = True
+        Me.lblB.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblB.Location = New System.Drawing.Point(573, 570)
+        Me.lblB.Name = "lblB"
+        Me.lblB.Size = New System.Drawing.Size(0, 15)
+        Me.lblB.TabIndex = 18
+        '
+        'lblC
+        '
+        Me.lblC.AutoSize = True
+        Me.lblC.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblC.Location = New System.Drawing.Point(112, 663)
+        Me.lblC.Name = "lblC"
+        Me.lblC.Size = New System.Drawing.Size(0, 15)
+        Me.lblC.TabIndex = 19
+        '
+        'lblD
+        '
+        Me.lblD.AutoSize = True
+        Me.lblD.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblD.Location = New System.Drawing.Point(573, 663)
+        Me.lblD.Name = "lblD"
+        Me.lblD.Size = New System.Drawing.Size(0, 15)
+        Me.lblD.TabIndex = 20
+        '
+        'lblPista
+        '
+        Me.lblPista.AutoSize = True
+        Me.lblPista.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPista.Location = New System.Drawing.Point(157, 522)
+        Me.lblPista.Name = "lblPista"
+        Me.lblPista.Size = New System.Drawing.Size(0, 17)
+        Me.lblPista.TabIndex = 21
+        '
+        'lblNomPista
+        '
+        Me.lblNomPista.AutoSize = True
+        Me.lblNomPista.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNomPista.Location = New System.Drawing.Point(91, 522)
+        Me.lblNomPista.Name = "lblNomPista"
+        Me.lblNomPista.Size = New System.Drawing.Size(49, 17)
+        Me.lblNomPista.TabIndex = 22
+        Me.lblNomPista.Text = "Pista:"
+        '
+        'pbFoto
+        '
+        Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.p19worm
+        Me.pbFoto.Location = New System.Drawing.Point(0, 171)
+        Me.pbFoto.Name = "pbFoto"
+        Me.pbFoto.Size = New System.Drawing.Size(988, 742)
+        Me.pbFoto.TabIndex = 23
+        Me.pbFoto.TabStop = False
+        '
+        'timerFotoStart
+        '
+        Me.timerFotoStart.Interval = 10000
+        '
+        'timerFotoStop
+        '
+        Me.timerFotoStop.Interval = 10000
+        '
         'AlmiPlay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.pbFoto)
+        Me.Controls.Add(Me.lblNomPista)
+        Me.Controls.Add(Me.lblPista)
+        Me.Controls.Add(Me.lblD)
+        Me.Controls.Add(Me.lblC)
+        Me.Controls.Add(Me.lblB)
+        Me.Controls.Add(Me.lblA)
+        Me.Controls.Add(Me.lblPregunta)
         Me.Controls.Add(Me.lblGanado)
         Me.Controls.Add(Me.lblPerdido)
         Me.Controls.Add(Me.lblSig)
         Me.Controls.Add(Me.pbSalir)
         Me.Controls.Add(Me.pbVolver)
         Me.Controls.Add(Me.lblTiempo)
-        Me.Controls.Add(Me.txtD)
-        Me.Controls.Add(Me.txtB)
-        Me.Controls.Add(Me.txtC)
-        Me.Controls.Add(Me.txtA)
-        Me.Controls.Add(Me.txtPregunta)
         Me.Controls.Add(Me.pbMitad)
         Me.Controls.Add(Me.pbPublico)
         Me.Controls.Add(Me.pbLlamada)
@@ -233,6 +279,7 @@ Partial Class AlmiPlay
         CType(Me.pbMitad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbVolver, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbSalir, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -243,11 +290,6 @@ Partial Class AlmiPlay
     Friend WithEvents pbLlamada As PictureBox
     Friend WithEvents pbPublico As PictureBox
     Friend WithEvents pbMitad As PictureBox
-    Friend WithEvents txtPregunta As TextBox
-    Friend WithEvents txtA As TextBox
-    Friend WithEvents txtC As TextBox
-    Friend WithEvents txtB As TextBox
-    Friend WithEvents txtD As TextBox
     Friend WithEvents lblTiempo As Label
     Friend WithEvents timerLabel As Timer
     Friend WithEvents pbVolver As PictureBox
@@ -255,4 +297,15 @@ Partial Class AlmiPlay
     Friend WithEvents lblSig As Label
     Friend WithEvents lblPerdido As Label
     Friend WithEvents lblGanado As Label
+    Friend WithEvents lblPregunta As Label
+    Friend WithEvents lblA As Label
+    Friend WithEvents lblB As Label
+    Friend WithEvents lblC As Label
+    Friend WithEvents lblD As Label
+    Friend WithEvents lblPista As Label
+    Friend WithEvents lblNomPista As Label
+    Friend WithEvents pbFoto As PictureBox
+    Friend WithEvents timerFotoStart As Timer
+    Friend WithEvents timerFotoStop As Timer
+    Friend WithEvents timerEspera As Timer
 End Class
