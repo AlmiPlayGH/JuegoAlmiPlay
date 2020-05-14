@@ -121,6 +121,9 @@
   <data name="fondoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\fondoLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="publicoRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\publicoRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="prueba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\prueba.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,14 +133,20 @@
   <data name="campoPregunta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\campoPregunta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botonSalir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\botonSalir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eyeC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\eyeC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botonVolver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\botonVolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mitadRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\mitadRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mitad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\mitad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botonVolver1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\botonVolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,19 +160,19 @@
   <data name="p19worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\p19worm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mitad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\mitad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botonSalir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\botonSalir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="llamada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\llamada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="publico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\publico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="eyeA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\eyeA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eyeC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\eyeC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="publico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\publico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="llamadaRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\llamadaRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

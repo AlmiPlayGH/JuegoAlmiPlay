@@ -46,6 +46,15 @@ Partial Class AlmiPlay
         Me.timerFotoStart = New System.Windows.Forms.Timer(Me.components)
         Me.timerFotoStop = New System.Windows.Forms.Timer(Me.components)
         Me.timerEspera = New System.Windows.Forms.Timer(Me.components)
+        Me.pbLlamadaRed = New System.Windows.Forms.PictureBox()
+        Me.pbPublicoRed = New System.Windows.Forms.PictureBox()
+        Me.pbMitadRed = New System.Windows.Forms.PictureBox()
+        Me.lblAOculto = New System.Windows.Forms.Label()
+        Me.lblBOculto = New System.Windows.Forms.Label()
+        Me.lblCOculto = New System.Windows.Forms.Label()
+        Me.lblDOculto = New System.Windows.Forms.Label()
+        Me.lblScoreNom = New System.Windows.Forms.Label()
+        Me.lblScore = New System.Windows.Forms.Label()
         CType(Me.pbRespuestas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPregunta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLlamada, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +63,9 @@ Partial Class AlmiPlay
         CType(Me.pbVolver, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbLlamadaRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbPublicoRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMitadRed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbRespuestas
@@ -176,7 +188,7 @@ Partial Class AlmiPlay
         '
         Me.lblA.AutoSize = True
         Me.lblA.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblA.Location = New System.Drawing.Point(114, 570)
+        Me.lblA.Location = New System.Drawing.Point(107, 570)
         Me.lblA.Name = "lblA"
         Me.lblA.Size = New System.Drawing.Size(0, 15)
         Me.lblA.TabIndex = 17
@@ -185,7 +197,7 @@ Partial Class AlmiPlay
         '
         Me.lblB.AutoSize = True
         Me.lblB.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblB.Location = New System.Drawing.Point(573, 570)
+        Me.lblB.Location = New System.Drawing.Point(565, 570)
         Me.lblB.Name = "lblB"
         Me.lblB.Size = New System.Drawing.Size(0, 15)
         Me.lblB.TabIndex = 18
@@ -194,7 +206,7 @@ Partial Class AlmiPlay
         '
         Me.lblC.AutoSize = True
         Me.lblC.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblC.Location = New System.Drawing.Point(112, 663)
+        Me.lblC.Location = New System.Drawing.Point(107, 663)
         Me.lblC.Name = "lblC"
         Me.lblC.Size = New System.Drawing.Size(0, 15)
         Me.lblC.TabIndex = 19
@@ -203,7 +215,7 @@ Partial Class AlmiPlay
         '
         Me.lblD.AutoSize = True
         Me.lblD.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblD.Location = New System.Drawing.Point(573, 663)
+        Me.lblD.Location = New System.Drawing.Point(565, 663)
         Me.lblD.Name = "lblD"
         Me.lblD.Size = New System.Drawing.Size(0, 15)
         Me.lblD.TabIndex = 20
@@ -230,7 +242,7 @@ Partial Class AlmiPlay
         'pbFoto
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.p19worm
-        Me.pbFoto.Location = New System.Drawing.Point(0, 171)
+        Me.pbFoto.Location = New System.Drawing.Point(12, -516)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(988, 742)
         Me.pbFoto.TabIndex = 23
@@ -244,19 +256,110 @@ Partial Class AlmiPlay
         '
         Me.timerFotoStop.Interval = 10000
         '
+        'pbLlamadaRed
+        '
+        Me.pbLlamadaRed.Image = Global.AlmiPlay.My.Resources.Resources.llamadaRed
+        Me.pbLlamadaRed.Location = New System.Drawing.Point(49, 258)
+        Me.pbLlamadaRed.Name = "pbLlamadaRed"
+        Me.pbLlamadaRed.Size = New System.Drawing.Size(176, 127)
+        Me.pbLlamadaRed.TabIndex = 24
+        Me.pbLlamadaRed.TabStop = False
+        '
+        'pbPublicoRed
+        '
+        Me.pbPublicoRed.Image = Global.AlmiPlay.My.Resources.Resources.publicoRed
+        Me.pbPublicoRed.Location = New System.Drawing.Point(250, 258)
+        Me.pbPublicoRed.Name = "pbPublicoRed"
+        Me.pbPublicoRed.Size = New System.Drawing.Size(176, 127)
+        Me.pbPublicoRed.TabIndex = 25
+        Me.pbPublicoRed.TabStop = False
+        '
+        'pbMitadRed
+        '
+        Me.pbMitadRed.Image = Global.AlmiPlay.My.Resources.Resources.mitadRed
+        Me.pbMitadRed.Location = New System.Drawing.Point(449, 258)
+        Me.pbMitadRed.Name = "pbMitadRed"
+        Me.pbMitadRed.Size = New System.Drawing.Size(176, 127)
+        Me.pbMitadRed.TabIndex = 26
+        Me.pbMitadRed.TabStop = False
+        '
+        'lblAOculto
+        '
+        Me.lblAOculto.AutoSize = True
+        Me.lblAOculto.Location = New System.Drawing.Point(898, 713)
+        Me.lblAOculto.Name = "lblAOculto"
+        Me.lblAOculto.Size = New System.Drawing.Size(10, 13)
+        Me.lblAOculto.TabIndex = 27
+        Me.lblAOculto.Text = "."
+        '
+        'lblBOculto
+        '
+        Me.lblBOculto.AutoSize = True
+        Me.lblBOculto.Location = New System.Drawing.Point(914, 713)
+        Me.lblBOculto.Name = "lblBOculto"
+        Me.lblBOculto.Size = New System.Drawing.Size(10, 13)
+        Me.lblBOculto.TabIndex = 28
+        Me.lblBOculto.Text = "."
+        '
+        'lblCOculto
+        '
+        Me.lblCOculto.AutoSize = True
+        Me.lblCOculto.Location = New System.Drawing.Point(930, 713)
+        Me.lblCOculto.Name = "lblCOculto"
+        Me.lblCOculto.Size = New System.Drawing.Size(10, 13)
+        Me.lblCOculto.TabIndex = 29
+        Me.lblCOculto.Text = "."
+        '
+        'lblDOculto
+        '
+        Me.lblDOculto.AutoSize = True
+        Me.lblDOculto.Location = New System.Drawing.Point(946, 713)
+        Me.lblDOculto.Name = "lblDOculto"
+        Me.lblDOculto.Size = New System.Drawing.Size(10, 13)
+        Me.lblDOculto.TabIndex = 30
+        Me.lblDOculto.Text = "."
+        '
+        'lblScoreNom
+        '
+        Me.lblScoreNom.AutoSize = True
+        Me.lblScoreNom.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblScoreNom.Location = New System.Drawing.Point(667, 373)
+        Me.lblScoreNom.Name = "lblScoreNom"
+        Me.lblScoreNom.Size = New System.Drawing.Size(89, 28)
+        Me.lblScoreNom.TabIndex = 31
+        Me.lblScoreNom.Text = "Score:"
+        '
+        'lblScore
+        '
+        Me.lblScore.AutoSize = True
+        Me.lblScore.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblScore.Location = New System.Drawing.Point(762, 373)
+        Me.lblScore.Name = "lblScore"
+        Me.lblScore.Size = New System.Drawing.Size(26, 28)
+        Me.lblScore.TabIndex = 32
+        Me.lblScore.Text = "0"
+        '
         'AlmiPlay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.lblScore)
+        Me.Controls.Add(Me.lblScoreNom)
+        Me.Controls.Add(Me.lblDOculto)
+        Me.Controls.Add(Me.lblCOculto)
+        Me.Controls.Add(Me.lblBOculto)
+        Me.Controls.Add(Me.lblAOculto)
         Me.Controls.Add(Me.pbFoto)
+        Me.Controls.Add(Me.pbMitadRed)
+        Me.Controls.Add(Me.pbPublicoRed)
+        Me.Controls.Add(Me.pbLlamadaRed)
         Me.Controls.Add(Me.lblNomPista)
         Me.Controls.Add(Me.lblPista)
         Me.Controls.Add(Me.lblD)
         Me.Controls.Add(Me.lblC)
         Me.Controls.Add(Me.lblB)
-        Me.Controls.Add(Me.lblA)
         Me.Controls.Add(Me.lblPregunta)
         Me.Controls.Add(Me.lblGanado)
         Me.Controls.Add(Me.lblPerdido)
@@ -268,6 +371,7 @@ Partial Class AlmiPlay
         Me.Controls.Add(Me.pbPublico)
         Me.Controls.Add(Me.pbLlamada)
         Me.Controls.Add(Me.pbPregunta)
+        Me.Controls.Add(Me.lblA)
         Me.Controls.Add(Me.pbRespuestas)
         Me.Name = "AlmiPlay"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -280,6 +384,9 @@ Partial Class AlmiPlay
         CType(Me.pbVolver, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbSalir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbLlamadaRed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbPublicoRed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMitadRed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -308,4 +415,13 @@ Partial Class AlmiPlay
     Friend WithEvents timerFotoStart As Timer
     Friend WithEvents timerFotoStop As Timer
     Friend WithEvents timerEspera As Timer
+    Friend WithEvents pbLlamadaRed As PictureBox
+    Friend WithEvents pbPublicoRed As PictureBox
+    Friend WithEvents pbMitadRed As PictureBox
+    Friend WithEvents lblAOculto As Label
+    Friend WithEvents lblBOculto As Label
+    Friend WithEvents lblCOculto As Label
+    Friend WithEvents lblDOculto As Label
+    Friend WithEvents lblScoreNom As Label
+    Friend WithEvents lblScore As Label
 End Class

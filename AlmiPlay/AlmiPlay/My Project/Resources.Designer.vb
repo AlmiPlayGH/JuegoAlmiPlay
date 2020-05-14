@@ -183,9 +183,29 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property llamadaRed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("llamadaRed", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property mitad() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("mitad", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property mitadRed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("mitadRed", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -216,6 +236,16 @@ Namespace My.Resources
         Friend ReadOnly Property publico() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("publico", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property publicoRed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("publicoRed", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

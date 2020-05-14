@@ -203,5 +203,14 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\mitadRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\publicoRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\llamadaRed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -17,7 +17,6 @@ Public Class AlmiPlay
     Public cliente As HttpClient
 
     Private Sub AlmiPLay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Randomize()
         cambioColoresAP()
         timerLabel.Start()
@@ -34,37 +33,144 @@ Public Class AlmiPlay
         Try
             'VARIABLES
             Dim contId As Integer
+            Dim contPregunta As Integer
             Dim responseBody As String
             Dim jsonWeb As String
             Dim url As String
             contId = Int((26 * Rnd()) + 1)
+            contPregunta = 1
             'URL CON POSICION DE CAMPO ALEATORIA
             url = "http://62.117.137.221:8181/api/preguntas/" & contId
             'SE OBITENE EL JSON EN LA VARIABLE RESPONSEBODY
-            Dim response = Await cliente.GetAsync(url)
+            Dim response = Await cliente.GetAsync(url) 
             response.EnsureSuccessStatusCode()
             responseBody = Await response.Content.ReadAsStringAsync()
-
-            Dim exampleJson As String = "{ 'no':'123', 'name':'Some Name', 'com':'This is a comment'}"
+            'CREAMOS EL JSON PASANDOLE COMO PARAMETRO EL STRING RESPONSEBODY
             Dim json As JObject = JObject.Parse(responseBody)
             jsonWeb = JsonConvert.SerializeObject(json, Formatting.Indented, New JsonSerializerSettings()) 'STRING DEL JSON CORRESPONDIENTE
+            '28 MAYUS y 40 MINUS
+            'AÑADIMOS LOS LAS PREGUNTAS Y RESPUESTAS A CADA CAMPO CORRESPONDIENTE
+            'MsgBox(jsonWeb)
             lblPregunta.Text = json.SelectToken("data.pregunta")
             lblPista.Text = json.SelectToken("data.pista")
-            'MsgBox(json.SelectToken("data.respuesta[2][1]"))
+            lblA.Text = json.SelectToken("data.respuestas[0].[0]")
+            lblB.Text = json.SelectToken("data.respuestas[1].[0]")
+            lblC.Text = json.SelectToken("data.respuestas[2].[0]")
+            lblD.Text = json.SelectToken("data.respuestas[3].[0]")
+            'AÑADIMOS LA RESPUESTA CORRECTA A UNOS LABEL OCULTOS PARA COMPARAR
+            lblAOculto.Text = json.SelectToken("data.respuestas[0].[1]")
+            lblBOculto.Text = json.SelectToken("data.respuestas[1].[1]")
+            lblCOculto.Text = json.SelectToken("data.respuestas[2].[1]")
+            lblDOculto.Text = json.SelectToken("data.respuestas[3].[1]")
             'MsgBox(jsonWeb)
-            'MsgBox(json.SelectToken("data[0].respuestas[1]"))
 
+            'CAMBIAMOS EL TAMAÑO DE LA LETRA EN EL CASO DE QUE TENGA DEMASIADOS CARACTERES (PARA QUE QUEPA)
+            If Len(lblA.Text) > 38 Then
+                lblA.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
+            End If
+            If Len(lblB.Text) > 38 Then
+                lblB.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
+            End If
+            If Len(lblC.Text) > 38 Then
+                lblC.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
+            End If
+            If Len(lblD.Text) > 38 Then
+                lblD.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
+            End If
 
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub lblA_Click(sender As Object, e As EventArgs) Handles lblA.Click
+        num1Score = 10 + lblTiempo.Text
+        num2Score = lblScore.Text
+        num3Score = num1Score + num2Score
+        If lblAOculto.Text = 1 Then
+            lblA.ForeColor = Color.GreenYellow
+            lblScore.Text = num3Score
+        Else lblA.ForeColor = Color.Red
+        End If
+
+        If lblBOculto.Text = 1 Then
+            lblB.ForeColor = Color.GreenYellow
+        End If
+        If lblCOculto.Text = 1 Then
+            lblC.ForeColor = Color.GreenYellow
+        End If
+        If lblDOculto.Text = 1 Then
+            lblD.ForeColor = Color.GreenYellow
+        End If
 
     End Sub
 
-    Private Function bd()
+    Private Sub lblB_Click(sender As Object, e As EventArgs) Handles lblB.Click
+        num1Score = 10 + lblTiempo.Text
+        num2Score = lblScore.Text
+        num3Score = num1Score + num2Score
+        If lblBOculto.Text = 1 Then
+            lblB.ForeColor = Color.GreenYellow
+            lblScore.Text = num3Score
+        Else lblB.ForeColor = Color.Red
+        End If
 
-    End Function
+        If lblAOculto.Text = 1 Then
+            lblA.ForeColor = Color.GreenYellow
+        End If
+        If lblCOculto.Text = 1 Then
+            lblC.ForeColor = Color.GreenYellow
+        End If
+        If lblDOculto.Text = 1 Then
+            lblD.ForeColor = Color.GreenYellow
+        End If
+
+    End Sub
+
+    Private Sub lblC_Click(sender As Object, e As EventArgs) Handles lblC.Click
+        num1Score = 10 + lblTiempo.Text
+        num2Score = lblScore.Text
+        num3Score = num1Score + num2Score
+        If lblCOculto.Text = 1 Then
+            lblC.ForeColor = Color.GreenYellow
+            lblScore.Text = num3Score
+        Else lblC.ForeColor = Color.Red
+        End If
+
+        If lblAOculto.Text = 1 Then
+            lblA.ForeColor = Color.GreenYellow
+        End If
+        If lblBOculto.Text = 1 Then
+            lblB.ForeColor = Color.GreenYellow
+        End If
+        If lblDOculto.Text = 1 Then
+            lblD.ForeColor = Color.GreenYellow
+        End If
+
+    End Sub
+
+    Private Sub lblD_Click(sender As Object, e As EventArgs) Handles lblD.Click
+        num1Score = 10 + lblTiempo.Text
+        num2Score = lblScore.Text
+        num3Score = num1Score + num2Score
+        If lblDOculto.Text = 1 Then
+            lblD.ForeColor = Color.GreenYellow
+            lblScore.Text = num3Score
+        Else lblD.ForeColor = Color.Red
+        End If
+
+        If lblAOculto.Text = 1 Then
+            lblA.ForeColor = Color.GreenYellow
+        End If
+        If lblCOculto.Text = 1 Then
+            lblC.ForeColor = Color.GreenYellow
+        End If
+        If lblBOculto.Text = 1 Then
+            lblB.ForeColor = Color.GreenYellow
+        End If
+    End Sub
+
 
     Private Sub pbVolver_Click(sender As Object, e As EventArgs) Handles pbVolver.Click
         Me.Close()
@@ -81,7 +187,6 @@ Public Class AlmiPlay
     Private Sub timerLabel_Tick(sender As Object, e As EventArgs) Handles timerLabel.Tick
 
         Dim num1, num2 As Integer
-
         num1 = 1
         num2 = lblTiempo.Text
         lblTiempo.Text = num2 - 1
@@ -115,12 +220,17 @@ Public Class AlmiPlay
     End Sub
 
     Private Function cambioColoresAP()
-
         pbRespuestas.BackColor = Color.Transparent
         pbMitad.BackColor = Color.Transparent
         pbLlamada.BackColor = Color.Transparent
         pbPublico.BackColor = Color.Transparent
         pbPregunta.BackColor = Color.Transparent
+        pbLlamadaRed.BackColor = Color.Transparent
+        pbPublicoRed.BackColor = Color.Transparent
+        pbMitadRed.BackColor = Color.Transparent
+        pbLlamadaRed.Hide()
+        pbPublicoRed.Hide()
+        pbMitadRed.Hide()
         lblPregunta.BackColor = Color.FromArgb(35, 31, 32)
         lblA.BackColor = Color.FromArgb(35, 31, 32)
         lblB.BackColor = Color.FromArgb(35, 31, 32)
@@ -131,6 +241,10 @@ Public Class AlmiPlay
         lblB.ForeColor = Color.White
         lblC.ForeColor = Color.White
         lblD.ForeColor = Color.White
+        lblScore.ForeColor = Color.White
+        lblScoreNom.ForeColor = Color.White
+        lblScore.BackColor = Color.Transparent
+        lblScoreNom.BackColor = Color.Transparent
         lblTiempo.ForeColor = Color.White
         lblTiempo.BackColor = Color.Transparent
         pbSalir.BackColor = Color.Transparent
@@ -150,7 +264,10 @@ Public Class AlmiPlay
         lblNomPista.Hide()
         lblNomPista.BackColor = Color.Transparent
         lblNomPista.ForeColor = Color.White
-
+        lblAOculto.Hide()
+        lblBOculto.Hide()
+        lblCOculto.Hide()
+        lblDOculto.Hide()
     End Function
 
     Private Sub lblSig_Click(sender As Object, e As EventArgs) Handles lblSig.Click
@@ -169,12 +286,39 @@ Public Class AlmiPlay
         lblPista.Hide()
         lblNomPista.Hide()
         lblSig.Hide()
+        enabledPreguntas()
     End Sub
 
     Private Sub pbLlamada_Click(sender As Object, e As EventArgs) Handles pbLlamada.Click
         lblPista.Show()
         lblNomPista.Show()
+        pbLlamada.Hide()
+        pbLlamadaRed.Show()
     End Sub
+
+    Private Sub pbPublico_Click(sender As Object, e As EventArgs) Handles pbPublico.Click
+        pbPublico.Hide()
+        pbPublicoRed.Show()
+    End Sub
+
+    Private Sub pbMitad_Click(sender As Object, e As EventArgs) Handles pbMitad.Click
+        pbMitad.Hide()
+        pbMitadRed.Show()
+    End Sub
+
+    Public Function disabledPreguntas()
+        lblA.Enabled = False
+        lblB.Enabled = False
+        lblC.Enabled = False
+        lblD.Enabled = False
+    End Function
+    Public Function enabledPreguntas()
+        lblA.Enabled = True
+        lblB.Enabled = True
+        lblC.Enabled = True
+        lblD.Enabled = True
+    End Function
+
 
 
 End Class
