@@ -44,7 +44,9 @@ Public Class AlmiPlay
             contPregunta = 1
             'URL CON POSICION DE CAMPO ALEATORIA
             url = "http://62.117.137.221:8181/api/preguntas/" & contId
-            foto = "http://62.117.137.221:8181/api/preguntas/imagen/" & contId & ".jpg"
+            ' foto = "http://62.117.137.221:8181/api/preguntas/imagen/" & contId & ".jpg"
+            foto = "http://62.117.137.221:8181/api/preguntas/imagen/45.jpg"
+
             'SE OBITENE EL JSON EN LA VARIABLE RESPONSEBODY
             Dim response = Await cliente.GetAsync(url)
             response.EnsureSuccessStatusCode()
@@ -67,6 +69,8 @@ Public Class AlmiPlay
             lblCOculto.Text = json.SelectToken("data.respuestas[2].[1]")
             lblDOculto.Text = json.SelectToken("data.respuestas[3].[1]")
             'MsgBox(jsonWeb)
+
+            pbFoto.Load(foto)
 
             'CAMBIAMOS EL TAMAÑO DE LA LETRA EN EL CASO DE QUE TENGA DEMASIADOS CARACTERES (PARA QUE QUEPA)
             If Len(lblA.Text) > 55 Then
@@ -582,4 +586,8 @@ Public Class AlmiPlay
         pb40.BackColor = Color.Transparent
         ocultarPorcentajes()
     End Function
+
+
+
+
 End Class

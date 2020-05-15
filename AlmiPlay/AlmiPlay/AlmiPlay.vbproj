@@ -242,5 +242,8 @@
   <ItemGroup>
     <None Include="bin\Debug\40x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\fondoAux.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -42,3 +42,8 @@ End Module
 '        Next
 '    Loop Until auxQuiza = 0
 'End If
+
+'op.InitialDirectory = foto
+'If op.ShowDialog = Windows.Forms.DialogResult.OK Then
+'pbFoto.Image = Image.FromFile(op.FileName)
+'End If

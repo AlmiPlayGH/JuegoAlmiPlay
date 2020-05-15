@@ -73,6 +73,7 @@ Partial Class AlmiPlay
         Me.pb25 = New System.Windows.Forms.PictureBox()
         Me.pb40 = New System.Windows.Forms.PictureBox()
         Me.pb15 = New System.Windows.Forms.PictureBox()
+        Me.op = New System.Windows.Forms.OpenFileDialog()
         CType(Me.pbRespuestas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPregunta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLlamada, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -275,10 +276,11 @@ Partial Class AlmiPlay
         '
         'pbFoto
         '
-        Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.p19worm
-        Me.pbFoto.Location = New System.Drawing.Point(631, -415)
+        Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoAux1
+        Me.pbFoto.Image = Global.AlmiPlay.My.Resources.Resources.fondoAux
+        Me.pbFoto.Location = New System.Drawing.Point(-7, -4)
         Me.pbFoto.Name = "pbFoto"
-        Me.pbFoto.Size = New System.Drawing.Size(988, 742)
+        Me.pbFoto.Size = New System.Drawing.Size(995, 750)
         Me.pbFoto.TabIndex = 23
         Me.pbFoto.TabStop = False
         '
@@ -537,12 +539,17 @@ Partial Class AlmiPlay
         Me.pb15.TabIndex = 50
         Me.pb15.TabStop = False
         '
+        'op
+        '
+        Me.op.FileName = "op"
+        '
         'AlmiPlay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.pbFoto)
         Me.Controls.Add(Me.pb15)
         Me.Controls.Add(Me.pb40)
         Me.Controls.Add(Me.pb25)
@@ -562,7 +569,6 @@ Partial Class AlmiPlay
         Me.Controls.Add(Me.lblCOculto)
         Me.Controls.Add(Me.lblBOculto)
         Me.Controls.Add(Me.lblAOculto)
-        Me.Controls.Add(Me.pbFoto)
         Me.Controls.Add(Me.lblNomPista)
         Me.Controls.Add(Me.lblPista)
         Me.Controls.Add(Me.lblPregunta)
@@ -674,4 +680,5 @@ Partial Class AlmiPlay
     Friend WithEvents pb25 As PictureBox
     Friend WithEvents pb40 As PictureBox
     Friend WithEvents pb15 As PictureBox
+    Friend WithEvents op As OpenFileDialog
 End Class
