@@ -33,8 +33,8 @@ Partial Class AlmiPlay
         Me.pbVolver = New System.Windows.Forms.PictureBox()
         Me.pbSalir = New System.Windows.Forms.PictureBox()
         Me.lblSig = New System.Windows.Forms.Label()
-        Me.lblPerdido = New System.Windows.Forms.Label()
-        Me.lblGanado = New System.Windows.Forms.Label()
+        Me.lblFallo = New System.Windows.Forms.Label()
+        Me.lblAcertar = New System.Windows.Forms.Label()
         Me.lblPregunta = New System.Windows.Forms.Label()
         Me.lblA = New System.Windows.Forms.Label()
         Me.lblB = New System.Windows.Forms.Label()
@@ -55,6 +55,14 @@ Partial Class AlmiPlay
         Me.lblDOculto = New System.Windows.Forms.Label()
         Me.lblScoreNom = New System.Windows.Forms.Label()
         Me.lblScore = New System.Windows.Forms.Label()
+        Me.pbRojoA = New System.Windows.Forms.PictureBox()
+        Me.pbRojoC = New System.Windows.Forms.PictureBox()
+        Me.pbRojoB = New System.Windows.Forms.PictureBox()
+        Me.pbRojoD = New System.Windows.Forms.PictureBox()
+        Me.pbVerdeA = New System.Windows.Forms.PictureBox()
+        Me.pbVerdeC = New System.Windows.Forms.PictureBox()
+        Me.pbVerdeB = New System.Windows.Forms.PictureBox()
+        Me.pbVerdeD = New System.Windows.Forms.PictureBox()
         CType(Me.pbRespuestas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPregunta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLlamada, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +74,14 @@ Partial Class AlmiPlay
         CType(Me.pbLlamadaRed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPublicoRed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbMitadRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbRojoA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbRojoC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbRojoB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbRojoD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbVerdeA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbVerdeC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbVerdeB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbVerdeD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbRespuestas
@@ -155,25 +171,25 @@ Partial Class AlmiPlay
         Me.lblSig.TabIndex = 13
         Me.lblSig.Text = "Siguiente Pregunta"
         '
-        'lblPerdido
+        'lblFallo
         '
-        Me.lblPerdido.AutoSize = True
-        Me.lblPerdido.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPerdido.Location = New System.Drawing.Point(112, 108)
-        Me.lblPerdido.Name = "lblPerdido"
-        Me.lblPerdido.Size = New System.Drawing.Size(93, 15)
-        Me.lblPerdido.TabIndex = 14
-        Me.lblPerdido.Text = "¡Has perdido!"
+        Me.lblFallo.AutoSize = True
+        Me.lblFallo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFallo.Location = New System.Drawing.Point(112, 108)
+        Me.lblFallo.Name = "lblFallo"
+        Me.lblFallo.Size = New System.Drawing.Size(87, 15)
+        Me.lblFallo.TabIndex = 14
+        Me.lblFallo.Text = "¡Has fallado!"
         '
-        'lblGanado
+        'lblAcertar
         '
-        Me.lblGanado.AutoSize = True
-        Me.lblGanado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGanado.Location = New System.Drawing.Point(114, 107)
-        Me.lblGanado.Name = "lblGanado"
-        Me.lblGanado.Size = New System.Drawing.Size(91, 15)
-        Me.lblGanado.TabIndex = 15
-        Me.lblGanado.Text = "¡Has ganado!"
+        Me.lblAcertar.AutoSize = True
+        Me.lblAcertar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAcertar.Location = New System.Drawing.Point(108, 108)
+        Me.lblAcertar.Name = "lblAcertar"
+        Me.lblAcertar.Size = New System.Drawing.Size(102, 15)
+        Me.lblAcertar.TabIndex = 15
+        Me.lblAcertar.Text = "¡Has acertado!"
         '
         'lblPregunta
         '
@@ -242,7 +258,7 @@ Partial Class AlmiPlay
         'pbFoto
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.p19worm
-        Me.pbFoto.Location = New System.Drawing.Point(12, -516)
+        Me.pbFoto.Location = New System.Drawing.Point(0, -432)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(988, 742)
         Me.pbFoto.TabIndex = 23
@@ -339,12 +355,88 @@ Partial Class AlmiPlay
         Me.lblScore.TabIndex = 32
         Me.lblScore.Text = "0"
         '
+        'pbRojoA
+        '
+        Me.pbRojoA.Image = Global.AlmiPlay.My.Resources.Resources.incorrectoDer
+        Me.pbRojoA.Location = New System.Drawing.Point(1, 551)
+        Me.pbRojoA.Name = "pbRojoA"
+        Me.pbRojoA.Size = New System.Drawing.Size(514, 73)
+        Me.pbRojoA.TabIndex = 33
+        Me.pbRojoA.TabStop = False
+        '
+        'pbRojoC
+        '
+        Me.pbRojoC.Image = Global.AlmiPlay.My.Resources.Resources.incorrectoDer
+        Me.pbRojoC.Location = New System.Drawing.Point(2, 643)
+        Me.pbRojoC.Name = "pbRojoC"
+        Me.pbRojoC.Size = New System.Drawing.Size(514, 73)
+        Me.pbRojoC.TabIndex = 34
+        Me.pbRojoC.TabStop = False
+        '
+        'pbRojoB
+        '
+        Me.pbRojoB.Image = Global.AlmiPlay.My.Resources.Resources.incorrectoIzq
+        Me.pbRojoB.Location = New System.Drawing.Point(486, 551)
+        Me.pbRojoB.Name = "pbRojoB"
+        Me.pbRojoB.Size = New System.Drawing.Size(498, 73)
+        Me.pbRojoB.TabIndex = 35
+        Me.pbRojoB.TabStop = False
+        '
+        'pbRojoD
+        '
+        Me.pbRojoD.Image = Global.AlmiPlay.My.Resources.Resources.incorrectoIzq
+        Me.pbRojoD.Location = New System.Drawing.Point(486, 643)
+        Me.pbRojoD.Name = "pbRojoD"
+        Me.pbRojoD.Size = New System.Drawing.Size(498, 73)
+        Me.pbRojoD.TabIndex = 36
+        Me.pbRojoD.TabStop = False
+        '
+        'pbVerdeA
+        '
+        Me.pbVerdeA.Image = Global.AlmiPlay.My.Resources.Resources.correctoIzq
+        Me.pbVerdeA.Location = New System.Drawing.Point(1, 550)
+        Me.pbVerdeA.Name = "pbVerdeA"
+        Me.pbVerdeA.Size = New System.Drawing.Size(514, 73)
+        Me.pbVerdeA.TabIndex = 37
+        Me.pbVerdeA.TabStop = False
+        '
+        'pbVerdeC
+        '
+        Me.pbVerdeC.Image = Global.AlmiPlay.My.Resources.Resources.correctoIzq
+        Me.pbVerdeC.Location = New System.Drawing.Point(1, 642)
+        Me.pbVerdeC.Name = "pbVerdeC"
+        Me.pbVerdeC.Size = New System.Drawing.Size(514, 73)
+        Me.pbVerdeC.TabIndex = 38
+        Me.pbVerdeC.TabStop = False
+        '
+        'pbVerdeB
+        '
+        Me.pbVerdeB.Image = Global.AlmiPlay.My.Resources.Resources.correctoDer
+        Me.pbVerdeB.Location = New System.Drawing.Point(485, 551)
+        Me.pbVerdeB.Name = "pbVerdeB"
+        Me.pbVerdeB.Size = New System.Drawing.Size(502, 73)
+        Me.pbVerdeB.TabIndex = 39
+        Me.pbVerdeB.TabStop = False
+        '
+        'pbVerdeD
+        '
+        Me.pbVerdeD.Image = Global.AlmiPlay.My.Resources.Resources.correctoDer
+        Me.pbVerdeD.Location = New System.Drawing.Point(482, 642)
+        Me.pbVerdeD.Name = "pbVerdeD"
+        Me.pbVerdeD.Size = New System.Drawing.Size(502, 73)
+        Me.pbVerdeD.TabIndex = 40
+        Me.pbVerdeD.TabStop = False
+        '
         'AlmiPlay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.lblD)
+        Me.Controls.Add(Me.lblC)
+        Me.Controls.Add(Me.lblB)
+        Me.Controls.Add(Me.lblA)
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.lblScoreNom)
         Me.Controls.Add(Me.lblDOculto)
@@ -357,12 +449,9 @@ Partial Class AlmiPlay
         Me.Controls.Add(Me.pbLlamadaRed)
         Me.Controls.Add(Me.lblNomPista)
         Me.Controls.Add(Me.lblPista)
-        Me.Controls.Add(Me.lblD)
-        Me.Controls.Add(Me.lblC)
-        Me.Controls.Add(Me.lblB)
         Me.Controls.Add(Me.lblPregunta)
-        Me.Controls.Add(Me.lblGanado)
-        Me.Controls.Add(Me.lblPerdido)
+        Me.Controls.Add(Me.lblAcertar)
+        Me.Controls.Add(Me.lblFallo)
         Me.Controls.Add(Me.lblSig)
         Me.Controls.Add(Me.pbSalir)
         Me.Controls.Add(Me.pbVolver)
@@ -371,7 +460,14 @@ Partial Class AlmiPlay
         Me.Controls.Add(Me.pbPublico)
         Me.Controls.Add(Me.pbLlamada)
         Me.Controls.Add(Me.pbPregunta)
-        Me.Controls.Add(Me.lblA)
+        Me.Controls.Add(Me.pbVerdeB)
+        Me.Controls.Add(Me.pbVerdeA)
+        Me.Controls.Add(Me.pbVerdeC)
+        Me.Controls.Add(Me.pbVerdeD)
+        Me.Controls.Add(Me.pbRojoA)
+        Me.Controls.Add(Me.pbRojoB)
+        Me.Controls.Add(Me.pbRojoC)
+        Me.Controls.Add(Me.pbRojoD)
         Me.Controls.Add(Me.pbRespuestas)
         Me.Name = "AlmiPlay"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -387,6 +483,14 @@ Partial Class AlmiPlay
         CType(Me.pbLlamadaRed, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPublicoRed, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbMitadRed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbRojoA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbRojoC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbRojoB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbRojoD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbVerdeA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbVerdeC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbVerdeB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbVerdeD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -402,8 +506,8 @@ Partial Class AlmiPlay
     Friend WithEvents pbVolver As PictureBox
     Friend WithEvents pbSalir As PictureBox
     Friend WithEvents lblSig As Label
-    Friend WithEvents lblPerdido As Label
-    Friend WithEvents lblGanado As Label
+    Friend WithEvents lblFallo As Label
+    Friend WithEvents lblAcertar As Label
     Friend WithEvents lblPregunta As Label
     Friend WithEvents lblA As Label
     Friend WithEvents lblB As Label
@@ -424,4 +528,12 @@ Partial Class AlmiPlay
     Friend WithEvents lblDOculto As Label
     Friend WithEvents lblScoreNom As Label
     Friend WithEvents lblScore As Label
+    Friend WithEvents pbRojoA As PictureBox
+    Friend WithEvents pbRojoC As PictureBox
+    Friend WithEvents pbRojoB As PictureBox
+    Friend WithEvents pbRojoD As PictureBox
+    Friend WithEvents pbVerdeA As PictureBox
+    Friend WithEvents pbVerdeC As PictureBox
+    Friend WithEvents pbVerdeB As PictureBox
+    Friend WithEvents pbVerdeD As PictureBox
 End Class

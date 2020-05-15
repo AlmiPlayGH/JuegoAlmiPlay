@@ -212,5 +212,23 @@
   <ItemGroup>
     <None Include="bin\Debug\llamadaRed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\respuestaQuizaIzq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\respuestaQuizaDer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\incorrectoDer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\incorrectoIzq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\correctoDer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\correctoIzq.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

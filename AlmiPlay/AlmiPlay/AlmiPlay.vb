@@ -65,16 +65,16 @@ Public Class AlmiPlay
             'MsgBox(jsonWeb)
 
             'CAMBIAMOS EL TAMAÑO DE LA LETRA EN EL CASO DE QUE TENGA DEMASIADOS CARACTERES (PARA QUE QUEPA)
-            If Len(lblA.Text) > 38 Then
+            If Len(lblA.Text) > 45 Then
                 lblA.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblB.Text) > 38 Then
+            If Len(lblB.Text) > 45 Then
                 lblB.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblC.Text) > 38 Then
+            If Len(lblC.Text) > 45 Then
                 lblC.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblD.Text) > 38 Then
+            If Len(lblD.Text) > 45 Then
                 lblD.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
 
@@ -89,20 +89,46 @@ Public Class AlmiPlay
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
         If lblAOculto.Text = 1 Then
-            lblA.ForeColor = Color.GreenYellow
+            lblA.BackColor = Color.FromArgb(83, 187, 97)
+            lblAcertar.Show()
+            lblSig.Show()
+            timerLabel.Stop()
+            pbVerdeA.Show()
             lblScore.Text = num3Score
-        Else lblA.ForeColor = Color.Red
+            disabledComodines()
+        Else lblA.BackColor = Color.FromArgb(191, 83, 83)
+            pbRojoA.Show()
+            lblFallo.Show()
+            timerLabel.Stop()
+            disabledComodines()
         End If
 
         If lblBOculto.Text = 1 Then
-            lblB.ForeColor = Color.GreenYellow
+            lblB.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeB.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
+
         End If
+
         If lblCOculto.Text = 1 Then
-            lblC.ForeColor = Color.GreenYellow
+            lblC.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeC.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
+
         End If
+
         If lblDOculto.Text = 1 Then
-            lblD.ForeColor = Color.GreenYellow
+            lblD.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeD.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
         End If
+
 
     End Sub
 
@@ -111,20 +137,46 @@ Public Class AlmiPlay
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
         If lblBOculto.Text = 1 Then
-            lblB.ForeColor = Color.GreenYellow
+            lblB.BackColor = Color.FromArgb(83, 187, 97)
+            lblAcertar.Show()
+            lblSig.Show()
+            timerLabel.Stop()
+            pbVerdeB.Show()
             lblScore.Text = num3Score
-        Else lblB.ForeColor = Color.Red
+            disabledComodines()
+        Else lblB.BackColor = Color.FromArgb(191, 83, 83)
+            pbRojoB.Show()
+            lblFallo.Show()
+            timerLabel.Stop()
+            disabledComodines()
         End If
 
         If lblAOculto.Text = 1 Then
-            lblA.ForeColor = Color.GreenYellow
+            lblA.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeA.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
+
         End If
+
         If lblCOculto.Text = 1 Then
-            lblC.ForeColor = Color.GreenYellow
+            lblC.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeC.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
+
         End If
+
         If lblDOculto.Text = 1 Then
-            lblD.ForeColor = Color.GreenYellow
+            lblD.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeD.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
         End If
+
 
     End Sub
 
@@ -133,20 +185,46 @@ Public Class AlmiPlay
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
         If lblCOculto.Text = 1 Then
-            lblC.ForeColor = Color.GreenYellow
+            lblC.BackColor = Color.FromArgb(83, 187, 97)
+            lblAcertar.Show()
+            lblSig.Show()
+            timerLabel.Stop()
+            pbVerdeC.Show()
             lblScore.Text = num3Score
-        Else lblC.ForeColor = Color.Red
+            disabledComodines()
+        Else lblC.BackColor = Color.FromArgb(191, 83, 83)
+            pbRojoC.Show()
+            lblFallo.Show()
+            timerLabel.Stop()
+            disabledComodines()
+        End If
+
+        If lblBOculto.Text = 1 Then
+            lblB.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeB.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
+
         End If
 
         If lblAOculto.Text = 1 Then
-            lblA.ForeColor = Color.GreenYellow
+            lblA.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeA.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
+
         End If
-        If lblBOculto.Text = 1 Then
-            lblB.ForeColor = Color.GreenYellow
-        End If
+
         If lblDOculto.Text = 1 Then
-            lblD.ForeColor = Color.GreenYellow
+            lblD.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeD.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
         End If
+
 
     End Sub
 
@@ -155,20 +233,46 @@ Public Class AlmiPlay
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
         If lblDOculto.Text = 1 Then
-            lblD.ForeColor = Color.GreenYellow
+            lblD.BackColor = Color.FromArgb(83, 187, 97)
+            lblAcertar.Show()
+            lblSig.Show()
+            timerLabel.Stop()
+            pbVerdeD.Show()
             lblScore.Text = num3Score
-        Else lblD.ForeColor = Color.Red
+            disabledComodines()
+        Else lblD.BackColor = Color.FromArgb(191, 83, 83)
+            pbRojoD.Show()
+            lblFallo.Show()
+            timerLabel.Stop()
+            disabledComodines()
+        End If
+
+        If lblBOculto.Text = 1 Then
+            lblB.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeB.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
+
+        End If
+
+        If lblCOculto.Text = 1 Then
+            lblC.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeC.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
+
         End If
 
         If lblAOculto.Text = 1 Then
-            lblA.ForeColor = Color.GreenYellow
+            lblA.BackColor = Color.FromArgb(83, 187, 97)
+            pbVerdeA.Show()
+            timerLabel.Stop()
+            lblSig.Show()
+            disabledComodines()
         End If
-        If lblCOculto.Text = 1 Then
-            lblC.ForeColor = Color.GreenYellow
-        End If
-        If lblBOculto.Text = 1 Then
-            lblB.ForeColor = Color.GreenYellow
-        End If
+
     End Sub
 
 
@@ -209,7 +313,7 @@ Public Class AlmiPlay
             'cont = cont + 1
             'imagen.lblContPreg.Text = (cont & "/10")
             lblSig.Show()
-            lblPerdido.Show()
+            lblFallo.Show()
 
         End If
 
@@ -251,13 +355,13 @@ Public Class AlmiPlay
         pbVolver.BackColor = Color.Transparent
         lblSig.BackColor = Color.Transparent
         lblSig.ForeColor = Color.White
-        lblGanado.BackColor = Color.Transparent
-        lblGanado.ForeColor = Color.White
-        lblPerdido.BackColor = Color.Transparent
-        lblPerdido.ForeColor = Color.White
+        lblAcertar.BackColor = Color.Transparent
+        lblAcertar.ForeColor = Color.White
+        lblFallo.BackColor = Color.Transparent
+        lblFallo.ForeColor = Color.White
         lblSig.Hide()
-        lblGanado.Hide()
-        lblPerdido.Hide()
+        lblAcertar.Hide()
+        lblFallo.Hide()
         lblPista.Hide()
         lblPista.BackColor = Color.Transparent
         lblPista.ForeColor = Color.White
@@ -268,42 +372,61 @@ Public Class AlmiPlay
         lblBOculto.Hide()
         lblCOculto.Hide()
         lblDOculto.Hide()
+        pbVerdeA.BackColor = Color.Transparent
+        pbVerdeB.BackColor = Color.Transparent
+        pbVerdeC.BackColor = Color.Transparent
+        pbVerdeD.BackColor = Color.Transparent
+        pbRojoA.BackColor = Color.Transparent
+        pbRojoB.BackColor = Color.Transparent
+        pbRojoC.BackColor = Color.Transparent
+        pbRojoD.BackColor = Color.Transparent
+        ocultarRespuestasRDY()
     End Function
 
     Private Sub lblSig_Click(sender As Object, e As EventArgs) Handles lblSig.Click
         'Me.Close()
         'imagen.Show()
+        ocultarRespuestasRDY()
         lblTiempo.Left = 303
         data()
         timerFotoStart.Start()
         timerLabel.Start()
         lblTiempo.Text = 30
-        pbLlamada.Enabled = True
-        pbPublico.Enabled = True
-        pbMitad.Enabled = True
         timerLabel.Start()
-        lblPerdido.Hide()
+        lblFallo.Hide()
         lblPista.Hide()
         lblNomPista.Hide()
         lblSig.Hide()
         enabledPreguntas()
+        enabledComodines()
+        lblAcertar.Hide()
+        lblA.BackColor = Color.FromArgb(35, 31, 32)
+        lblB.BackColor = Color.FromArgb(35, 31, 32)
+        lblC.BackColor = Color.FromArgb(35, 31, 32)
+        lblD.BackColor = Color.FromArgb(35, 31, 32)
     End Sub
 
     Private Sub pbLlamada_Click(sender As Object, e As EventArgs) Handles pbLlamada.Click
         lblPista.Show()
         lblNomPista.Show()
+        disabledComodines()
         pbLlamada.Hide()
         pbLlamadaRed.Show()
+
     End Sub
 
     Private Sub pbPublico_Click(sender As Object, e As EventArgs) Handles pbPublico.Click
         pbPublico.Hide()
         pbPublicoRed.Show()
+        disabledComodines()
     End Sub
 
     Private Sub pbMitad_Click(sender As Object, e As EventArgs) Handles pbMitad.Click
         pbMitad.Hide()
         pbMitadRed.Show()
+        disabledComodines()
+
+
     End Sub
 
     Public Function disabledPreguntas()
@@ -319,6 +442,28 @@ Public Class AlmiPlay
         lblD.Enabled = True
     End Function
 
+    Public Function disabledComodines()
+        pbLlamada.Enabled = False
+        pbPublico.Enabled = False
+        pbMitad.Enabled = False
+    End Function
+
+    Public Function enabledComodines()
+        pbLlamada.Enabled = True
+        pbPublico.Enabled = True
+        pbMitad.Enabled = True
+    End Function
+
+    Public Function ocultarRespuestasRDY()
+        pbVerdeA.Hide()
+        pbVerdeB.Hide()
+        pbVerdeC.Hide()
+        pbVerdeD.Hide()
+        pbRojoA.Hide()
+        pbRojoB.Hide()
+        pbRojoC.Hide()
+        pbRojoD.Hide()
+    End Function
 
 
 End Class
