@@ -399,7 +399,7 @@ Public Class AlmiPlay
         pb20.BackColor = Color.Transparent
         pb25.BackColor = Color.Transparent
         pb40.BackColor = Color.Transparent
-
+        ocultarPorcentajes()
     End Function
 
     Private Sub lblSig_Click(sender As Object, e As EventArgs) Handles lblSig.Click
@@ -433,6 +433,7 @@ Public Class AlmiPlay
         lblB.BackColor = Color.FromArgb(35, 31, 32)
         lblC.BackColor = Color.FromArgb(35, 31, 32)
         lblD.BackColor = Color.FromArgb(35, 31, 32)
+        mostrarPorcentajes()
     End Sub
 
     Private Sub pbLlamada_Click(sender As Object, e As EventArgs) Handles pbLlamada.Click
@@ -445,9 +446,38 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub pbPublico_Click(sender As Object, e As EventArgs) Handles pbPublico.Click
-        pbPublico.Hide()
+        'pbPublico.Hide()
         pbPublicoRed.Show()
         disabledComodines()
+        mostrarPorcentajes()
+        If lblAOculto.Text = 1 Then
+            pb40.Location = New Point(8, 541)
+            pb15.Location = New Point(933, 541)
+            pb25.Location = New Point(933, 632)
+            pb20.Location = New Point(8, 632)
+        End If
+
+        If lblBOculto.Text = 1 Then
+            pb40.Location = New Point(933, 541)
+            pb15.Location = New Point(933, 632)
+            pb25.Location = New Point(8, 541)
+            pb20.Location = New Point(8, 632)
+        End If
+
+        If lblCOculto.Text = 1 Then
+            pb40.Location = New Point(8, 632)
+            pb15.Location = New Point(8, 541)
+            pb25.Location = New Point(933, 541)
+            pb20.Location = New Point(933, 632)
+        End If
+
+        If lblDOculto.Text = 1 Then
+            pb40.Location = New Point(933, 632)
+            pb15.Location = New Point(933, 541)
+            pb25.Location = New Point(8, 541)
+            pb20.Location = New Point(8, 632)
+        End If
+
     End Sub
 
     Private Sub pbMitad_Click(sender As Object, e As EventArgs) Handles pbMitad.Click
@@ -524,11 +554,17 @@ Public Class AlmiPlay
         pbRojoD.Hide()
     End Function
 
-    Private Sub pbPublicoRed_Click(sender As Object, e As EventArgs) Handles pbPublicoRed.Click
-        If lblAOculto.Text = 1 Then
-            pb40.Show()
+    Public Function ocultarPorcentajes()
+        pb40.Hide()
+        pb15.Hide()
+        pb25.Hide()
+        pb20.Hide()
+    End Function
+    Public Function mostrarPorcentajes()
+        pb40.Show()
+        pb15.Show()
+        pb25.Show()
+        pb20.Show()
+    End Function
 
-
-        End If
-    End Sub
 End Class
