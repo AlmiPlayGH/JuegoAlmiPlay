@@ -10,16 +10,18 @@ Imports System.IO
 Imports System.Web.Script.Serialization
 
 
+
 Public Class AlmiPlay
 
     Public response As HttpResponseMessage
     Public ServerUrl As String
     Public cliente As HttpClient
-
+    Public contLblPreg As Integer
     Private Sub AlmiPLay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
         cambioColoresAP()
         timerLabel.Start()
+        contLblPreg = 1
         ServerUrl = "http://62.117.137.221:8181/api/preguntas"
         cliente = New HttpClient()
         cliente.BaseAddress = New Uri(ServerUrl)
@@ -381,11 +383,34 @@ Public Class AlmiPlay
         pbRojoC.BackColor = Color.Transparent
         pbRojoD.BackColor = Color.Transparent
         ocultarRespuestasRDY()
+        pbNaranjaA.Hide()
+        pbNaranjaB.Hide()
+        pbNaranjaD.Hide()
+        pbNaranjaC.Hide()
+        pbNaranjaA.BackColor = Color.Transparent
+        pbNaranjaB.BackColor = Color.Transparent
+        pbNaranjaC.BackColor = Color.Transparent
+        pbNaranjaD.BackColor = Color.Transparent
+        lblContPreg.BackColor = Color.Transparent
+        lblVeinte.BackColor = Color.Transparent
+        lblContPreg.ForeColor = Color.White
+        lblVeinte.ForeColor = Color.White
+        pb15.BackColor = Color.Transparent
+        pb20.BackColor = Color.Transparent
+        pb25.BackColor = Color.Transparent
+        pb40.BackColor = Color.Transparent
+
     End Function
 
     Private Sub lblSig_Click(sender As Object, e As EventArgs) Handles lblSig.Click
         'Me.Close()
         'imagen.Show()
+        contLblPreg = contLblPreg + 1
+        If contLblPreg < 10 Then
+            lblContPreg.Text = "0" & contLblPreg
+        Else lblContPreg.Text = contLblPreg
+        End If
+
         ocultarRespuestasRDY()
         lblTiempo.Left = 303
         data()
@@ -400,6 +425,10 @@ Public Class AlmiPlay
         enabledPreguntas()
         enabledComodines()
         lblAcertar.Hide()
+        pbNaranjaA.Hide()
+        pbNaranjaB.Hide()
+        pbNaranjaD.Hide()
+        pbNaranjaC.Hide()
         lblA.BackColor = Color.FromArgb(35, 31, 32)
         lblB.BackColor = Color.FromArgb(35, 31, 32)
         lblC.BackColor = Color.FromArgb(35, 31, 32)
@@ -422,9 +451,39 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub pbMitad_Click(sender As Object, e As EventArgs) Handles pbMitad.Click
-        pbMitad.Hide()
+        'pbMitad.Hide()
         pbMitadRed.Show()
         disabledComodines()
+
+        Dim contQues As Integer
+        If lblAOculto.Text = 1 Then
+            pbNaranjaA.Show()
+            contQues = 1
+            lblA.BackColor = Color.FromArgb(248, 155, 28)
+            pbNaranjaB.Show()
+            lblB.BackColor = Color.FromArgb(248, 155, 28)
+        End If
+        If lblBOculto.Text = 1 Then
+            pbNaranjaB.Show()
+            contQues = 2
+            lblB.BackColor = Color.FromArgb(248, 155, 28)
+            pbNaranjaC.Show()
+            lblC.BackColor = Color.FromArgb(248, 155, 28)
+        End If
+        If lblCOculto.Text = 1 Then
+            pbNaranjaC.Show()
+            contQues = 3
+            lblC.BackColor = Color.FromArgb(248, 155, 28)
+            pbNaranjaD.Show()
+            lblD.BackColor = Color.FromArgb(248, 155, 28)
+        End If
+        If lblDOculto.Text = 1 Then
+            pbNaranjaD.Show()
+            contQues = 4
+            lblD.BackColor = Color.FromArgb(248, 155, 28)
+            pbNaranjaA.Show()
+            lblA.BackColor = Color.FromArgb(248, 155, 28)
+        End If
 
 
     End Sub
@@ -465,5 +524,11 @@ Public Class AlmiPlay
         pbRojoD.Hide()
     End Function
 
+    Private Sub pbPublicoRed_Click(sender As Object, e As EventArgs) Handles pbPublicoRed.Click
+        If lblAOculto.Text = 1 Then
+            pb40.Show()
 
+
+        End If
+    End Sub
 End Class

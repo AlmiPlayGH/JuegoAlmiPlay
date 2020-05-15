@@ -230,5 +230,17 @@
   <ItemGroup>
     <None Include="bin\Debug\correctoIzq.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\15x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\20x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\25x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\40x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

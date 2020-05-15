@@ -63,6 +63,16 @@ Partial Class AlmiPlay
         Me.pbVerdeC = New System.Windows.Forms.PictureBox()
         Me.pbVerdeB = New System.Windows.Forms.PictureBox()
         Me.pbVerdeD = New System.Windows.Forms.PictureBox()
+        Me.pbNaranjaB = New System.Windows.Forms.PictureBox()
+        Me.pbNaranjaD = New System.Windows.Forms.PictureBox()
+        Me.pbNaranjaA = New System.Windows.Forms.PictureBox()
+        Me.pbNaranjaC = New System.Windows.Forms.PictureBox()
+        Me.lblContPreg = New System.Windows.Forms.Label()
+        Me.lblVeinte = New System.Windows.Forms.Label()
+        Me.pb20 = New System.Windows.Forms.PictureBox()
+        Me.pb25 = New System.Windows.Forms.PictureBox()
+        Me.pb40 = New System.Windows.Forms.PictureBox()
+        Me.pb15 = New System.Windows.Forms.PictureBox()
         CType(Me.pbRespuestas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPregunta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLlamada, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,6 +92,14 @@ Partial Class AlmiPlay
         CType(Me.pbVerdeC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbVerdeB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbVerdeD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbNaranjaB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbNaranjaD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbNaranjaA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbNaranjaC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb40, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbRespuestas
@@ -258,7 +276,7 @@ Partial Class AlmiPlay
         'pbFoto
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.p19worm
-        Me.pbFoto.Location = New System.Drawing.Point(0, -432)
+        Me.pbFoto.Location = New System.Drawing.Point(631, -372)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(988, 742)
         Me.pbFoto.TabIndex = 23
@@ -339,7 +357,7 @@ Partial Class AlmiPlay
         '
         Me.lblScoreNom.AutoSize = True
         Me.lblScoreNom.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScoreNom.Location = New System.Drawing.Point(667, 373)
+        Me.lblScoreNom.Location = New System.Drawing.Point(651, 373)
         Me.lblScoreNom.Name = "lblScoreNom"
         Me.lblScoreNom.Size = New System.Drawing.Size(89, 28)
         Me.lblScoreNom.TabIndex = 31
@@ -349,7 +367,7 @@ Partial Class AlmiPlay
         '
         Me.lblScore.AutoSize = True
         Me.lblScore.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblScore.Location = New System.Drawing.Point(762, 373)
+        Me.lblScore.Location = New System.Drawing.Point(735, 373)
         Me.lblScore.Name = "lblScore"
         Me.lblScore.Size = New System.Drawing.Size(26, 28)
         Me.lblScore.TabIndex = 32
@@ -367,7 +385,7 @@ Partial Class AlmiPlay
         'pbRojoC
         '
         Me.pbRojoC.Image = Global.AlmiPlay.My.Resources.Resources.incorrectoDer
-        Me.pbRojoC.Location = New System.Drawing.Point(2, 643)
+        Me.pbRojoC.Location = New System.Drawing.Point(2, 642)
         Me.pbRojoC.Name = "pbRojoC"
         Me.pbRojoC.Size = New System.Drawing.Size(514, 73)
         Me.pbRojoC.TabIndex = 34
@@ -385,7 +403,7 @@ Partial Class AlmiPlay
         'pbRojoD
         '
         Me.pbRojoD.Image = Global.AlmiPlay.My.Resources.Resources.incorrectoIzq
-        Me.pbRojoD.Location = New System.Drawing.Point(486, 643)
+        Me.pbRojoD.Location = New System.Drawing.Point(486, 642)
         Me.pbRojoD.Name = "pbRojoD"
         Me.pbRojoD.Size = New System.Drawing.Size(498, 73)
         Me.pbRojoD.TabIndex = 36
@@ -394,7 +412,7 @@ Partial Class AlmiPlay
         'pbVerdeA
         '
         Me.pbVerdeA.Image = Global.AlmiPlay.My.Resources.Resources.correctoIzq
-        Me.pbVerdeA.Location = New System.Drawing.Point(1, 550)
+        Me.pbVerdeA.Location = New System.Drawing.Point(-7, 550)
         Me.pbVerdeA.Name = "pbVerdeA"
         Me.pbVerdeA.Size = New System.Drawing.Size(514, 73)
         Me.pbVerdeA.TabIndex = 37
@@ -403,7 +421,7 @@ Partial Class AlmiPlay
         'pbVerdeC
         '
         Me.pbVerdeC.Image = Global.AlmiPlay.My.Resources.Resources.correctoIzq
-        Me.pbVerdeC.Location = New System.Drawing.Point(1, 642)
+        Me.pbVerdeC.Location = New System.Drawing.Point(-8, 642)
         Me.pbVerdeC.Name = "pbVerdeC"
         Me.pbVerdeC.Size = New System.Drawing.Size(514, 73)
         Me.pbVerdeC.TabIndex = 38
@@ -412,7 +430,7 @@ Partial Class AlmiPlay
         'pbVerdeB
         '
         Me.pbVerdeB.Image = Global.AlmiPlay.My.Resources.Resources.correctoDer
-        Me.pbVerdeB.Location = New System.Drawing.Point(485, 551)
+        Me.pbVerdeB.Location = New System.Drawing.Point(483, 550)
         Me.pbVerdeB.Name = "pbVerdeB"
         Me.pbVerdeB.Size = New System.Drawing.Size(502, 73)
         Me.pbVerdeB.TabIndex = 39
@@ -421,11 +439,103 @@ Partial Class AlmiPlay
         'pbVerdeD
         '
         Me.pbVerdeD.Image = Global.AlmiPlay.My.Resources.Resources.correctoDer
-        Me.pbVerdeD.Location = New System.Drawing.Point(482, 642)
+        Me.pbVerdeD.Location = New System.Drawing.Point(482, 641)
         Me.pbVerdeD.Name = "pbVerdeD"
         Me.pbVerdeD.Size = New System.Drawing.Size(502, 73)
         Me.pbVerdeD.TabIndex = 40
         Me.pbVerdeD.TabStop = False
+        '
+        'pbNaranjaB
+        '
+        Me.pbNaranjaB.Image = Global.AlmiPlay.My.Resources.Resources.respuestaQuizaDer2
+        Me.pbNaranjaB.Location = New System.Drawing.Point(482, 551)
+        Me.pbNaranjaB.Name = "pbNaranjaB"
+        Me.pbNaranjaB.Size = New System.Drawing.Size(502, 73)
+        Me.pbNaranjaB.TabIndex = 43
+        Me.pbNaranjaB.TabStop = False
+        '
+        'pbNaranjaD
+        '
+        Me.pbNaranjaD.Image = Global.AlmiPlay.My.Resources.Resources.respuestaQuizaDer2
+        Me.pbNaranjaD.Location = New System.Drawing.Point(493, 642)
+        Me.pbNaranjaD.Name = "pbNaranjaD"
+        Me.pbNaranjaD.Size = New System.Drawing.Size(502, 73)
+        Me.pbNaranjaD.TabIndex = 44
+        Me.pbNaranjaD.TabStop = False
+        '
+        'pbNaranjaA
+        '
+        Me.pbNaranjaA.Image = Global.AlmiPlay.My.Resources.Resources.respuestaQuizaIzq2
+        Me.pbNaranjaA.Location = New System.Drawing.Point(-8, 551)
+        Me.pbNaranjaA.Name = "pbNaranjaA"
+        Me.pbNaranjaA.Size = New System.Drawing.Size(514, 73)
+        Me.pbNaranjaA.TabIndex = 41
+        Me.pbNaranjaA.TabStop = False
+        '
+        'pbNaranjaC
+        '
+        Me.pbNaranjaC.Image = Global.AlmiPlay.My.Resources.Resources.respuestaQuizaIzq2
+        Me.pbNaranjaC.Location = New System.Drawing.Point(2, 642)
+        Me.pbNaranjaC.Name = "pbNaranjaC"
+        Me.pbNaranjaC.Size = New System.Drawing.Size(514, 73)
+        Me.pbNaranjaC.TabIndex = 42
+        Me.pbNaranjaC.TabStop = False
+        '
+        'lblContPreg
+        '
+        Me.lblContPreg.AutoSize = True
+        Me.lblContPreg.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContPreg.Location = New System.Drawing.Point(811, 373)
+        Me.lblContPreg.Name = "lblContPreg"
+        Me.lblContPreg.Size = New System.Drawing.Size(40, 28)
+        Me.lblContPreg.TabIndex = 45
+        Me.lblContPreg.Text = "01"
+        '
+        'lblVeinte
+        '
+        Me.lblVeinte.AutoSize = True
+        Me.lblVeinte.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVeinte.Location = New System.Drawing.Point(847, 373)
+        Me.lblVeinte.Name = "lblVeinte"
+        Me.lblVeinte.Size = New System.Drawing.Size(53, 28)
+        Me.lblVeinte.TabIndex = 46
+        Me.lblVeinte.Text = "/ 20"
+        '
+        'pb20
+        '
+        Me.pb20.Image = Global.AlmiPlay.My.Resources.Resources._20x
+        Me.pb20.Location = New System.Drawing.Point(8, 632)
+        Me.pb20.Name = "pb20"
+        Me.pb20.Size = New System.Drawing.Size(48, 27)
+        Me.pb20.TabIndex = 47
+        Me.pb20.TabStop = False
+        '
+        'pb25
+        '
+        Me.pb25.Image = Global.AlmiPlay.My.Resources.Resources._25x
+        Me.pb25.Location = New System.Drawing.Point(933, 541)
+        Me.pb25.Name = "pb25"
+        Me.pb25.Size = New System.Drawing.Size(48, 27)
+        Me.pb25.TabIndex = 48
+        Me.pb25.TabStop = False
+        '
+        'pb40
+        '
+        Me.pb40.Image = Global.AlmiPlay.My.Resources.Resources._40x
+        Me.pb40.Location = New System.Drawing.Point(933, 632)
+        Me.pb40.Name = "pb40"
+        Me.pb40.Size = New System.Drawing.Size(48, 27)
+        Me.pb40.TabIndex = 49
+        Me.pb40.TabStop = False
+        '
+        'pb15
+        '
+        Me.pb15.Image = Global.AlmiPlay.My.Resources.Resources._15x
+        Me.pb15.Location = New System.Drawing.Point(8, 541)
+        Me.pb15.Name = "pb15"
+        Me.pb15.Size = New System.Drawing.Size(48, 27)
+        Me.pb15.TabIndex = 50
+        Me.pb15.TabStop = False
         '
         'AlmiPlay
         '
@@ -433,6 +543,15 @@ Partial Class AlmiPlay
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.pb15)
+        Me.Controls.Add(Me.pb40)
+        Me.Controls.Add(Me.pb25)
+        Me.Controls.Add(Me.pb20)
+        Me.Controls.Add(Me.lblVeinte)
+        Me.Controls.Add(Me.lblContPreg)
+        Me.Controls.Add(Me.pbLlamadaRed)
+        Me.Controls.Add(Me.pbPublicoRed)
+        Me.Controls.Add(Me.pbMitadRed)
         Me.Controls.Add(Me.lblD)
         Me.Controls.Add(Me.lblC)
         Me.Controls.Add(Me.lblB)
@@ -444,9 +563,6 @@ Partial Class AlmiPlay
         Me.Controls.Add(Me.lblBOculto)
         Me.Controls.Add(Me.lblAOculto)
         Me.Controls.Add(Me.pbFoto)
-        Me.Controls.Add(Me.pbMitadRed)
-        Me.Controls.Add(Me.pbPublicoRed)
-        Me.Controls.Add(Me.pbLlamadaRed)
         Me.Controls.Add(Me.lblNomPista)
         Me.Controls.Add(Me.lblPista)
         Me.Controls.Add(Me.lblPregunta)
@@ -468,6 +584,10 @@ Partial Class AlmiPlay
         Me.Controls.Add(Me.pbRojoB)
         Me.Controls.Add(Me.pbRojoC)
         Me.Controls.Add(Me.pbRojoD)
+        Me.Controls.Add(Me.pbNaranjaA)
+        Me.Controls.Add(Me.pbNaranjaB)
+        Me.Controls.Add(Me.pbNaranjaC)
+        Me.Controls.Add(Me.pbNaranjaD)
         Me.Controls.Add(Me.pbRespuestas)
         Me.Name = "AlmiPlay"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -491,6 +611,14 @@ Partial Class AlmiPlay
         CType(Me.pbVerdeC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbVerdeB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbVerdeD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbNaranjaB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbNaranjaD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbNaranjaA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbNaranjaC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb40, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb15, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -536,4 +664,14 @@ Partial Class AlmiPlay
     Friend WithEvents pbVerdeC As PictureBox
     Friend WithEvents pbVerdeB As PictureBox
     Friend WithEvents pbVerdeD As PictureBox
+    Friend WithEvents pbNaranjaB As PictureBox
+    Friend WithEvents pbNaranjaD As PictureBox
+    Friend WithEvents pbNaranjaA As PictureBox
+    Friend WithEvents pbNaranjaC As PictureBox
+    Friend WithEvents lblContPreg As Label
+    Friend WithEvents lblVeinte As Label
+    Friend WithEvents pb20 As PictureBox
+    Friend WithEvents pb25 As PictureBox
+    Friend WithEvents pb40 As PictureBox
+    Friend WithEvents pb15 As PictureBox
 End Class
