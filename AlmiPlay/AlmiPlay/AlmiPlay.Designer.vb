@@ -276,7 +276,7 @@ Partial Class AlmiPlay
         'pbFoto
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.p19worm
-        Me.pbFoto.Location = New System.Drawing.Point(631, -372)
+        Me.pbFoto.Location = New System.Drawing.Point(631, -415)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(988, 742)
         Me.pbFoto.TabIndex = 23
@@ -439,7 +439,7 @@ Partial Class AlmiPlay
         'pbVerdeD
         '
         Me.pbVerdeD.Image = Global.AlmiPlay.My.Resources.Resources.correctoDer
-        Me.pbVerdeD.Location = New System.Drawing.Point(482, 641)
+        Me.pbVerdeD.Location = New System.Drawing.Point(482, 642)
         Me.pbVerdeD.Name = "pbVerdeD"
         Me.pbVerdeD.Size = New System.Drawing.Size(502, 73)
         Me.pbVerdeD.TabIndex = 40

@@ -39,12 +39,14 @@ Public Class AlmiPlay
             Dim responseBody As String
             Dim jsonWeb As String
             Dim url As String
+            Dim foto As String
             contId = Int((26 * Rnd()) + 1)
             contPregunta = 1
             'URL CON POSICION DE CAMPO ALEATORIA
             url = "http://62.117.137.221:8181/api/preguntas/" & contId
+            foto = "http://62.117.137.221:8181/api/preguntas/imagen/" & contId & ".jpg"
             'SE OBITENE EL JSON EN LA VARIABLE RESPONSEBODY
-            Dim response = Await cliente.GetAsync(url) 
+            Dim response = Await cliente.GetAsync(url)
             response.EnsureSuccessStatusCode()
             responseBody = Await response.Content.ReadAsStringAsync()
             'CREAMOS EL JSON PASANDOLE COMO PARAMETRO EL STRING RESPONSEBODY
@@ -67,16 +69,16 @@ Public Class AlmiPlay
             'MsgBox(jsonWeb)
 
             'CAMBIAMOS EL TAMAÑO DE LA LETRA EN EL CASO DE QUE TENGA DEMASIADOS CARACTERES (PARA QUE QUEPA)
-            If Len(lblA.Text) > 45 Then
+            If Len(lblA.Text) > 55 Then
                 lblA.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblB.Text) > 45 Then
+            If Len(lblB.Text) > 55 Then
                 lblB.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblC.Text) > 45 Then
+            If Len(lblC.Text) > 55 Then
                 lblC.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblD.Text) > 45 Then
+            If Len(lblD.Text) > 55 Then
                 lblD.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
 
@@ -90,6 +92,10 @@ Public Class AlmiPlay
         num1Score = 10 + lblTiempo.Text
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
+        lblA.Enabled = False
+        lblB.Enabled = False
+        lblC.Enabled = False
+        lblD.Enabled = False
         If lblAOculto.Text = 1 Then
             lblA.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -131,13 +137,16 @@ Public Class AlmiPlay
             disabledComodines()
         End If
 
-
     End Sub
 
     Private Sub lblB_Click(sender As Object, e As EventArgs) Handles lblB.Click
         num1Score = 10 + lblTiempo.Text
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
+        lblA.Enabled = False
+        lblB.Enabled = False
+        lblC.Enabled = False
+        lblD.Enabled = False
         If lblBOculto.Text = 1 Then
             lblB.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -186,6 +195,10 @@ Public Class AlmiPlay
         num1Score = 10 + lblTiempo.Text
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
+        lblA.Enabled = False
+        lblB.Enabled = False
+        lblC.Enabled = False
+        lblD.Enabled = False
         If lblCOculto.Text = 1 Then
             lblC.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -234,6 +247,10 @@ Public Class AlmiPlay
         num1Score = 10 + lblTiempo.Text
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
+        lblA.Enabled = False
+        lblB.Enabled = False
+        lblC.Enabled = False
+        lblD.Enabled = False
         If lblDOculto.Text = 1 Then
             lblD.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -325,83 +342,6 @@ Public Class AlmiPlay
 
     End Sub
 
-    Private Function cambioColoresAP()
-        pbRespuestas.BackColor = Color.Transparent
-        pbMitad.BackColor = Color.Transparent
-        pbLlamada.BackColor = Color.Transparent
-        pbPublico.BackColor = Color.Transparent
-        pbPregunta.BackColor = Color.Transparent
-        pbLlamadaRed.BackColor = Color.Transparent
-        pbPublicoRed.BackColor = Color.Transparent
-        pbMitadRed.BackColor = Color.Transparent
-        pbLlamadaRed.Hide()
-        pbPublicoRed.Hide()
-        pbMitadRed.Hide()
-        lblPregunta.BackColor = Color.FromArgb(35, 31, 32)
-        lblA.BackColor = Color.FromArgb(35, 31, 32)
-        lblB.BackColor = Color.FromArgb(35, 31, 32)
-        lblC.BackColor = Color.FromArgb(35, 31, 32)
-        lblD.BackColor = Color.FromArgb(35, 31, 32)
-        lblPregunta.ForeColor = Color.White
-        lblA.ForeColor = Color.White
-        lblB.ForeColor = Color.White
-        lblC.ForeColor = Color.White
-        lblD.ForeColor = Color.White
-        lblScore.ForeColor = Color.White
-        lblScoreNom.ForeColor = Color.White
-        lblScore.BackColor = Color.Transparent
-        lblScoreNom.BackColor = Color.Transparent
-        lblTiempo.ForeColor = Color.White
-        lblTiempo.BackColor = Color.Transparent
-        pbSalir.BackColor = Color.Transparent
-        pbVolver.BackColor = Color.Transparent
-        lblSig.BackColor = Color.Transparent
-        lblSig.ForeColor = Color.White
-        lblAcertar.BackColor = Color.Transparent
-        lblAcertar.ForeColor = Color.White
-        lblFallo.BackColor = Color.Transparent
-        lblFallo.ForeColor = Color.White
-        lblSig.Hide()
-        lblAcertar.Hide()
-        lblFallo.Hide()
-        lblPista.Hide()
-        lblPista.BackColor = Color.Transparent
-        lblPista.ForeColor = Color.White
-        lblNomPista.Hide()
-        lblNomPista.BackColor = Color.Transparent
-        lblNomPista.ForeColor = Color.White
-        lblAOculto.Hide()
-        lblBOculto.Hide()
-        lblCOculto.Hide()
-        lblDOculto.Hide()
-        pbVerdeA.BackColor = Color.Transparent
-        pbVerdeB.BackColor = Color.Transparent
-        pbVerdeC.BackColor = Color.Transparent
-        pbVerdeD.BackColor = Color.Transparent
-        pbRojoA.BackColor = Color.Transparent
-        pbRojoB.BackColor = Color.Transparent
-        pbRojoC.BackColor = Color.Transparent
-        pbRojoD.BackColor = Color.Transparent
-        ocultarRespuestasRDY()
-        pbNaranjaA.Hide()
-        pbNaranjaB.Hide()
-        pbNaranjaD.Hide()
-        pbNaranjaC.Hide()
-        pbNaranjaA.BackColor = Color.Transparent
-        pbNaranjaB.BackColor = Color.Transparent
-        pbNaranjaC.BackColor = Color.Transparent
-        pbNaranjaD.BackColor = Color.Transparent
-        lblContPreg.BackColor = Color.Transparent
-        lblVeinte.BackColor = Color.Transparent
-        lblContPreg.ForeColor = Color.White
-        lblVeinte.ForeColor = Color.White
-        pb15.BackColor = Color.Transparent
-        pb20.BackColor = Color.Transparent
-        pb25.BackColor = Color.Transparent
-        pb40.BackColor = Color.Transparent
-        ocultarPorcentajes()
-    End Function
-
     Private Sub lblSig_Click(sender As Object, e As EventArgs) Handles lblSig.Click
         'Me.Close()
         'imagen.Show()
@@ -410,7 +350,7 @@ Public Class AlmiPlay
             lblContPreg.Text = "0" & contLblPreg
         Else lblContPreg.Text = contLblPreg
         End If
-
+        ocultarPorcentajes()
         ocultarRespuestasRDY()
         lblTiempo.Left = 303
         data()
@@ -433,7 +373,6 @@ Public Class AlmiPlay
         lblB.BackColor = Color.FromArgb(35, 31, 32)
         lblC.BackColor = Color.FromArgb(35, 31, 32)
         lblD.BackColor = Color.FromArgb(35, 31, 32)
-        mostrarPorcentajes()
     End Sub
 
     Private Sub pbLlamada_Click(sender As Object, e As EventArgs) Handles pbLlamada.Click
@@ -567,4 +506,80 @@ Public Class AlmiPlay
         pb20.Show()
     End Function
 
+    Private Function cambioColoresAP()
+        pbRespuestas.BackColor = Color.Transparent
+        pbMitad.BackColor = Color.Transparent
+        pbLlamada.BackColor = Color.Transparent
+        pbPublico.BackColor = Color.Transparent
+        pbPregunta.BackColor = Color.Transparent
+        pbLlamadaRed.BackColor = Color.Transparent
+        pbPublicoRed.BackColor = Color.Transparent
+        pbMitadRed.BackColor = Color.Transparent
+        pbLlamadaRed.Hide()
+        pbPublicoRed.Hide()
+        pbMitadRed.Hide()
+        lblPregunta.BackColor = Color.FromArgb(35, 31, 32)
+        lblA.BackColor = Color.FromArgb(35, 31, 32)
+        lblB.BackColor = Color.FromArgb(35, 31, 32)
+        lblC.BackColor = Color.FromArgb(35, 31, 32)
+        lblD.BackColor = Color.FromArgb(35, 31, 32)
+        lblPregunta.ForeColor = Color.White
+        lblA.ForeColor = Color.White
+        lblB.ForeColor = Color.White
+        lblC.ForeColor = Color.White
+        lblD.ForeColor = Color.White
+        lblScore.ForeColor = Color.White
+        lblScoreNom.ForeColor = Color.White
+        lblScore.BackColor = Color.Transparent
+        lblScoreNom.BackColor = Color.Transparent
+        lblTiempo.ForeColor = Color.White
+        lblTiempo.BackColor = Color.Transparent
+        pbSalir.BackColor = Color.Transparent
+        pbVolver.BackColor = Color.Transparent
+        lblSig.BackColor = Color.Transparent
+        lblSig.ForeColor = Color.White
+        lblAcertar.BackColor = Color.Transparent
+        lblAcertar.ForeColor = Color.White
+        lblFallo.BackColor = Color.Transparent
+        lblFallo.ForeColor = Color.White
+        lblSig.Hide()
+        lblAcertar.Hide()
+        lblFallo.Hide()
+        lblPista.Hide()
+        lblPista.BackColor = Color.Transparent
+        lblPista.ForeColor = Color.White
+        lblNomPista.Hide()
+        lblNomPista.BackColor = Color.Transparent
+        lblNomPista.ForeColor = Color.White
+        lblAOculto.Hide()
+        lblBOculto.Hide()
+        lblCOculto.Hide()
+        lblDOculto.Hide()
+        pbVerdeA.BackColor = Color.Transparent
+        pbVerdeB.BackColor = Color.Transparent
+        pbVerdeC.BackColor = Color.Transparent
+        pbVerdeD.BackColor = Color.Transparent
+        pbRojoA.BackColor = Color.Transparent
+        pbRojoB.BackColor = Color.Transparent
+        pbRojoC.BackColor = Color.Transparent
+        pbRojoD.BackColor = Color.Transparent
+        ocultarRespuestasRDY()
+        pbNaranjaA.Hide()
+        pbNaranjaB.Hide()
+        pbNaranjaD.Hide()
+        pbNaranjaC.Hide()
+        pbNaranjaA.BackColor = Color.Transparent
+        pbNaranjaB.BackColor = Color.Transparent
+        pbNaranjaC.BackColor = Color.Transparent
+        pbNaranjaD.BackColor = Color.Transparent
+        lblContPreg.BackColor = Color.Transparent
+        lblVeinte.BackColor = Color.Transparent
+        lblContPreg.ForeColor = Color.White
+        lblVeinte.ForeColor = Color.White
+        pb15.BackColor = Color.Transparent
+        pb20.BackColor = Color.Transparent
+        pb25.BackColor = Color.Transparent
+        pb40.BackColor = Color.Transparent
+        ocultarPorcentajes()
+    End Function
 End Class
