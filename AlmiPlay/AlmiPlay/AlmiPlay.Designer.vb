@@ -278,7 +278,7 @@ Partial Class AlmiPlay
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoAux1
         Me.pbFoto.Image = Global.AlmiPlay.My.Resources.Resources.fondoAux1
-        Me.pbFoto.Location = New System.Drawing.Point(344, 541)
+        Me.pbFoto.Location = New System.Drawing.Point(0, -2)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(984, 743)
         Me.pbFoto.TabIndex = 23

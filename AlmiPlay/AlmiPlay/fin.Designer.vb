@@ -80,7 +80,7 @@ Partial Class fin
         Me.Controls.Add(Me.pbFin)
         Me.Name = "fin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "fin"
+        Me.Text = "Fin del Juego"
         CType(Me.pbFin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

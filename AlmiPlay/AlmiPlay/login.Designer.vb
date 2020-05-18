@@ -30,6 +30,7 @@ Partial Class login
         Me.btnOjo = New System.Windows.Forms.Button()
         Me.timePass = New System.Windows.Forms.Timer(Me.components)
         Me.timePass1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lblIdUsuario = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtUsuLog
@@ -87,12 +88,23 @@ Partial Class login
         '
         Me.timePass1.Interval = 2000
         '
+        'lblIdUsuario
+        '
+        Me.lblIdUsuario.AutoSize = True
+        Me.lblIdUsuario.Location = New System.Drawing.Point(25, 690)
+        Me.lblIdUsuario.Name = "lblIdUsuario"
+        Me.lblIdUsuario.Size = New System.Drawing.Size(62, 13)
+        Me.lblIdUsuario.TabIndex = 6
+        Me.lblIdUsuario.Text = "lblIdUsuario"
+        '
         'login
         '
+        Me.AcceptButton = Me.btnJugar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoLogin1
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.lblIdUsuario)
         Me.Controls.Add(Me.btnOjo)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.btnSalir)
@@ -112,4 +124,5 @@ Partial Class login
     Friend WithEvents btnOjo As Button
     Friend WithEvents timePass As Timer
     Friend WithEvents timePass1 As Timer
+    Friend WithEvents lblIdUsuario As Label
 End Class

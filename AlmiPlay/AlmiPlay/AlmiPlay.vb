@@ -305,7 +305,9 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub pbSalir_Click(sender As Object, e As EventArgs) Handles pbSalir.Click
-
+        Me.Close()
+        login.Close()
+        fin.Close()
     End Sub
 
     Private Sub timerLabel_Tick(sender As Object, e As EventArgs) Handles timerLabel.Tick
@@ -379,6 +381,10 @@ Public Class AlmiPlay
         lblB.BackColor = Color.FromArgb(35, 31, 32)
         lblC.BackColor = Color.FromArgb(35, 31, 32)
         lblD.BackColor = Color.FromArgb(35, 31, 32)
+        lblA.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
+        lblB.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
+        lblC.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
+        lblD.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
     End Sub
 
     Private Sub pbLlamada_Click(sender As Object, e As EventArgs) Handles pbLlamada.Click

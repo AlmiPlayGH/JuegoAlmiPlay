@@ -25,7 +25,7 @@ Public Class login
         
     End Sub
 
-    Private Sub btnJugar_Click(sender As Object, e As EventArgs) Handles btnJugar.Click
+    Private Sub btnJugar_Click(sender As Object, e As EventArgs) Handles btnJugar.Click, btnJugar.Enter, MyBase.Enter
 
         Dim consulta As String
         Dim lista As Byte
@@ -89,4 +89,11 @@ Public Class login
         txtPass.PasswordChar = "*"
         timePass.Stop()
     End Sub
+
+    Private Sub txtUsuLog_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUsuLog.KeyPress
+        If Asc(e.KeyChar) = 32 Then
+            txtPass.Focus()
+        End If
+    End Sub
+
 End Class
