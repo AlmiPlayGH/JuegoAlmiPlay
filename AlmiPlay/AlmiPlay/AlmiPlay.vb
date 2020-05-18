@@ -301,14 +301,11 @@ Public Class AlmiPlay
 
     Private Sub pbVolver_Click(sender As Object, e As EventArgs) Handles pbVolver.Click
         Me.Close()
-        imagen.Close()
         login.Show()
     End Sub
 
     Private Sub pbSalir_Click(sender As Object, e As EventArgs) Handles pbSalir.Click
-        Me.Close()
-        login.Close()
-        imagen.Close()
+
     End Sub
 
     Private Sub timerLabel_Tick(sender As Object, e As EventArgs) Handles timerLabel.Tick
@@ -353,6 +350,11 @@ Public Class AlmiPlay
         If contLblPreg < 10 Then
             lblContPreg.Text = "0" & contLblPreg
         Else lblContPreg.Text = contLblPreg
+            If contLblPreg = 10 Then
+                fin.Show()
+                Me.Hide()
+
+            End If
         End If
         ocultarPorcentajes()
         ocultarRespuestasRDY()
@@ -586,8 +588,6 @@ Public Class AlmiPlay
         pb40.BackColor = Color.Transparent
         ocultarPorcentajes()
     End Function
-
-
 
 
 End Class

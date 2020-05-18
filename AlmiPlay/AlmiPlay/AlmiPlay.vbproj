@@ -102,10 +102,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="baseDatos.vb" />
-    <Compile Include="imagen.Designer.vb">
-      <DependentUpon>imagen.vb</DependentUpon>
+    <Compile Include="fin.Designer.vb">
+      <DependentUpon>fin.vb</DependentUpon>
     </Compile>
-    <Compile Include="imagen.vb">
+    <Compile Include="fin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.vb">
@@ -135,8 +135,8 @@
     <EmbeddedResource Include="AlmiPlay.resx">
       <DependentUpon>AlmiPlay.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="imagen.resx">
-      <DependentUpon>imagen.vb</DependentUpon>
+    <EmbeddedResource Include="fin.resx">
+      <DependentUpon>fin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
@@ -244,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\fondoAux.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\p2adsl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\fondoFin.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

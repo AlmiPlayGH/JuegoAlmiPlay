@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fondoAux" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\fondoAux.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="llamadaRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\llamadaRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="incorrectoDer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\incorrectoDer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +130,8 @@
   <data name="botonVolver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\botonVolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botonVolver3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\botonVolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondoAux1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\fondoAux.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="15x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\15x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +145,9 @@
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p2adsl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\p2adsl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botonVolver1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\botonVolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +156,9 @@
   </data>
   <data name="fondoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\fondoLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondoFin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\fondoFin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="publico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\publico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +172,14 @@
   <data name="40x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\40x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="publicoRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\publicoRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="correctoIzq" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\correctoIzq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="publicoRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\publicoRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondoAux" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\fondoAux.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="llamada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\llamada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,9 +192,6 @@
   </data>
   <data name="mitad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\mitad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="correctoDer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\correctoDer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="p19worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\p19worm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +211,14 @@
   <data name="botonVolver2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\botonVolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="llamadaRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\llamadaRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="correctoDer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\correctoDer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eyeC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\eyeC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonVolver3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\botonVolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mitadRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\mitadRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,7 +238,7 @@
   <data name="botonSalir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\botonSalir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondoAux1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\fondoAux.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondoFin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\fondoFin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

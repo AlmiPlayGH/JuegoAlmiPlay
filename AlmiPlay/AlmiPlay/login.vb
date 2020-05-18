@@ -50,7 +50,6 @@ Public Class login
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
-        imagen.Close()
         AlmiPlay.Close()
         conexionAP.Close()
     End Sub
