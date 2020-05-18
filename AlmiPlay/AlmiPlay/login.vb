@@ -39,6 +39,7 @@ Public Class login
             dataAdapterAP.Fill(dataSetAP, "Usuarios")
             lista = dataSetAP.Tables("Usuarios").Rows().Count()
         Else MsgBox("Rellene los campos correspondientes por favor.")
+            txtUsuLog.Focus()
         End If
 
         If lista <> 0 Then
@@ -48,6 +49,7 @@ Public Class login
             Me.Hide()
             conexionAP.Close()
         Else MsgBox("Intentelo de nuevo")
+            txtUsuLog.Focus()
         End If
     End Sub
 

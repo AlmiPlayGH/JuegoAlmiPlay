@@ -8,8 +8,7 @@ Imports System.Text
 Imports System
 Imports System.IO
 Imports System.Web.Script.Serialization
-
-
+Imports System.Threading
 
 Public Class AlmiPlay
 
@@ -100,6 +99,7 @@ Public Class AlmiPlay
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
+
         If lblAOculto.Text = 1 Then
             lblA.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -108,6 +108,7 @@ Public Class AlmiPlay
             pbVerdeA.Show()
             lblScore.Text = num3Score
             disabledComodines()
+            contCorrectas = contCorrectas + 1
         Else lblA.BackColor = Color.FromArgb(191, 83, 83)
             pbRojoA.Show()
             lblFallo.Show()
@@ -159,6 +160,7 @@ Public Class AlmiPlay
             pbVerdeB.Show()
             lblScore.Text = num3Score
             disabledComodines()
+            contCorrectas = contCorrectas + 1
         Else lblB.BackColor = Color.FromArgb(191, 83, 83)
             pbRojoB.Show()
             lblFallo.Show()
@@ -211,6 +213,7 @@ Public Class AlmiPlay
             pbVerdeC.Show()
             lblScore.Text = num3Score
             disabledComodines()
+            contCorrectas = contCorrectas + 1
         Else lblC.BackColor = Color.FromArgb(191, 83, 83)
             pbRojoC.Show()
             lblFallo.Show()
@@ -255,6 +258,7 @@ Public Class AlmiPlay
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
+
         If lblDOculto.Text = 1 Then
             lblD.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -263,6 +267,7 @@ Public Class AlmiPlay
             pbVerdeD.Show()
             lblScore.Text = num3Score
             disabledComodines()
+            contCorrectas = contCorrectas + 1
         Else lblD.BackColor = Color.FromArgb(191, 83, 83)
             pbRojoD.Show()
             lblFallo.Show()
@@ -593,6 +598,12 @@ Public Class AlmiPlay
         pb25.BackColor = Color.Transparent
         pb40.BackColor = Color.Transparent
         ocultarPorcentajes()
+        contCorrectas = 0
+        fechaActual = Date.Now
+        dia = DateTime.Now.ToString("dd")
+        mes = DateTime.Now.ToString("MM")
+        año = DateTime.Now.ToString("yyyy")
+        fecha = año & "-" & mes & "-" & dia
     End Function
 
 

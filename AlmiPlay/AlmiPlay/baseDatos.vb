@@ -12,6 +12,12 @@ Module baseDatos
     Public regTotal As Integer
     Public dataReaderAP As MySqlDataReader
     Public num1Score, num2Score, num3Score As Integer
+    Public contCorrectas As Integer
+    Public fechaActual As Date
+    Public dia As String
+    Public mes As String
+    Public año As String
+    Public fecha As String
 
 
 End Module
