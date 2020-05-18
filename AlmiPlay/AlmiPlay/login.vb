@@ -29,6 +29,8 @@ Public Class login
 
         Dim consulta As String
         Dim lista As Byte
+        Dim idUsu As String
+        Dim idUsuCon As String
         'SI USU Y PASS NO ESTAN VACIOS, SE LE PASA LA CONSULTA AL DATADAPTER. DE AHI SE LE PASA EL DATASET A USUARIOS..    
         If txtUsuLog.Text <> "" And txtPass.Text <> "" Then
             consulta = "select * from Usuarios where usuario='" & txtUsuLog.Text & "' and pass='" & txtPass.Text & "'"
@@ -40,6 +42,7 @@ Public Class login
         End If
 
         If lista <> 0 Then
+            lblIdUsuario.Text = dataSetAP.Tables("Usuarios").Rows(0).Item("id_usuario")
             MsgBox("¡Hola " & txtUsuLog.Text & "!" & " Pulsa en Aceptar para empezar tu partida.")
             AlmiPlay.Show()
             Me.Hide()
@@ -63,7 +66,7 @@ Public Class login
         btnSalir.BackColor = Color.FromArgb(0, 7, 71)
         btnSalir.ForeColor = Color.White
         btnOjo.BackColor = Color.FromArgb(1, 8, 54)
-
+        lblIdUsuario.Hide()
     End Function
 
     Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged

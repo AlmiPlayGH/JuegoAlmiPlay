@@ -13,6 +13,7 @@ Module baseDatos
     Public dataReaderAP As MySqlDataReader
     Public num1Score, num2Score, num3Score As Integer
 
+
 End Module
 
 'If lblAOculto.Text = 0 Or lblBOculto.Text = 0 Or lblCOculto.Text = 0 Or lblDOculto.Text = 0 Then
