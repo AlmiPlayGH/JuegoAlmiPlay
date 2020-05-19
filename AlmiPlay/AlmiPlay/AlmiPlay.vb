@@ -33,17 +33,36 @@ Public Class AlmiPlay
         'Campos JSON: respuestas, pregunta, imagen, pista
         Try
             'VARIABLES
+            Randomize()
             Dim contId As Integer
             Dim contPregunta As Integer
             Dim responseBody As String
             Dim jsonWeb As String
             Dim url As String
             Dim foto As String
+           
             If selecTema = 0 Then
-                contId = Int((30 * Rnd()) + 1)
-            Else contId = Int((60 * Rnd()) + 31)
-            End If
+                 For i = 0 To 19 Step 1
+                    If contId = randomRep(i)
+                    contId = Int((29 * Rnd()) + 1)
+                       If contId <> randomRep(i) 
+                           contId = Int((29 * Rnd()) + 1)
+                            Exit For
+                        End If
+                        End If
+                        Next 
 
+            Else  For i = 0 To 19 Step 1
+                    If contId = randomRep(i)
+                    contId = Int((29 * Rnd()) + 1)
+                       If contId <> randomRep(i) 
+                           contId = Int((29 * Rnd()) + 31)
+                            Exit For
+                        End If
+                        End If
+                        Next  
+            End If
+            randomRep(contRepe)=contId
             contPregunta = 1
             'URL CON POSICION DE CAMPO ALEATORIA
             url = "http://62.117.137.221:8181/api/preguntas/" & contId
@@ -282,9 +301,9 @@ Public Class AlmiPlay
             timerLabel.Stop()
             disabledComodines()
         End If
-
         If lblBOculto.Text = 1 Then
             lblB.BackColor = Color.FromArgb(83, 187, 97)
+
             pbVerdeB.Show()
             timerLabel.Stop()
             lblSig.Show()
@@ -402,6 +421,7 @@ Public Class AlmiPlay
         lblC.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
         lblD.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
         txtExplicacion.Hide()
+        contRepe=contRepe+1
 
     End Sub
 

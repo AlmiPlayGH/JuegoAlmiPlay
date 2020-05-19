@@ -23,7 +23,8 @@ Module baseDatos
     Public totalScore As String
     Public tiempoTardado As Integer
     Public selecTema As Integer
-
+    Public randomRep (19) As Integer
+    Public contRepe As Integer
 
 End Module
 
