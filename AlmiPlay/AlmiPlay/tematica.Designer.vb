@@ -25,6 +25,8 @@ Partial Class tematica
         Me.btnFol = New System.Windows.Forms.Button()
         Me.btnIngles = New System.Windows.Forms.Button()
         Me.pbTematica = New System.Windows.Forms.PictureBox()
+        Me.btnSalirTEM = New System.Windows.Forms.Button()
+        Me.btnVolverTEM = New System.Windows.Forms.Button()
         CType(Me.pbTematica, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,7 +45,7 @@ Partial Class tematica
         '
         Me.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngles.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngles.Location = New System.Drawing.Point(649, 265)
+        Me.btnIngles.Location = New System.Drawing.Point(644, 265)
         Me.btnIngles.Name = "btnIngles"
         Me.btnIngles.Size = New System.Drawing.Size(107, 35)
         Me.btnIngles.TabIndex = 2
@@ -60,11 +62,35 @@ Partial Class tematica
         Me.pbTematica.TabIndex = 0
         Me.pbTematica.TabStop = False
         '
+        'btnSalirTEM
+        '
+        Me.btnSalirTEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalirTEM.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalirTEM.Location = New System.Drawing.Point(892, 381)
+        Me.btnSalirTEM.Name = "btnSalirTEM"
+        Me.btnSalirTEM.Size = New System.Drawing.Size(65, 26)
+        Me.btnSalirTEM.TabIndex = 3
+        Me.btnSalirTEM.Text = "Salir"
+        Me.btnSalirTEM.UseVisualStyleBackColor = True
+        '
+        'btnVolverTEM
+        '
+        Me.btnVolverTEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVolverTEM.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVolverTEM.Location = New System.Drawing.Point(807, 381)
+        Me.btnVolverTEM.Name = "btnVolverTEM"
+        Me.btnVolverTEM.Size = New System.Drawing.Size(65, 26)
+        Me.btnVolverTEM.TabIndex = 4
+        Me.btnVolverTEM.Text = "Volver"
+        Me.btnVolverTEM.UseVisualStyleBackColor = True
+        '
         'tematica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.btnVolverTEM)
+        Me.Controls.Add(Me.btnSalirTEM)
         Me.Controls.Add(Me.btnIngles)
         Me.Controls.Add(Me.btnFol)
         Me.Controls.Add(Me.pbTematica)
@@ -79,4 +105,6 @@ Partial Class tematica
     Friend WithEvents pbTematica As PictureBox
     Friend WithEvents btnFol As Button
     Friend WithEvents btnIngles As Button
+    Friend WithEvents btnSalirTEM As Button
+    Friend WithEvents btnVolverTEM As Button
 End Class

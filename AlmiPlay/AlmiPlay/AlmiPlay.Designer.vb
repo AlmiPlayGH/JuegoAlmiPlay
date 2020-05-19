@@ -74,6 +74,7 @@ Partial Class AlmiPlay
         Me.pb40 = New System.Windows.Forms.PictureBox()
         Me.pb15 = New System.Windows.Forms.PictureBox()
         Me.op = New System.Windows.Forms.OpenFileDialog()
+        Me.txtExplicacion = New System.Windows.Forms.TextBox()
         CType(Me.pbRespuestas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPregunta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLlamada, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -278,9 +279,9 @@ Partial Class AlmiPlay
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoAux1
         Me.pbFoto.Image = Global.AlmiPlay.My.Resources.Resources.fondoAux1
-        Me.pbFoto.Location = New System.Drawing.Point(665, 632)
+        Me.pbFoto.Location = New System.Drawing.Point(-8, -6)
         Me.pbFoto.Name = "pbFoto"
-        Me.pbFoto.Size = New System.Drawing.Size(984, 740)
+        Me.pbFoto.Size = New System.Drawing.Size(993, 745)
         Me.pbFoto.TabIndex = 23
         Me.pbFoto.TabStop = False
         '
@@ -543,6 +544,17 @@ Partial Class AlmiPlay
         '
         Me.op.FileName = "op"
         '
+        'txtExplicacion
+        '
+        Me.txtExplicacion.BackColor = System.Drawing.SystemColors.Desktop
+        Me.txtExplicacion.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtExplicacion.Location = New System.Drawing.Point(681, 236)
+        Me.txtExplicacion.Multiline = True
+        Me.txtExplicacion.Name = "txtExplicacion"
+        Me.txtExplicacion.ReadOnly = True
+        Me.txtExplicacion.Size = New System.Drawing.Size(194, 121)
+        Me.txtExplicacion.TabIndex = 51
+        '
         'AlmiPlay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -550,6 +562,7 @@ Partial Class AlmiPlay
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(984, 741)
         Me.Controls.Add(Me.pbFoto)
+        Me.Controls.Add(Me.txtExplicacion)
         Me.Controls.Add(Me.pb15)
         Me.Controls.Add(Me.pb40)
         Me.Controls.Add(Me.pb25)
@@ -681,4 +694,5 @@ Partial Class AlmiPlay
     Friend WithEvents pb40 As PictureBox
     Friend WithEvents pb15 As PictureBox
     Friend WithEvents op As OpenFileDialog
+    Friend WithEvents txtExplicacion As TextBox
 End Class

@@ -39,12 +39,16 @@ Public Class AlmiPlay
             Dim jsonWeb As String
             Dim url As String
             Dim foto As String
-            contId = Int((26 * Rnd()) + 1)
+            If selecTema = 0 Then
+                contId = Int((30 * Rnd()) + 1)
+            Else contId = Int((60 * Rnd()) + 31)
+            End If
+
             contPregunta = 1
             'URL CON POSICION DE CAMPO ALEATORIA
             url = "http://62.117.137.221:8181/api/preguntas/" & contId
-            ' foto = "http://62.117.137.221:8181/api/preguntas/imagen/" & contId & ".jpg"
-            foto = "http://62.117.137.221:8181/api/preguntas/imagen/45.jpg"
+            foto = "http://62.117.137.221:8181/api/preguntas/imagen/" & contId & ".jpg"
+            'foto = "http://62.117.137.221:8181/api/preguntas/imagen/45.jpg"
 
             'SE OBITENE EL JSON EN LA VARIABLE RESPONSEBODY
             Dim response = Await cliente.GetAsync(url)
@@ -58,6 +62,7 @@ Public Class AlmiPlay
             'MsgBox(jsonWeb)
             lblPregunta.Text = json.SelectToken("data.pregunta")
             lblPista.Text = json.SelectToken("data.pista")
+            txtExplicacion.Text = json.SelectToken("data.texto")
             lblA.Text = json.SelectToken("data.respuestas[0].[0]")
             lblB.Text = json.SelectToken("data.respuestas[1].[0]")
             lblC.Text = json.SelectToken("data.respuestas[2].[0]")
@@ -102,7 +107,7 @@ Public Class AlmiPlay
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
-
+        mostrarExpli()
         If lblAOculto.Text = 1 Then
             lblA.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -154,6 +159,7 @@ Public Class AlmiPlay
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
+        mostrarExpli()
         If lblBOculto.Text = 1 Then
             lblB.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -206,6 +212,7 @@ Public Class AlmiPlay
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
+        mostrarExpli()
         If lblCOculto.Text = 1 Then
             lblC.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -258,7 +265,7 @@ Public Class AlmiPlay
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
-
+        mostrarExpli()
         If lblDOculto.Text = 1 Then
             lblD.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
@@ -359,7 +366,7 @@ Public Class AlmiPlay
         If contLblPreg < 10 Then
             lblContPreg.Text = "0" & contLblPreg
         Else lblContPreg.Text = contLblPreg
-            If contLblPreg = 10 Then
+            If contLblPreg > 20 Then
                 fin.Show()
                 Me.Hide()
 
@@ -394,6 +401,8 @@ Public Class AlmiPlay
         lblB.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
         lblC.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
         lblD.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
+        txtExplicacion.Hide()
+
     End Sub
 
     Private Sub pbLlamada_Click(sender As Object, e As EventArgs) Handles pbLlamada.Click
@@ -527,6 +536,12 @@ Public Class AlmiPlay
         pb20.Show()
     End Function
 
+    Public Function mostrarExpli()
+        If selecTema = 1 Then
+            txtExplicacion.Show()
+        End If
+
+    End Function
     Private Function cambioColoresAP()
         pbRespuestas.BackColor = Color.Transparent
         pbMitad.BackColor = Color.Transparent
@@ -608,7 +623,11 @@ Public Class AlmiPlay
         mes = DateTime.Now.ToString("MM")
         año = DateTime.Now.ToString("yyyy")
         fecha = año & "-" & mes & "-" & dia
+        txtExplicacion.BackColor = Color.FromArgb(35, 31, 32)
+        txtExplicacion.ForeColor = Color.White
+        txtExplicacion.Hide()
     End Function
+
 
 
 End Class
