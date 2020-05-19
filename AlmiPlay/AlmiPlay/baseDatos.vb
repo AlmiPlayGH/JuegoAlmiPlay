@@ -18,6 +18,11 @@ Module baseDatos
     Public mes As String
     Public año As String
     Public fecha As String
+    Public idUsu As String
+    Public usuLog As String
+    Public totalScore As String
+    Public tiempoTardado As Integer
+    Public selecTema As Integer
 
 
 End Module

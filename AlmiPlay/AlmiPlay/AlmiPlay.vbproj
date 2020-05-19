@@ -130,6 +130,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="tematica.Designer.vb">
+      <DependentUpon>tematica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tematica.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AlmiPlay.resx">
@@ -146,6 +152,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tematica.resx">
+      <DependentUpon>tematica.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +259,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\fondoFin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\fondoFin2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\tematica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\tematica2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

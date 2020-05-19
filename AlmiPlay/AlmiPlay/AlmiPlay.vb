@@ -91,10 +91,13 @@ Public Class AlmiPlay
 
     End Sub
 
-    Private Sub lblA_Click(sender As Object, e As EventArgs) Handles lblA.Click
+    Public Function sumaScore()
         num1Score = 10 + lblTiempo.Text
         num2Score = lblScore.Text
         num3Score = num1Score + num2Score
+    End Function
+    Private Sub lblA_Click(sender As Object, e As EventArgs) Handles lblA.Click
+
         lblA.Enabled = False
         lblB.Enabled = False
         lblC.Enabled = False
@@ -106,6 +109,7 @@ Public Class AlmiPlay
             lblSig.Show()
             timerLabel.Stop()
             pbVerdeA.Show()
+            sumaScore()
             lblScore.Text = num3Score
             disabledComodines()
             contCorrectas = contCorrectas + 1
@@ -145,9 +149,7 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblB_Click(sender As Object, e As EventArgs) Handles lblB.Click
-        num1Score = 10 + lblTiempo.Text
-        num2Score = lblScore.Text
-        num3Score = num1Score + num2Score
+
         lblA.Enabled = False
         lblB.Enabled = False
         lblC.Enabled = False
@@ -158,6 +160,7 @@ Public Class AlmiPlay
             lblSig.Show()
             timerLabel.Stop()
             pbVerdeB.Show()
+            sumaScore()
             lblScore.Text = num3Score
             disabledComodines()
             contCorrectas = contCorrectas + 1
@@ -198,9 +201,7 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblC_Click(sender As Object, e As EventArgs) Handles lblC.Click
-        num1Score = 10 + lblTiempo.Text
-        num2Score = lblScore.Text
-        num3Score = num1Score + num2Score
+
         lblA.Enabled = False
         lblB.Enabled = False
         lblC.Enabled = False
@@ -211,6 +212,7 @@ Public Class AlmiPlay
             lblSig.Show()
             timerLabel.Stop()
             pbVerdeC.Show()
+            sumaScore()
             lblScore.Text = num3Score
             disabledComodines()
             contCorrectas = contCorrectas + 1
@@ -251,9 +253,7 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblD_Click(sender As Object, e As EventArgs) Handles lblD.Click
-        num1Score = 10 + lblTiempo.Text
-        num2Score = lblScore.Text
-        num3Score = num1Score + num2Score
+
         lblA.Enabled = False
         lblB.Enabled = False
         lblC.Enabled = False
@@ -265,6 +265,7 @@ Public Class AlmiPlay
             lblSig.Show()
             timerLabel.Stop()
             pbVerdeD.Show()
+            sumaScore()
             lblScore.Text = num3Score
             disabledComodines()
             contCorrectas = contCorrectas + 1
@@ -321,6 +322,7 @@ Public Class AlmiPlay
         num1 = 1
         num2 = lblTiempo.Text
         lblTiempo.Text = num2 - 1
+        tiempoTardado = tiempoTardado + 1
         If num2 < 50 And num2 > 20 Then
             pbFoto.Show()
         End If
@@ -363,6 +365,8 @@ Public Class AlmiPlay
 
             End If
         End If
+        tiempoTardado = tiempoTardado - 10
+        totalScore = lblScore.Text
         ocultarPorcentajes()
         ocultarRespuestasRDY()
         lblTiempo.Left = 303

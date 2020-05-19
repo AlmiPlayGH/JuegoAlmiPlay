@@ -24,7 +24,29 @@
         lblVolverLogin.ForeColor = Color.FromArgb(213, 177, 67)
         lblResultado.BackColor = Color.FromArgb(0, 10, 49)
         lblResultado.ForeColor = Color.White
+        lblAfiliado.BackColor = Color.FromArgb(0, 13, 61)
+        lblResultado.BackColor = Color.FromArgb(0, 13, 61)
+        lblCorrectas.BackColor = Color.FromArgb(0, 13, 61)
+        lblUsuario.BackColor = Color.FromArgb(0, 10, 49)
+        lblTiempo.BackColor = Color.FromArgb(0, 10, 49)
+        lblFecha.BackColor = Color.FromArgb(0, 10, 49)
+        lblAfiliado.ForeColor = Color.White
+        lblFecha.ForeColor = Color.White
+        lblCorrectas.ForeColor = Color.White
+        lblUsuario.ForeColor = Color.White
+        lblTiempo.ForeColor = Color.White
+
+        lblAfiliado.Text = idUsu
+        lblUsuario.Text = usuLog
         lblResultado.Text = num3Score
-        'num3score, contCorrectas, fecha, lblIdUsuario
+        lblTiempo.Text = tiempoTardado
+        lblCorrectas.Text = contCorrectas
+        lblFecha.Text = fecha
+
+
+
+        'num3score, contCorrectas, fecha, idUsu
     End Function
+
+
 End Class
