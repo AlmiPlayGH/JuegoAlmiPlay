@@ -31,7 +31,7 @@
         Try
             If dataAdapterAP.Update(dataSetAP, "Puntuaciones") = 0 Then
                 MsgBox("Error al actualizar con la BD. Intentalo más tarde")
-            Else MsgBox("bien")
+                'Else MsgBox("bien")
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -56,7 +56,6 @@
         lblCorrectas.ForeColor = Color.White
         lblUsuario.ForeColor = Color.White
         lblTiempo.ForeColor = Color.White
-
         lblAfiliado.Text = idUsu
         lblUsuario.Text = usuLog
         lblResultado.Text = num3Score

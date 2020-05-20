@@ -52,14 +52,15 @@ Public Class AlmiPlay
                         End If
                     Next
                     If contAux = 1 Then
+                        'MsgBox("Todo bien")
                         Exit Do
                     End If
                     If contAux > 1 Then
                         contId = Int((29 * Rnd()) + 1)
                         contAux = 1
+                        'MsgBox("Repetida")
                     End If
                 Loop While contAux > 0
-
 
 
             Else contId = Int((29 * Rnd()) + 1)
@@ -72,12 +73,6 @@ Public Class AlmiPlay
                 Next
             End If
             randomRep(contRepe) = contId
-            MsgBox(randomRep(contRepe))
-            If contRepe = 18 Then
-                For i = 0 To 19 Step 1
-                    MsgBox(randomRep(i))
-                Next
-            End If
             contPregunta = 1
             'URL CON POSICION DE CAMPO ALEATORIA
             url = "http://62.117.137.221:8181/api/preguntas/" & contId
@@ -94,7 +89,6 @@ Public Class AlmiPlay
             '28 MAYUS y 40 MINUS
             'AÑADIMOS LOS LAS PREGUNTAS Y RESPUESTAS A CADA CAMPO CORRESPONDIENTE
             'MsgBox(jsonWeb)
-            MsgBox(jsonWeb)
             lblPregunta.Text = json.SelectToken("data.pregunta")
             lblPista.Text = json.SelectToken("data.pista")
             txtExplicacion.Text = json.SelectToken("data.texto")
