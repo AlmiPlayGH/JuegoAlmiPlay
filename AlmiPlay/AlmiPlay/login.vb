@@ -6,23 +6,9 @@ Public Class login
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cambioColoresLogin()
-        regAct = 0
-        'INSTANCIAMOS DEL DATASET
-        dataSetAP = New DataSet() 
-        'CREAMOS LA CONEXION
-        conexionAP = New MySqlConnection("server=62.117.137.221;database=almi;user id=almi;password=Almi123;port=3306;characterset=UTF8")
-        'CREAMOS EL DATA ADAPTER
-        dataAdapterAP = New MySqlDataAdapter("select * from Usuarios", conexionAP)
-        'GENERAMOS LOS COMANDOS DE ACTUALIZACIÓN DEL DATA ADAPTER (INSERT, UPDATE, DELETE)
-        cmBuild = New MySqlCommandBuilder(dataAdapterAP)
-        'EJECUTAR EL SELECTCOMMAND DEL DATAADAPTER
-        regTotal = dataAdapterAP.Fill(dataSetAP, "Usuarios") 'EJECUTA EL SELECT
-        'CARGAR LOS DATOS EN EL FORMULARIO
-        If dataSetAP.Tables("Usuarios").Rows().Count() > 0 Then
-            MsgBox("Conexion exitosa")
-        End If
+        llamadaBBDDLogin()
 
-        
+
     End Sub
 
     Private Sub btnJugar_Click(sender As Object, e As EventArgs) Handles btnJugar.Click, btnJugar.Enter, MyBase.Enter
@@ -51,6 +37,7 @@ Public Class login
         Else MsgBox("Intentelo de nuevo")
             txtUsuLog.Focus()
         End If
+        conexionAP.Close()
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -102,4 +89,7 @@ Public Class login
         End If
     End Sub
 
+    Private Sub login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        conexionAP.Close()
+    End Sub
 End Class

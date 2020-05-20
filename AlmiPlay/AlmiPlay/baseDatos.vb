@@ -11,6 +11,7 @@ Module baseDatos
     Public regAct As Integer
     Public regTotal As Integer
     Public dataReaderAP As MySqlDataReader
+    Public dataRowAP As DataRow
     Public num1Score, num2Score, num3Score As Integer
     Public contCorrectas As Integer
     Public fechaActual As Date
@@ -18,7 +19,7 @@ Module baseDatos
     Public mes As String
     Public año As String
     Public fecha As String
-    Public idUsu As String
+    Public idUsu As Integer
     Public usuLog As String
     Public totalScore As String
     Public tiempoTardado As Integer
@@ -26,37 +27,49 @@ Module baseDatos
     Public randomRep (19) As Integer
     Public contRepe As Integer
 
+    Public Function llamadaBBDDLogin()
+        regAct = 0
+        'INSTANCIAMOS DEL DATASET
+        dataSetAP = New DataSet()
+        'CREAMOS LA CONEXION
+        conexionAP = New MySqlConnection("server=62.117.137.221;database=almi;user id=almi;password=Almi123;port=3306;characterset=UTF8")
+        'CREAMOS EL DATA ADAPTER
+        dataAdapterAP = New MySqlDataAdapter("select * from Usuarios", conexionAP)
+        'GENERAMOS LOS COMANDOS DE ACTUALIZACIÓN DEL DATA ADAPTER (INSERT, UPDATE, DELETE)
+        cmBuild = New MySqlCommandBuilder(dataAdapterAP)
+        'EJECUTAR EL SELECTCOMMAND DEL DATAADAPTER
+        regTotal = dataAdapterAP.Fill(dataSetAP, "Usuarios") 'EJECUTA EL SELECT
+        'CARGAR LOS DATOS EN EL FORMULARIO
+        If dataSetAP.Tables("Usuarios").Rows().Count() > 0 Then
+            MsgBox("Conexion exitosa")
+        End If
+    End Function
+
+    Public Function llamadaBBDDScore()
+        regAct = 0
+        'INSTANCIAMOS DEL DATASET
+        dataSetAP = New DataSet()
+        'CREAMOS LA CONEXION
+        conexionAP = New MySqlConnection("server=62.117.137.221;database=almi;user id=almi;password=Almi123;port=3306;characterset=UTF8")
+        'CREAMOS EL DATA ADAPTER
+        dataAdapterAP = New MySqlDataAdapter("select * from Puntuaciones", conexionAP)
+        'GENERAMOS LOS COMANDOS DE ACTUALIZACIÓN DEL DATA ADAPTER (INSERT, UPDATE, DELETE)
+        cmBuild = New MySqlCommandBuilder(dataAdapterAP)
+        'EJECUTAR EL SELECTCOMMAND DEL DATAADAPTER
+        regTotal = dataAdapterAP.Fill(dataSetAP, "Puntuaciones") 'EJECUTA EL SELECT
+        'CARGAR LOS DATOS EN EL FORMULARIO
+        If dataSetAP.Tables("Puntuaciones").Rows().Count() > 0 Then
+            MsgBox("Conexion exitosa")
+        End If
+    End Function
+
+    Public Function calcularFecha()
+        dia = DateTime.Now.ToString("dd")
+        mes = DateTime.Now.ToString("MM")
+        año = DateTime.Now.ToString("yyyy")
+        fecha = año & "-" & mes & "-" & dia
+    End Function
+
 End Module
 
-'If lblAOculto.Text = 0 Or lblBOculto.Text = 0 Or lblCOculto.Text = 0 Or lblDOculto.Text = 0 Then
-'    Dim contQuiza As Integer
-'    Dim auxQuiza As Integer
-'    auxQuiza = 0
-'    Do
-'        contQuiza = Int((4 * Rnd()) + 1)
-'        For contPreg As Integer = 1 To 4 Step 1
-'            If contPreg = contQuiza And contQuiza = 1 And contQues <> 1 Then
-'                pbNaranjaA.Show()
-'                auxQuiza = 1
-'                Exit For
-'            ElseIf contPreg = contQuiza And contQuiza = 2 And contQues <> 2 Then
-'                pbNaranjaB.Show()
-'                auxQuiza = 1
-'                Exit For
-'            ElseIf contPreg = contQuiza And contQuiza = 3 And contQues <> 3 Then
-'                pbNaranjaC.Show()
-'                auxQuiza = 1
-'                Exit For
-'            ElseIf contPreg = contQuiza And contQuiza = 4 And contQues <> 4 Then
-'                pbNaranjaD.Show()
-'                auxQuiza = 1
-'                Exit For
-'            End If
-'        Next
-'    Loop Until auxQuiza = 0
-'End If
 
-'op.InitialDirectory = foto
-'If op.ShowDialog = Windows.Forms.DialogResult.OK Then
-'pbFoto.Image = Image.FromFile(op.FileName)
-'End If

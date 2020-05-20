@@ -1,21 +1,42 @@
 ﻿Public Class fin
     Private Sub fin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        llamadaBBDDScore()
+        insertarScore()
         cambioInicio()
-
     End Sub
-
     Private Sub lblVolverLogin_Click(sender As Object, e As EventArgs) Handles lblVolverLogin.Click
         Me.Hide()
         login.Show()
         AlmiPlay.Close()
     End Sub
 
-
     Private Sub lblSalirFin_Click(sender As Object, e As EventArgs) Handles lblSalirFin.Click
         Me.Close()
         login.Close()
         AlmiPlay.Close()
     End Sub
+
+    Private Function insertarScore()
+        dia = DateTime.Now.ToString("dd")
+        mes = DateTime.Now.ToString("MM")
+        año = DateTime.Now.ToString("yyyy")
+        fecha = año & "-" & mes & "-" & dia
+        dataRowAP = dataSetAP.Tables("Puntuaciones").NewRow
+        dataRowAP.Item("id_usuario") = idUsu
+        dataRowAP.Item("puntuacion") = num3Score
+        dataRowAP.Item("tiempo") = tiempoTardado
+        dataRowAP.Item("correctas") = contCorrectas
+        dataRowAP.Item("fecha") = fecha
+        dataSetAP.Tables("Puntuaciones").Rows.Add(dataRowAP)
+        Try
+            If dataAdapterAP.Update(dataSetAP, "Puntuaciones") = 0 Then
+                MsgBox("Error al actualizar con la BD. Intentalo más tarde")
+            Else MsgBox("bien")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Function
 
     Private Function cambioInicio()
         lblSalirFin.BackColor = Color.FromArgb(0, 9, 43)
@@ -42,11 +63,10 @@
         lblTiempo.Text = tiempoTardado
         lblCorrectas.Text = contCorrectas
         lblFecha.Text = fecha
-
-
-
         'num3score, contCorrectas, fecha, idUsu
     End Function
 
-
+    Private Sub fin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        conexionAP.Close()
+    End Sub
 End Class

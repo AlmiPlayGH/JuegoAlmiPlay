@@ -385,7 +385,7 @@ Public Class AlmiPlay
         If contLblPreg < 10 Then
             lblContPreg.Text = "0" & contLblPreg
         Else lblContPreg.Text = contLblPreg
-            If contLblPreg > 20 Then
+            If contLblPreg > 9 Then
                 fin.Show()
                 Me.Hide()
 
@@ -639,13 +639,10 @@ Public Class AlmiPlay
         ocultarPorcentajes()
         contCorrectas = 0
         fechaActual = Date.Now
-        dia = DateTime.Now.ToString("dd")
-        mes = DateTime.Now.ToString("MM")
-        año = DateTime.Now.ToString("yyyy")
-        fecha = año & "-" & mes & "-" & dia
         txtExplicacion.BackColor = Color.FromArgb(35, 31, 32)
         txtExplicacion.ForeColor = Color.White
         txtExplicacion.Hide()
+        calcularFecha()
     End Function
 
 
