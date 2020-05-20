@@ -40,29 +40,44 @@ Public Class AlmiPlay
             Dim jsonWeb As String
             Dim url As String
             Dim foto As String
-           
-            If selecTema = 0 Then
-                 For i = 0 To 19 Step 1
-                    If contId = randomRep(i)
-                    contId = Int((29 * Rnd()) + 1)
-                       If contId <> randomRep(i) 
-                           contId = Int((29 * Rnd()) + 1)
-                            Exit For
-                        End If
-                        End If
-                        Next 
+            Dim contAux As Integer
 
-            Else  For i = 0 To 19 Step 1
-                    If contId = randomRep(i)
-                    contId = Int((29 * Rnd()) + 1)
-                       If contId <> randomRep(i) 
-                           contId = Int((29 * Rnd()) + 31)
-                            Exit For
+            If selecTema = 0 Then
+                contId = Int((29 * Rnd()) + 1)
+                contAux = 1
+                Do
+                    For i = 0 To 19 Step 1
+                        If contId = randomRep(i) Then
+                            contAux = contAux + 1
                         End If
-                        End If
-                        Next  
+                    Next
+                    If contAux = 1 Then
+                        Exit Do
+                    End If
+                    If contAux > 1 Then
+                        contId = Int((29 * Rnd()) + 1)
+                        contAux = 1
+                    End If
+                Loop While contAux > 0
+
+
+
+            Else contId = Int((29 * Rnd()) + 1)
+                For i = 0 To 19 Step 1
+                    If contId = randomRep(i) Then
+                        contId = Int((29 * Rnd()) + 31)
+                        MsgBox(randomRep(i))
+                        Exit For
+                    End If
+                Next
             End If
-            randomRep(contRepe)=contId
+            randomRep(contRepe) = contId
+            MsgBox(randomRep(contRepe))
+            If contRepe = 18 Then
+                For i = 0 To 19 Step 1
+                    MsgBox(randomRep(i))
+                Next
+            End If
             contPregunta = 1
             'URL CON POSICION DE CAMPO ALEATORIA
             url = "http://62.117.137.221:8181/api/preguntas/" & contId
@@ -79,6 +94,7 @@ Public Class AlmiPlay
             '28 MAYUS y 40 MINUS
             'AÑADIMOS LOS LAS PREGUNTAS Y RESPUESTAS A CADA CAMPO CORRESPONDIENTE
             'MsgBox(jsonWeb)
+            MsgBox(jsonWeb)
             lblPregunta.Text = json.SelectToken("data.pregunta")
             lblPista.Text = json.SelectToken("data.pista")
             txtExplicacion.Text = json.SelectToken("data.texto")
@@ -385,7 +401,7 @@ Public Class AlmiPlay
         If contLblPreg < 10 Then
             lblContPreg.Text = "0" & contLblPreg
         Else lblContPreg.Text = contLblPreg
-            If contLblPreg > 9 Then
+            If contLblPreg > 20 Then
                 fin.Show()
                 Me.Hide()
 
