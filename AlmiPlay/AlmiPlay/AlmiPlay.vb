@@ -63,14 +63,25 @@ Public Class AlmiPlay
                 Loop While contAux > 0
 
 
-            Else contId = Int((29 * Rnd()) + 1)
-                For i = 0 To 19 Step 1
-                    If contId = randomRep(i) Then
-                        contId = Int((29 * Rnd()) + 31)
-                        MsgBox(randomRep(i))
-                        Exit For
+            Else contId = Int((29 * Rnd()) + 31)
+                contAux = 1
+                Do
+                    For i = 0 To 19 Step 1
+                        If contId = randomRep(i) Then
+                            contAux = contAux + 1
+                        End If
+                    Next
+                    If contAux = 1 Then
+                        'MsgBox("Todo bien")
+                        Exit Do
                     End If
-                Next
+                    If contAux > 1 Then
+                        contId = Int((29 * Rnd()) + 31)
+                        contAux = 1
+                        'MsgBox("Repetida")
+                    End If
+                Loop While contAux > 0
+
             End If
             randomRep(contRepe) = contId
             contPregunta = 1
@@ -375,14 +386,27 @@ Public Class AlmiPlay
             pbLlamada.Enabled = False
             pbPublico.Enabled = False
             pbMitad.Enabled = False
+            disabledPreguntas()
             'cont = cont + 1
             'imagen.lblContPreg.Text = (cont & "/10")
             lblSig.Show()
-            lblFallo.Show()
-
+            lblSeAcabo.Show()
+            If lblAOculto.Text = 1 Then
+                pbNaranjaA.Show()
+                lblA.BackColor = Color.FromArgb(248, 155, 28)
+            ElseIf lblBOculto.Text = 1 Then
+                pbNaranjaB.Show()
+                lblB.BackColor = Color.FromArgb(248, 155, 28)
+            ElseIf lblCOculto.Text = 1 Then
+                pbNaranjaC.Show()
+                lblC.BackColor = Color.FromArgb(248, 155, 28)
+            ElseIf lblDOculto.Text = 1 Then
+                pbNaranjaD.Show()
+                lblD.BackColor = Color.FromArgb(248, 155, 28)
+            End If
         End If
 
-        If num2 = 20 Then
+                        If num2 = 20 Then
             timerFotoStop.Start()
         End If
 
@@ -432,7 +456,7 @@ Public Class AlmiPlay
         lblD.Font = New System.Drawing.Font("Arial Rounded MT", 10, FontStyle.Bold)
         txtExplicacion.Hide()
         contRepe=contRepe+1
-
+        lblSeAcabo.Hide()
     End Sub
 
     Private Sub pbLlamada_Click(sender As Object, e As EventArgs) Handles pbLlamada.Click
@@ -653,6 +677,9 @@ Public Class AlmiPlay
         txtExplicacion.ForeColor = Color.White
         txtExplicacion.Hide()
         calcularFecha()
+        lblSeAcabo.Hide()
+        lblSeAcabo.BackColor = Color.Transparent
+        lblSeAcabo.ForeColor = Color.White
     End Function
 
 

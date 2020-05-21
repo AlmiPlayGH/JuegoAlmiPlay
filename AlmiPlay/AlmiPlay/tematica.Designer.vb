@@ -45,7 +45,7 @@ Partial Class tematica
         '
         Me.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngles.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngles.Location = New System.Drawing.Point(644, 265)
+        Me.btnIngles.Location = New System.Drawing.Point(640, 265)
         Me.btnIngles.Name = "btnIngles"
         Me.btnIngles.Size = New System.Drawing.Size(107, 35)
         Me.btnIngles.TabIndex = 2

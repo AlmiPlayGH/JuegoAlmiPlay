@@ -75,6 +75,7 @@ Partial Class AlmiPlay
         Me.pb15 = New System.Windows.Forms.PictureBox()
         Me.op = New System.Windows.Forms.OpenFileDialog()
         Me.txtExplicacion = New System.Windows.Forms.TextBox()
+        Me.lblSeAcabo = New System.Windows.Forms.Label()
         CType(Me.pbRespuestas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPregunta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLlamada, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -279,7 +280,7 @@ Partial Class AlmiPlay
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoAux1
         Me.pbFoto.Image = Global.AlmiPlay.My.Resources.Resources.fondoAux1
-        Me.pbFoto.Location = New System.Drawing.Point(-8, -6)
+        Me.pbFoto.Location = New System.Drawing.Point(-6, -4)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(993, 745)
         Me.pbFoto.TabIndex = 23
@@ -555,6 +556,16 @@ Partial Class AlmiPlay
         Me.txtExplicacion.Size = New System.Drawing.Size(194, 121)
         Me.txtExplicacion.TabIndex = 51
         '
+        'lblSeAcabo
+        '
+        Me.lblSeAcabo.AutoSize = True
+        Me.lblSeAcabo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSeAcabo.Location = New System.Drawing.Point(80, 108)
+        Me.lblSeAcabo.Name = "lblSeAcabo"
+        Me.lblSeAcabo.Size = New System.Drawing.Size(158, 15)
+        Me.lblSeAcabo.TabIndex = 52
+        Me.lblSeAcabo.Text = "Se te acabó el tiempo..."
+        '
         'AlmiPlay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -562,6 +573,7 @@ Partial Class AlmiPlay
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(984, 741)
         Me.Controls.Add(Me.pbFoto)
+        Me.Controls.Add(Me.lblSeAcabo)
         Me.Controls.Add(Me.txtExplicacion)
         Me.Controls.Add(Me.pb15)
         Me.Controls.Add(Me.pb40)
@@ -695,4 +707,5 @@ Partial Class AlmiPlay
     Friend WithEvents pb15 As PictureBox
     Friend WithEvents op As OpenFileDialog
     Friend WithEvents txtExplicacion As TextBox
+    Friend WithEvents lblSeAcabo As Label
 End Class
