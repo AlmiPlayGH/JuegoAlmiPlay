@@ -8,12 +8,11 @@
         Me.Hide()
         login.Show()
         AlmiPlay.Close()
+
     End Sub
 
     Private Sub lblSalirFin_Click(sender As Object, e As EventArgs) Handles lblSalirFin.Click
-        Me.Close()
-        login.Close()
-        AlmiPlay.Close()
+        End
     End Sub
 
     Private Function insertarScore()

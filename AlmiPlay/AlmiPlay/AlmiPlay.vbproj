@@ -136,6 +136,12 @@
     <Compile Include="tematica.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="topDiez.Designer.vb">
+      <DependentUpon>topDiez.vb</DependentUpon>
+    </Compile>
+    <Compile Include="topDiez.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AlmiPlay.resx">
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tematica.resx">
       <DependentUpon>tematica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="topDiez.resx">
+      <DependentUpon>topDiez.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\tematica2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\top10.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

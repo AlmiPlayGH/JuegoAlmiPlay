@@ -41,9 +41,7 @@ Public Class login
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Me.Close()
-        AlmiPlay.Close()
-        conexionAP.Close()
+        End
     End Sub
 
     Private Function cambioColoresLogin()
@@ -52,8 +50,10 @@ Public Class login
         txtUsuLog.ForeColor = Color.White
         txtPass.ForeColor = Color.White
         btnJugar.BackColor = Color.FromArgb(213, 177, 67)
+        btnScore.BackColor = Color.FromArgb(0, 7, 71)
         btnSalir.BackColor = Color.FromArgb(0, 7, 71)
         btnSalir.ForeColor = Color.White
+        btnScore.ForeColor = Color.White
         btnOjo.BackColor = Color.FromArgb(1, 8, 54)
         lblIdUsuario.Hide()
 
@@ -91,5 +91,10 @@ Public Class login
 
     Private Sub login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         conexionAP.Close()
+    End Sub
+
+    Private Sub btnScore_Click(sender As Object, e As EventArgs) Handles btnScore.Click
+        Me.Hide()
+        topDiez.Show()
     End Sub
 End Class

@@ -358,9 +358,7 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub pbSalir_Click(sender As Object, e As EventArgs) Handles pbSalir.Click
-        Me.Close()
-        login.Close()
-        fin.Close()
+        End
     End Sub
 
     Private Sub timerLabel_Tick(sender As Object, e As EventArgs) Handles timerLabel.Tick

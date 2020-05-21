@@ -63,6 +63,8 @@ Module baseDatos
         End If
     End Function
 
+
+
     Public Function calcularFecha()
         dia = DateTime.Now.ToString("dd")
         mes = DateTime.Now.ToString("MM")

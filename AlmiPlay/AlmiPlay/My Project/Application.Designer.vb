@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.AlmiPlay.login
+            Me.MainForm = Global.AlmiPlay.topDiez
         End Sub
     End Class
 End Namespace

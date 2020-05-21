@@ -31,6 +31,7 @@ Partial Class login
         Me.timePass = New System.Windows.Forms.Timer(Me.components)
         Me.timePass1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblIdUsuario = New System.Windows.Forms.Label()
+        Me.btnScore = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtUsuLog
@@ -54,7 +55,8 @@ Partial Class login
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(840, 669)
+        Me.btnSalir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.Location = New System.Drawing.Point(863, 669)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(80, 34)
         Me.btnSalir.TabIndex = 3
@@ -97,6 +99,16 @@ Partial Class login
         Me.lblIdUsuario.TabIndex = 6
         Me.lblIdUsuario.Text = "lblIdUsuario"
         '
+        'btnScore
+        '
+        Me.btnScore.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnScore.Location = New System.Drawing.Point(763, 669)
+        Me.btnScore.Name = "btnScore"
+        Me.btnScore.Size = New System.Drawing.Size(80, 34)
+        Me.btnScore.TabIndex = 7
+        Me.btnScore.Text = "Score"
+        Me.btnScore.UseVisualStyleBackColor = True
+        '
         'login
         '
         Me.AcceptButton = Me.btnJugar
@@ -104,6 +116,7 @@ Partial Class login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoLogin1
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.btnScore)
         Me.Controls.Add(Me.lblIdUsuario)
         Me.Controls.Add(Me.btnOjo)
         Me.Controls.Add(Me.txtPass)
@@ -125,4 +138,5 @@ Partial Class login
     Friend WithEvents timePass As Timer
     Friend WithEvents timePass1 As Timer
     Friend WithEvents lblIdUsuario As Label
+    Friend WithEvents btnScore As Button
 End Class
