@@ -155,9 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="tematica.resx">
       <DependentUpon>tematica.vb</DependentUpon>
@@ -280,6 +280,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\top10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\musicPregunta2.wav" />
+    <None Include="bin\Debug\musicPregunta1.wav" />
+    <None Include="bin\Debug\musicFinJuego.wav" />
+    <None Include="bin\Debug\musicFallo.wav" />
+    <None Include="bin\Debug\musicAplauso.wav" />
+    <Content Include="bin\Debug\musicTemaInicio.wav" />
+    <Content Include="Resources\musicTemaInicio.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -24,9 +24,9 @@ Partial Class tematica
     Private Sub InitializeComponent()
         Me.btnFol = New System.Windows.Forms.Button()
         Me.btnIngles = New System.Windows.Forms.Button()
-        Me.pbTematica = New System.Windows.Forms.PictureBox()
         Me.btnSalirTEM = New System.Windows.Forms.Button()
         Me.btnVolverTEM = New System.Windows.Forms.Button()
+        Me.pbTematica = New System.Windows.Forms.PictureBox()
         CType(Me.pbTematica, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,22 +45,12 @@ Partial Class tematica
         '
         Me.btnIngles.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngles.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngles.Location = New System.Drawing.Point(640, 265)
+        Me.btnIngles.Location = New System.Drawing.Point(638, 265)
         Me.btnIngles.Name = "btnIngles"
         Me.btnIngles.Size = New System.Drawing.Size(107, 35)
         Me.btnIngles.TabIndex = 2
         Me.btnIngles.Text = "INGLES"
         Me.btnIngles.UseVisualStyleBackColor = True
-        '
-        'pbTematica
-        '
-        Me.pbTematica.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.tematica2
-        Me.pbTematica.Image = Global.AlmiPlay.My.Resources.Resources.tematica2
-        Me.pbTematica.Location = New System.Drawing.Point(-8, -20)
-        Me.pbTematica.Name = "pbTematica"
-        Me.pbTematica.Size = New System.Drawing.Size(1015, 776)
-        Me.pbTematica.TabIndex = 0
-        Me.pbTematica.TabStop = False
         '
         'btnSalirTEM
         '
@@ -83,6 +73,16 @@ Partial Class tematica
         Me.btnVolverTEM.TabIndex = 4
         Me.btnVolverTEM.Text = "Volver"
         Me.btnVolverTEM.UseVisualStyleBackColor = True
+        '
+        'pbTematica
+        '
+        Me.pbTematica.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.tematica2
+        Me.pbTematica.Image = Global.AlmiPlay.My.Resources.Resources.tematica2
+        Me.pbTematica.Location = New System.Drawing.Point(-8, -20)
+        Me.pbTematica.Name = "pbTematica"
+        Me.pbTematica.Size = New System.Drawing.Size(1015, 776)
+        Me.pbTematica.TabIndex = 0
+        Me.pbTematica.TabStop = False
         '
         'tematica
         '

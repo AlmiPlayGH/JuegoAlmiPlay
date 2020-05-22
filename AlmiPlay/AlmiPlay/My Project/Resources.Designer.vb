@@ -361,6 +361,60 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property musicAplauso() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("musicAplauso", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property musicFallo() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("musicFallo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property musicFinJuego() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("musicFinJuego", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property musicPregunta1() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("musicPregunta1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property musicPregunta2() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("musicPregunta2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property musicTemaInicio() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("musicTemaInicio", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property p19worm() As System.Drawing.Bitmap

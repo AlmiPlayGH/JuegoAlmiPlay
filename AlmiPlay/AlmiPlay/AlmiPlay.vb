@@ -33,7 +33,7 @@ Public Class AlmiPlay
         'Campos JSON: respuestas, pregunta, imagen, pista
         Try
             'VARIABLES
-            Randomize()
+
             Dim contId As Integer
             Dim contPregunta As Integer
             Dim responseBody As String
@@ -41,8 +41,10 @@ Public Class AlmiPlay
             Dim url As String
             Dim foto As String
             Dim contAux As Integer
+            musicaPreguntaUno()
 
             If selecTema = 0 Then
+                Randomize()
                 contId = Int((29 * Rnd()) + 1)
                 contAux = 1
                 Do
@@ -63,7 +65,8 @@ Public Class AlmiPlay
                 Loop While contAux > 0
 
 
-            Else contId = Int((29 * Rnd()) + 31)
+            Else Randomize()
+                contId = Int((29 * Rnd()) + 31)
                 contAux = 1
                 Do
                     For i = 0 To 19 Step 1
@@ -117,16 +120,16 @@ Public Class AlmiPlay
             pbFoto.Load(foto)
 
             'CAMBIAMOS EL TAMAÑO DE LA LETRA EN EL CASO DE QUE TENGA DEMASIADOS CARACTERES (PARA QUE QUEPA)
-            If Len(lblA.Text) > 55 Then
+            If Len(lblA.Text) > 50 Then
                 lblA.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblB.Text) > 55 Then
+            If Len(lblB.Text) > 50 Then
                 lblB.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblC.Text) > 55 Then
+            If Len(lblC.Text) > 50 Then
                 lblC.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
-            If Len(lblD.Text) > 55 Then
+            If Len(lblD.Text) > 50 Then
                 lblD.Font = New System.Drawing.Font("Arial Rounded MT", 7, FontStyle.Bold)
             End If
 
@@ -142,13 +145,14 @@ Public Class AlmiPlay
         num3Score = num1Score + num2Score
     End Function
     Private Sub lblA_Click(sender As Object, e As EventArgs) Handles lblA.Click
-
+        musicaStop()
         lblA.Enabled = False
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
         mostrarExpli()
         If lblAOculto.Text = 1 Then
+            musicaAcierto()
             lblA.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
             lblSig.Show()
@@ -159,6 +163,7 @@ Public Class AlmiPlay
             disabledComodines()
             contCorrectas = contCorrectas + 1
         Else lblA.BackColor = Color.FromArgb(191, 83, 83)
+            musicaError()
             pbRojoA.Show()
             lblFallo.Show()
             timerLabel.Stop()
@@ -194,13 +199,14 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblB_Click(sender As Object, e As EventArgs) Handles lblB.Click
-
+        musicaStop()
         lblA.Enabled = False
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
         mostrarExpli()
         If lblBOculto.Text = 1 Then
+            musicaAcierto()
             lblB.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
             lblSig.Show()
@@ -211,6 +217,7 @@ Public Class AlmiPlay
             disabledComodines()
             contCorrectas = contCorrectas + 1
         Else lblB.BackColor = Color.FromArgb(191, 83, 83)
+            musicaError()
             pbRojoB.Show()
             lblFallo.Show()
             timerLabel.Stop()
@@ -247,13 +254,14 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblC_Click(sender As Object, e As EventArgs) Handles lblC.Click
-
+        musicaStop()
         lblA.Enabled = False
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
         mostrarExpli()
         If lblCOculto.Text = 1 Then
+            musicaAcierto()
             lblC.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
             lblSig.Show()
@@ -264,8 +272,9 @@ Public Class AlmiPlay
             disabledComodines()
             contCorrectas = contCorrectas + 1
         Else lblC.BackColor = Color.FromArgb(191, 83, 83)
+            musicaError()
+            musicaError()
             pbRojoC.Show()
-            lblFallo.Show()
             timerLabel.Stop()
             disabledComodines()
         End If
@@ -285,7 +294,6 @@ Public Class AlmiPlay
             timerLabel.Stop()
             lblSig.Show()
             disabledComodines()
-
         End If
 
         If lblDOculto.Text = 1 Then
@@ -300,13 +308,14 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblD_Click(sender As Object, e As EventArgs) Handles lblD.Click
-
+        musicaStop()
         lblA.Enabled = False
         lblB.Enabled = False
         lblC.Enabled = False
         lblD.Enabled = False
         mostrarExpli()
         If lblDOculto.Text = 1 Then
+            musicaAcierto()
             lblD.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
             lblSig.Show()
@@ -317,6 +326,7 @@ Public Class AlmiPlay
             disabledComodines()
             contCorrectas = contCorrectas + 1
         Else lblD.BackColor = Color.FromArgb(191, 83, 83)
+            musicaError()
             pbRojoD.Show()
             lblFallo.Show()
             timerLabel.Stop()
@@ -380,6 +390,8 @@ Public Class AlmiPlay
             'lblTiempo.Text = "0" & num2 - 1 'para poner 0 delante en vez de solo un caracter
         End If
         If num2 = 1 Then
+            musicaStop()
+            musicaError()
             timerLabel.Stop()
             pbLlamada.Enabled = False
             pbPublico.Enabled = False
@@ -404,7 +416,7 @@ Public Class AlmiPlay
             End If
         End If
 
-                        If num2 = 20 Then
+        If num2 = 20 Then
             timerFotoStop.Start()
         End If
 
@@ -416,14 +428,19 @@ Public Class AlmiPlay
         contLblPreg = contLblPreg + 1
         If contLblPreg < 10 Then
             lblContPreg.Text = "0" & contLblPreg
+            musicaPreguntaUno()
         Else lblContPreg.Text = contLblPreg
+            musicaPreguntaDos()
+            'If contLblPreg > 19 Then
+            '    lblSig.Text = "Finalizar"
+            'End If
             If contLblPreg > 20 Then
-                fin.Show()
-                Me.Hide()
-
+                    fin.Show()
+                    Me.Hide()
+                    musicaStop()
+                End If
             End If
-        End If
-        tiempoTardado = tiempoTardado - 10
+            tiempoTardado = tiempoTardado - 10
         totalScore = lblScore.Text
         ocultarPorcentajes()
         ocultarRespuestasRDY()
@@ -679,7 +696,6 @@ Public Class AlmiPlay
         lblSeAcabo.BackColor = Color.Transparent
         lblSeAcabo.ForeColor = Color.White
     End Function
-
 
 
 End Class

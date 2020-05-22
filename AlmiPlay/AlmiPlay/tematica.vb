@@ -5,14 +5,16 @@
 
     Private Sub btnFol_Click(sender As Object, e As EventArgs) Handles btnFol.Click
         selecTema = 1
+        musicaStop()
         AlmiPlay.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub btnIngles_Click(sender As Object, e As EventArgs) Handles btnIngles.Click
         selecTema = 0
+        musicaStop()
         AlmiPlay.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub btnVolverTEM_Click(sender As Object, e As EventArgs) Handles btnVolverTEM.Click

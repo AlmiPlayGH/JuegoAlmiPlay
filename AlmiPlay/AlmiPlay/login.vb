@@ -2,11 +2,10 @@
 Imports MySql.Data
 Imports System.Windows.Forms
 Public Class login
-
-
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cambioColoresLogin()
         llamadaBBDDLogin()
+        musicaInicio()
 
 
     End Sub

@@ -22,7 +22,6 @@ Partial Class topDiez
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnVolverScore = New System.Windows.Forms.Button()
         Me.btnSalirScore = New System.Windows.Forms.Button()
         Me.lblTop1 = New System.Windows.Forms.Label()
@@ -55,18 +54,9 @@ Partial Class topDiez
         Me.lblFecha8 = New System.Windows.Forms.Label()
         Me.lblFecha9 = New System.Windows.Forms.Label()
         Me.lblFecha10 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.top10
-        Me.PictureBox1.Image = Global.AlmiPlay.My.Resources.Resources.top10
-        Me.PictureBox1.Location = New System.Drawing.Point(0, -24)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(987, 777)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'btnVolverScore
         '
@@ -95,18 +85,18 @@ Partial Class topDiez
         Me.lblTop1.AutoSize = True
         Me.lblTop1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop1.ForeColor = System.Drawing.Color.White
-        Me.lblTop1.Location = New System.Drawing.Point(183, 206)
+        Me.lblTop1.Location = New System.Drawing.Point(202, 206)
         Me.lblTop1.Name = "lblTop1"
         Me.lblTop1.Size = New System.Drawing.Size(55, 15)
         Me.lblTop1.TabIndex = 3
-        Me.lblTop1.Text = "lblTop1"
+        Me.lblTop1.Text = "lalTop1"
         '
         'lblTop2
         '
         Me.lblTop2.AutoSize = True
         Me.lblTop2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop2.ForeColor = System.Drawing.Color.White
-        Me.lblTop2.Location = New System.Drawing.Point(183, 250)
+        Me.lblTop2.Location = New System.Drawing.Point(202, 250)
         Me.lblTop2.Name = "lblTop2"
         Me.lblTop2.Size = New System.Drawing.Size(55, 15)
         Me.lblTop2.TabIndex = 4
@@ -117,7 +107,7 @@ Partial Class topDiez
         Me.lblTop3.AutoSize = True
         Me.lblTop3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop3.ForeColor = System.Drawing.Color.White
-        Me.lblTop3.Location = New System.Drawing.Point(183, 290)
+        Me.lblTop3.Location = New System.Drawing.Point(202, 290)
         Me.lblTop3.Name = "lblTop3"
         Me.lblTop3.Size = New System.Drawing.Size(55, 15)
         Me.lblTop3.TabIndex = 5
@@ -128,7 +118,7 @@ Partial Class topDiez
         Me.lblTop4.AutoSize = True
         Me.lblTop4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop4.ForeColor = System.Drawing.Color.White
-        Me.lblTop4.Location = New System.Drawing.Point(183, 332)
+        Me.lblTop4.Location = New System.Drawing.Point(202, 332)
         Me.lblTop4.Name = "lblTop4"
         Me.lblTop4.Size = New System.Drawing.Size(55, 15)
         Me.lblTop4.TabIndex = 6
@@ -139,7 +129,7 @@ Partial Class topDiez
         Me.lblTop5.AutoSize = True
         Me.lblTop5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop5.ForeColor = System.Drawing.Color.White
-        Me.lblTop5.Location = New System.Drawing.Point(183, 377)
+        Me.lblTop5.Location = New System.Drawing.Point(202, 377)
         Me.lblTop5.Name = "lblTop5"
         Me.lblTop5.Size = New System.Drawing.Size(55, 15)
         Me.lblTop5.TabIndex = 7
@@ -150,7 +140,7 @@ Partial Class topDiez
         Me.lblTop6.AutoSize = True
         Me.lblTop6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop6.ForeColor = System.Drawing.Color.White
-        Me.lblTop6.Location = New System.Drawing.Point(183, 421)
+        Me.lblTop6.Location = New System.Drawing.Point(202, 421)
         Me.lblTop6.Name = "lblTop6"
         Me.lblTop6.Size = New System.Drawing.Size(55, 15)
         Me.lblTop6.TabIndex = 8
@@ -161,7 +151,7 @@ Partial Class topDiez
         Me.lblTop7.AutoSize = True
         Me.lblTop7.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop7.ForeColor = System.Drawing.Color.White
-        Me.lblTop7.Location = New System.Drawing.Point(183, 461)
+        Me.lblTop7.Location = New System.Drawing.Point(202, 461)
         Me.lblTop7.Name = "lblTop7"
         Me.lblTop7.Size = New System.Drawing.Size(55, 15)
         Me.lblTop7.TabIndex = 9
@@ -172,7 +162,7 @@ Partial Class topDiez
         Me.lblTop8.AutoSize = True
         Me.lblTop8.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop8.ForeColor = System.Drawing.Color.White
-        Me.lblTop8.Location = New System.Drawing.Point(183, 505)
+        Me.lblTop8.Location = New System.Drawing.Point(202, 505)
         Me.lblTop8.Name = "lblTop8"
         Me.lblTop8.Size = New System.Drawing.Size(55, 15)
         Me.lblTop8.TabIndex = 10
@@ -183,7 +173,7 @@ Partial Class topDiez
         Me.lblTop9.AutoSize = True
         Me.lblTop9.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop9.ForeColor = System.Drawing.Color.White
-        Me.lblTop9.Location = New System.Drawing.Point(183, 547)
+        Me.lblTop9.Location = New System.Drawing.Point(202, 547)
         Me.lblTop9.Name = "lblTop9"
         Me.lblTop9.Size = New System.Drawing.Size(55, 15)
         Me.lblTop9.TabIndex = 11
@@ -194,7 +184,7 @@ Partial Class topDiez
         Me.lblTop10.AutoSize = True
         Me.lblTop10.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTop10.ForeColor = System.Drawing.Color.White
-        Me.lblTop10.Location = New System.Drawing.Point(183, 590)
+        Me.lblTop10.Location = New System.Drawing.Point(202, 590)
         Me.lblTop10.Name = "lblTop10"
         Me.lblTop10.Size = New System.Drawing.Size(63, 15)
         Me.lblTop10.TabIndex = 12
@@ -205,7 +195,7 @@ Partial Class topDiez
         Me.lblPunt1.AutoSize = True
         Me.lblPunt1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt1.ForeColor = System.Drawing.Color.White
-        Me.lblPunt1.Location = New System.Drawing.Point(455, 206)
+        Me.lblPunt1.Location = New System.Drawing.Point(483, 206)
         Me.lblPunt1.Name = "lblPunt1"
         Me.lblPunt1.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt1.TabIndex = 13
@@ -216,7 +206,7 @@ Partial Class topDiez
         Me.lblPunt2.AutoSize = True
         Me.lblPunt2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt2.ForeColor = System.Drawing.Color.White
-        Me.lblPunt2.Location = New System.Drawing.Point(455, 250)
+        Me.lblPunt2.Location = New System.Drawing.Point(483, 250)
         Me.lblPunt2.Name = "lblPunt2"
         Me.lblPunt2.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt2.TabIndex = 14
@@ -227,7 +217,7 @@ Partial Class topDiez
         Me.lblPunt3.AutoSize = True
         Me.lblPunt3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt3.ForeColor = System.Drawing.Color.White
-        Me.lblPunt3.Location = New System.Drawing.Point(455, 290)
+        Me.lblPunt3.Location = New System.Drawing.Point(483, 290)
         Me.lblPunt3.Name = "lblPunt3"
         Me.lblPunt3.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt3.TabIndex = 15
@@ -238,7 +228,7 @@ Partial Class topDiez
         Me.lblPunt4.AutoSize = True
         Me.lblPunt4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt4.ForeColor = System.Drawing.Color.White
-        Me.lblPunt4.Location = New System.Drawing.Point(455, 332)
+        Me.lblPunt4.Location = New System.Drawing.Point(483, 332)
         Me.lblPunt4.Name = "lblPunt4"
         Me.lblPunt4.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt4.TabIndex = 16
@@ -249,7 +239,7 @@ Partial Class topDiez
         Me.lblPunt5.AutoSize = True
         Me.lblPunt5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt5.ForeColor = System.Drawing.Color.White
-        Me.lblPunt5.Location = New System.Drawing.Point(455, 377)
+        Me.lblPunt5.Location = New System.Drawing.Point(483, 377)
         Me.lblPunt5.Name = "lblPunt5"
         Me.lblPunt5.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt5.TabIndex = 17
@@ -260,7 +250,7 @@ Partial Class topDiez
         Me.lblPunt6.AutoSize = True
         Me.lblPunt6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt6.ForeColor = System.Drawing.Color.White
-        Me.lblPunt6.Location = New System.Drawing.Point(455, 421)
+        Me.lblPunt6.Location = New System.Drawing.Point(483, 421)
         Me.lblPunt6.Name = "lblPunt6"
         Me.lblPunt6.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt6.TabIndex = 18
@@ -271,7 +261,7 @@ Partial Class topDiez
         Me.lblFecha1.AutoSize = True
         Me.lblFecha1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha1.ForeColor = System.Drawing.Color.White
-        Me.lblFecha1.Location = New System.Drawing.Point(700, 206)
+        Me.lblFecha1.Location = New System.Drawing.Point(694, 206)
         Me.lblFecha1.Name = "lblFecha1"
         Me.lblFecha1.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha1.TabIndex = 19
@@ -282,7 +272,7 @@ Partial Class topDiez
         Me.lblPunt7.AutoSize = True
         Me.lblPunt7.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt7.ForeColor = System.Drawing.Color.White
-        Me.lblPunt7.Location = New System.Drawing.Point(455, 461)
+        Me.lblPunt7.Location = New System.Drawing.Point(483, 461)
         Me.lblPunt7.Name = "lblPunt7"
         Me.lblPunt7.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt7.TabIndex = 19
@@ -293,7 +283,7 @@ Partial Class topDiez
         Me.lblPunt8.AutoSize = True
         Me.lblPunt8.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt8.ForeColor = System.Drawing.Color.White
-        Me.lblPunt8.Location = New System.Drawing.Point(455, 505)
+        Me.lblPunt8.Location = New System.Drawing.Point(483, 505)
         Me.lblPunt8.Name = "lblPunt8"
         Me.lblPunt8.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt8.TabIndex = 20
@@ -304,7 +294,7 @@ Partial Class topDiez
         Me.lblPunt9.AutoSize = True
         Me.lblPunt9.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt9.ForeColor = System.Drawing.Color.White
-        Me.lblPunt9.Location = New System.Drawing.Point(455, 547)
+        Me.lblPunt9.Location = New System.Drawing.Point(483, 547)
         Me.lblPunt9.Name = "lblPunt9"
         Me.lblPunt9.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt9.TabIndex = 21
@@ -315,7 +305,7 @@ Partial Class topDiez
         Me.lblPunt10.AutoSize = True
         Me.lblPunt10.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPunt10.ForeColor = System.Drawing.Color.White
-        Me.lblPunt10.Location = New System.Drawing.Point(455, 590)
+        Me.lblPunt10.Location = New System.Drawing.Point(483, 590)
         Me.lblPunt10.Name = "lblPunt10"
         Me.lblPunt10.Size = New System.Drawing.Size(59, 15)
         Me.lblPunt10.TabIndex = 22
@@ -326,7 +316,7 @@ Partial Class topDiez
         Me.lblFecha2.AutoSize = True
         Me.lblFecha2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha2.ForeColor = System.Drawing.Color.White
-        Me.lblFecha2.Location = New System.Drawing.Point(700, 250)
+        Me.lblFecha2.Location = New System.Drawing.Point(694, 250)
         Me.lblFecha2.Name = "lblFecha2"
         Me.lblFecha2.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha2.TabIndex = 23
@@ -337,7 +327,7 @@ Partial Class topDiez
         Me.lblFecha3.AutoSize = True
         Me.lblFecha3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha3.ForeColor = System.Drawing.Color.White
-        Me.lblFecha3.Location = New System.Drawing.Point(700, 290)
+        Me.lblFecha3.Location = New System.Drawing.Point(694, 290)
         Me.lblFecha3.Name = "lblFecha3"
         Me.lblFecha3.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha3.TabIndex = 24
@@ -348,7 +338,7 @@ Partial Class topDiez
         Me.lblFecha4.AutoSize = True
         Me.lblFecha4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha4.ForeColor = System.Drawing.Color.White
-        Me.lblFecha4.Location = New System.Drawing.Point(700, 332)
+        Me.lblFecha4.Location = New System.Drawing.Point(694, 332)
         Me.lblFecha4.Name = "lblFecha4"
         Me.lblFecha4.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha4.TabIndex = 25
@@ -359,7 +349,7 @@ Partial Class topDiez
         Me.lblFecha5.AutoSize = True
         Me.lblFecha5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha5.ForeColor = System.Drawing.Color.White
-        Me.lblFecha5.Location = New System.Drawing.Point(700, 377)
+        Me.lblFecha5.Location = New System.Drawing.Point(694, 377)
         Me.lblFecha5.Name = "lblFecha5"
         Me.lblFecha5.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha5.TabIndex = 26
@@ -370,7 +360,7 @@ Partial Class topDiez
         Me.lblFecha6.AutoSize = True
         Me.lblFecha6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha6.ForeColor = System.Drawing.Color.White
-        Me.lblFecha6.Location = New System.Drawing.Point(700, 421)
+        Me.lblFecha6.Location = New System.Drawing.Point(694, 421)
         Me.lblFecha6.Name = "lblFecha6"
         Me.lblFecha6.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha6.TabIndex = 27
@@ -381,7 +371,7 @@ Partial Class topDiez
         Me.lblFecha7.AutoSize = True
         Me.lblFecha7.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha7.ForeColor = System.Drawing.Color.White
-        Me.lblFecha7.Location = New System.Drawing.Point(700, 461)
+        Me.lblFecha7.Location = New System.Drawing.Point(694, 461)
         Me.lblFecha7.Name = "lblFecha7"
         Me.lblFecha7.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha7.TabIndex = 28
@@ -392,7 +382,7 @@ Partial Class topDiez
         Me.lblFecha8.AutoSize = True
         Me.lblFecha8.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha8.ForeColor = System.Drawing.Color.White
-        Me.lblFecha8.Location = New System.Drawing.Point(700, 505)
+        Me.lblFecha8.Location = New System.Drawing.Point(694, 505)
         Me.lblFecha8.Name = "lblFecha8"
         Me.lblFecha8.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha8.TabIndex = 29
@@ -403,7 +393,7 @@ Partial Class topDiez
         Me.lblFecha9.AutoSize = True
         Me.lblFecha9.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha9.ForeColor = System.Drawing.Color.White
-        Me.lblFecha9.Location = New System.Drawing.Point(700, 547)
+        Me.lblFecha9.Location = New System.Drawing.Point(694, 547)
         Me.lblFecha9.Name = "lblFecha9"
         Me.lblFecha9.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha9.TabIndex = 30
@@ -414,11 +404,21 @@ Partial Class topDiez
         Me.lblFecha10.AutoSize = True
         Me.lblFecha10.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha10.ForeColor = System.Drawing.Color.White
-        Me.lblFecha10.Location = New System.Drawing.Point(700, 590)
+        Me.lblFecha10.Location = New System.Drawing.Point(694, 590)
         Me.lblFecha10.Name = "lblFecha10"
         Me.lblFecha10.Size = New System.Drawing.Size(59, 15)
         Me.lblFecha10.TabIndex = 31
         Me.lblFecha10.Text = "Label31"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.top10
+        Me.PictureBox1.Image = Global.AlmiPlay.My.Resources.Resources.top10
+        Me.PictureBox1.Location = New System.Drawing.Point(-3, -24)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(991, 777)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'topDiez
         '

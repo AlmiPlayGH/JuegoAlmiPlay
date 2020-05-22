@@ -58,11 +58,37 @@ Module baseDatos
         'EJECUTAR EL SELECTCOMMAND DEL DATAADAPTER
         regTotal = dataAdapterAP.Fill(dataSetAP, "Puntuaciones") 'EJECUTA EL SELECT
         'CARGAR LOS DATOS EN EL FORMULARIO
-        If dataSetAP.Tables("Puntuaciones").Rows().Count() > 0 Then
-            MsgBox("Conexion exitosa")
-        End If
+        'If dataSetAP.Tables("Puntuaciones").Rows().Count() > 0 Then
+        '    MsgBox("Conexion exitosa")
+        'End If
     End Function
 
+    Public Function musicaInicio()
+        My.Computer.Audio.Play(My.Resources.musicTemaInicio, AudioPlayMode.BackgroundLoop)
+    End Function
+
+    Public Function musicaAcierto()
+        My.Computer.Audio.Play(My.Resources.musicAplauso, AudioPlayMode.Background)
+    End Function
+
+    Public Function musicaError()
+        My.Computer.Audio.Play(My.Resources.musicFallo, AudioPlayMode.Background)
+    End Function
+
+    Public Function musicaFinJuego()
+        My.Computer.Audio.Play(My.Resources.musicFinJuego, AudioPlayMode.Background)
+    End Function
+
+    Public Function musicaPreguntaUno()
+        My.Computer.Audio.Play(My.Resources.musicPregunta1, AudioPlayMode.BackgroundLoop)
+    End Function
+
+    Public Function musicaPreguntaDos()
+        My.Computer.Audio.Play(My.Resources.musicPregunta2, AudioPlayMode.BackgroundLoop)
+    End Function
+    Public Function musicaStop()
+        My.Computer.Audio.Stop()
+    End Function
 
 
     Public Function calcularFecha()

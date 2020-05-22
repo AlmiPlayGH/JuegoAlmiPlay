@@ -25,12 +25,14 @@ Partial Class fin
         Me.lblVolverLogin = New System.Windows.Forms.Label()
         Me.lblSalirFin = New System.Windows.Forms.Label()
         Me.lblResultado = New System.Windows.Forms.Label()
-        Me.pbFin = New System.Windows.Forms.PictureBox()
         Me.lblTiempo = New System.Windows.Forms.Label()
         Me.lblCorrectas = New System.Windows.Forms.Label()
         Me.lblUsuario = New System.Windows.Forms.Label()
         Me.lblAfiliado = New System.Windows.Forms.Label()
         Me.lblFecha = New System.Windows.Forms.Label()
+        Me.pbFin = New System.Windows.Forms.PictureBox()
+        Me.lblPts = New System.Windows.Forms.Label()
+        Me.lblSeg = New System.Windows.Forms.Label()
         CType(Me.pbFin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,16 +65,6 @@ Partial Class fin
         Me.lblResultado.Size = New System.Drawing.Size(79, 22)
         Me.lblResultado.TabIndex = 3
         Me.lblResultado.Text = "SCORE"
-        '
-        'pbFin
-        '
-        Me.pbFin.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoFin2
-        Me.pbFin.Image = Global.AlmiPlay.My.Resources.Resources.fondoFin2
-        Me.pbFin.Location = New System.Drawing.Point(-3, -35)
-        Me.pbFin.Name = "pbFin"
-        Me.pbFin.Size = New System.Drawing.Size(991, 789)
-        Me.pbFin.TabIndex = 0
-        Me.pbFin.TabStop = False
         '
         'lblTiempo
         '
@@ -124,11 +116,43 @@ Partial Class fin
         Me.lblFecha.TabIndex = 8
         Me.lblFecha.Text = "FECHA"
         '
+        'pbFin
+        '
+        Me.pbFin.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoFin2
+        Me.pbFin.Image = Global.AlmiPlay.My.Resources.Resources.fondoFin2
+        Me.pbFin.Location = New System.Drawing.Point(-3, -35)
+        Me.pbFin.Name = "pbFin"
+        Me.pbFin.Size = New System.Drawing.Size(991, 789)
+        Me.pbFin.TabIndex = 0
+        Me.pbFin.TabStop = False
+        '
+        'lblPts
+        '
+        Me.lblPts.AutoSize = True
+        Me.lblPts.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPts.Location = New System.Drawing.Point(312, 463)
+        Me.lblPts.Name = "lblPts"
+        Me.lblPts.Size = New System.Drawing.Size(39, 22)
+        Me.lblPts.TabIndex = 9
+        Me.lblPts.Text = "pts"
+        '
+        'lblSeg
+        '
+        Me.lblSeg.AutoSize = True
+        Me.lblSeg.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSeg.Location = New System.Drawing.Point(312, 516)
+        Me.lblSeg.Name = "lblSeg"
+        Me.lblSeg.Size = New System.Drawing.Size(43, 22)
+        Me.lblSeg.TabIndex = 10
+        Me.lblSeg.Text = "seg"
+        '
         'fin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.lblSeg)
+        Me.Controls.Add(Me.lblPts)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.lblAfiliado)
         Me.Controls.Add(Me.lblUsuario)
@@ -156,4 +180,6 @@ Partial Class fin
     Friend WithEvents lblUsuario As Label
     Friend WithEvents lblAfiliado As Label
     Friend WithEvents lblFecha As Label
+    Friend WithEvents lblPts As Label
+    Friend WithEvents lblSeg As Label
 End Class

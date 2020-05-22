@@ -3,6 +3,11 @@
         llamadaBBDDScore()
         insertarScore()
         cambioInicio()
+        musicaStop()
+        AlmiPlay.Close()
+        tematica.Close()
+        topDiez.Close()
+        musicaFinJuego()
     End Sub
     Private Sub lblVolverLogin_Click(sender As Object, e As EventArgs) Handles lblVolverLogin.Click
         Me.Close()
@@ -62,6 +67,10 @@
         lblTiempo.Text = tiempoTardado
         lblCorrectas.Text = contCorrectas
         lblFecha.Text = fecha
+        lblPts.ForeColor = Color.White
+        lblPts.BackColor = Color.Transparent
+        lblSeg.ForeColor = Color.White
+        lblSeg.BackColor = Color.Transparent
         'num3score, contCorrectas, fecha, idUsu
     End Function
 
