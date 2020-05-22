@@ -5,10 +5,11 @@
         cambioInicio()
     End Sub
     Private Sub lblVolverLogin_Click(sender As Object, e As EventArgs) Handles lblVolverLogin.Click
-        Me.Hide()
+        Me.Close()
         login.Show()
         AlmiPlay.Close()
-
+        topDiez.Close()
+        tematica.Close()
     End Sub
 
     Private Sub lblSalirFin_Click(sender As Object, e As EventArgs) Handles lblSalirFin.Click

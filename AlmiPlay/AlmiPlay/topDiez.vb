@@ -1,15 +1,84 @@
-﻿Public Class topDiez
+﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data
+Imports System.Windows.Forms
+
+Public Class topDiez
     Private Sub topDiez_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cambioInicioScore()
         llamadaBBDDScore()
-
+        topDiez()
 
     End Sub
 
 
     Private Function topDiez()
         Dim consult As String
-        ' consult = "SELECT Usuarios.usuario, puntuacion, fecha FROM Puntuaciones INNER JOIN Usuarios ON Usuarios.id_usuario=Puntuaciones.id_usuario ORDER BY Puntuaciones.puntuacion desc LIMIT 10"
+        Dim punt As String
+        Dim usu As String
+        Dim fechaJuego As Date
+        Dim lista As Byte
+        'consult = "select puntuacion from Puntuaciones"
+        consult = "select Usuarios.usuario, puntuacion, fecha FROM Puntuaciones INNER JOIN Usuarios ON Usuarios.id_usuario=Puntuaciones.id_usuario ORDER BY Puntuaciones.puntuacion desc LIMIT 10"
+        dataAdapterAP = New MySqlDataAdapter(consult, conexionAP)
+        dataSetAP = New DataSet
+        dataAdapterAP.Fill(dataSetAP, "Puntuaciones")
+        lista = dataSetAP.Tables("Puntuaciones").Rows().Count()
+        If lista <> 0 Then
+            For a = 0 To dataSetAP.Tables("Puntuaciones").Rows().Count() Step 1
+                If a = 10 Then
+                    Exit For
+                End If
+                punt = dataSetAP.Tables("Puntuaciones").Rows(a).Item("puntuacion")
+                fechaJuego = dataSetAP.Tables("Puntuaciones").Rows(a).Item("fecha")
+                usu = dataSetAP.Tables("Puntuaciones").Rows(a).Item("usuario")
+                If a = 0 Then
+                    lblPunt1.Text = punt
+                    lblFecha1.Text = fechaJuego
+                    lblTop1.Text = usu
+                ElseIf a = 1 Then
+                    lblPunt2.Text = punt
+                    lblFecha2.Text = fechaJuego
+                    lblTop2.Text = usu
+                ElseIf a = 2 Then
+                    lblPunt3.Text = punt
+                    lblFecha3.Text = fechaJuego
+                    lblTop3.Text = usu
+                ElseIf a = 3 Then
+                    lblPunt4.Text = punt
+                    lblFecha4.Text = fechaJuego
+                    lblTop4.Text = usu
+                ElseIf a = 4 Then
+                    lblPunt5.Text = punt
+                    lblFecha5.Text = fechaJuego
+                    lblTop5.Text = usu
+                ElseIf a = 5 Then
+                    lblPunt6.Text = punt
+                    lblFecha6.Text = fechaJuego
+                    lblTop6.Text = usu
+                ElseIf a = 6 Then
+                    lblPunt7.Text = punt
+                    lblFecha7.Text = fechaJuego
+                    lblTop7.Text = usu
+                ElseIf a = 7 Then
+                    lblPunt8.Text = punt
+                    lblFecha8.Text = fechaJuego
+                    lblTop8.Text = usu
+                ElseIf a = 8 Then
+                    lblPunt9.Text = punt
+                    lblFecha9.Text = fechaJuego
+                    lblTop9.Text = usu
+                ElseIf a = 9 Then
+                    lblPunt10.Text = punt
+                    lblFecha10.Text = fechaJuego
+                    lblTop10.Text = usu
+                End If
+
+            Next
+        End If
+
+
+
+        'Usuarios.usuario, puntuacion, fecha FROM Puntuaciones INNER JOIN Usuarios ON Usuarios.id_usuario=Puntuaciones.id_usuario ORDER BY Puntuaciones.puntuacion desc LIMIT 10
     End Function
 
     Private Function cambioInicioScore()
@@ -21,7 +90,7 @@
     End Function
 
     Private Sub btnVolverScore_Click(sender As Object, e As EventArgs) Handles btnVolverScore.Click
-        Me.Hide()
+        Me.Close()
         login.Show()
     End Sub
 

@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub btnVolverTEM_Click(sender As Object, e As EventArgs) Handles btnVolverTEM.Click
-        Me.Hide()
+        Me.Close()
         login.Show()
     End Sub
 
