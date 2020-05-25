@@ -5,8 +5,15 @@ Public Class login
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cambioColoresLogin()
         llamadaBBDDLogin()
-        musicaInicio()
-
+        If contSonido = 0 Then
+            musicaInicio()
+            pbMusicYesLog.Show()
+            pbMusicNouLog.Hide()
+        End If
+        If contSonido = 1 Then
+            pbMusicYesLog.Hide()
+            pbMusicNouLog.Show()
+        End If
 
     End Sub
 
@@ -55,7 +62,8 @@ Public Class login
         btnScore.ForeColor = Color.White
         btnOjo.BackColor = Color.FromArgb(1, 8, 54)
         lblIdUsuario.Hide()
-
+        pbMusicYesLog.BackColor = Color.Transparent
+        pbMusicNouLog.BackColor = Color.Transparent
     End Function
 
     Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
@@ -95,5 +103,19 @@ Public Class login
     Private Sub btnScore_Click(sender As Object, e As EventArgs) Handles btnScore.Click
         Me.Hide()
         topDiez.Show()
+    End Sub
+
+    Private Sub pbMusic_Click(sender As Object, e As EventArgs) Handles pbMusicYesLog.Click
+        pbMusicNouLog.Show()
+        pbMusicYesLog.Hide()
+        musicaStop()
+        contSonido = contSonido + 1
+    End Sub
+
+    Private Sub pbMusicNO_Click(sender As Object, e As EventArgs) Handles pbMusicNouLog.Click
+        pbMusicNouLog.Hide()
+        pbMusicYesLog.Show()
+        musicaPreguntaUno()
+        contSonido = contSonido - 1
     End Sub
 End Class

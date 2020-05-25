@@ -26,6 +26,7 @@ Module baseDatos
     Public selecTema As Integer
     Public randomRep (19) As Integer
     Public contRepe As Integer
+    Public contSonido As Integer
 
     Public Function llamadaBBDDLogin()
         regAct = 0

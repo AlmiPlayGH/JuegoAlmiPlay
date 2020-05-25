@@ -32,6 +32,10 @@ Partial Class login
         Me.timePass1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblIdUsuario = New System.Windows.Forms.Label()
         Me.btnScore = New System.Windows.Forms.Button()
+        Me.pbMusicNouLog = New System.Windows.Forms.PictureBox()
+        Me.pbMusicYesLog = New System.Windows.Forms.PictureBox()
+        CType(Me.pbMusicNouLog, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMusicYesLog, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtUsuLog
@@ -109,6 +113,24 @@ Partial Class login
         Me.btnScore.Text = "Score"
         Me.btnScore.UseVisualStyleBackColor = True
         '
+        'pbMusicNouLog
+        '
+        Me.pbMusicNouLog.Image = Global.AlmiPlay.My.Resources.Resources.musicNO5
+        Me.pbMusicNouLog.Location = New System.Drawing.Point(912, 42)
+        Me.pbMusicNouLog.Name = "pbMusicNouLog"
+        Me.pbMusicNouLog.Size = New System.Drawing.Size(31, 29)
+        Me.pbMusicNouLog.TabIndex = 56
+        Me.pbMusicNouLog.TabStop = False
+        '
+        'pbMusicYesLog
+        '
+        Me.pbMusicYesLog.Image = Global.AlmiPlay.My.Resources.Resources.musicSi51
+        Me.pbMusicYesLog.Location = New System.Drawing.Point(912, 42)
+        Me.pbMusicYesLog.Name = "pbMusicYesLog"
+        Me.pbMusicYesLog.Size = New System.Drawing.Size(31, 29)
+        Me.pbMusicYesLog.TabIndex = 57
+        Me.pbMusicYesLog.TabStop = False
+        '
         'login
         '
         Me.AcceptButton = Me.btnJugar
@@ -116,6 +138,8 @@ Partial Class login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoLogin1
         Me.ClientSize = New System.Drawing.Size(984, 741)
+        Me.Controls.Add(Me.pbMusicYesLog)
+        Me.Controls.Add(Me.pbMusicNouLog)
         Me.Controls.Add(Me.btnScore)
         Me.Controls.Add(Me.lblIdUsuario)
         Me.Controls.Add(Me.btnOjo)
@@ -126,6 +150,8 @@ Partial Class login
         Me.Name = "login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Iniciar Sesion"
+        CType(Me.pbMusicNouLog, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMusicYesLog, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -139,4 +165,6 @@ Partial Class login
     Friend WithEvents timePass1 As Timer
     Friend WithEvents lblIdUsuario As Label
     Friend WithEvents btnScore As Button
+    Friend WithEvents pbMusicNouLog As PictureBox
+    Friend WithEvents pbMusicYesLog As PictureBox
 End Class

@@ -77,7 +77,7 @@ Partial Class tematica
         'pbTematica
         '
         Me.pbTematica.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.tematica2
-        Me.pbTematica.Image = Global.AlmiPlay.My.Resources.Resources.tematica2
+        Me.pbTematica.Image = Global.AlmiPlay.My.Resources.Resources.tematica3
         Me.pbTematica.Location = New System.Drawing.Point(-8, -20)
         Me.pbTematica.Name = "pbTematica"
         Me.pbTematica.Size = New System.Drawing.Size(1015, 776)

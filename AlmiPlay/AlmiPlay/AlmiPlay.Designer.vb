@@ -76,6 +76,9 @@ Partial Class AlmiPlay
         Me.op = New System.Windows.Forms.OpenFileDialog()
         Me.txtExplicacion = New System.Windows.Forms.TextBox()
         Me.lblSeAcabo = New System.Windows.Forms.Label()
+        Me.pbCirculoTime = New System.Windows.Forms.PictureBox()
+        Me.pbMusicYes = New System.Windows.Forms.PictureBox()
+        Me.pbMusicNou = New System.Windows.Forms.PictureBox()
         CType(Me.pbRespuestas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPregunta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLlamada, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +106,9 @@ Partial Class AlmiPlay
         CType(Me.pb25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb40, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbCirculoTime, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMusicYes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMusicNou, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbRespuestas
@@ -280,7 +286,7 @@ Partial Class AlmiPlay
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoAux1
         Me.pbFoto.Image = Global.AlmiPlay.My.Resources.Resources.fondoAux1
-        Me.pbFoto.Location = New System.Drawing.Point(-6, -4)
+        Me.pbFoto.Location = New System.Drawing.Point(-7, -3)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(993, 745)
         Me.pbFoto.TabIndex = 23
@@ -560,11 +566,39 @@ Partial Class AlmiPlay
         '
         Me.lblSeAcabo.AutoSize = True
         Me.lblSeAcabo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSeAcabo.Location = New System.Drawing.Point(80, 108)
+        Me.lblSeAcabo.Location = New System.Drawing.Point(69, 108)
         Me.lblSeAcabo.Name = "lblSeAcabo"
         Me.lblSeAcabo.Size = New System.Drawing.Size(158, 15)
         Me.lblSeAcabo.TabIndex = 52
         Me.lblSeAcabo.Text = "Se te acabó el tiempo..."
+        '
+        'pbCirculoTime
+        '
+        Me.pbCirculoTime.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.circuloTime4
+        Me.pbCirculoTime.Image = Global.AlmiPlay.My.Resources.Resources.circuloTime4
+        Me.pbCirculoTime.Location = New System.Drawing.Point(208, 5)
+        Me.pbCirculoTime.Name = "pbCirculoTime"
+        Me.pbCirculoTime.Size = New System.Drawing.Size(262, 273)
+        Me.pbCirculoTime.TabIndex = 53
+        Me.pbCirculoTime.TabStop = False
+        '
+        'pbMusicYes
+        '
+        Me.pbMusicYes.Image = Global.AlmiPlay.My.Resources.Resources.musicSi51
+        Me.pbMusicYes.Location = New System.Drawing.Point(924, 77)
+        Me.pbMusicYes.Name = "pbMusicYes"
+        Me.pbMusicYes.Size = New System.Drawing.Size(31, 29)
+        Me.pbMusicYes.TabIndex = 54
+        Me.pbMusicYes.TabStop = False
+        '
+        'pbMusicNou
+        '
+        Me.pbMusicNou.Image = Global.AlmiPlay.My.Resources.Resources.musicNO5
+        Me.pbMusicNou.Location = New System.Drawing.Point(924, 77)
+        Me.pbMusicNou.Name = "pbMusicNou"
+        Me.pbMusicNou.Size = New System.Drawing.Size(31, 29)
+        Me.pbMusicNou.TabIndex = 55
+        Me.pbMusicNou.TabStop = False
         '
         'AlmiPlay
         '
@@ -573,7 +607,14 @@ Partial Class AlmiPlay
         Me.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(984, 741)
         Me.Controls.Add(Me.pbFoto)
+        Me.Controls.Add(Me.lblSig)
         Me.Controls.Add(Me.lblSeAcabo)
+        Me.Controls.Add(Me.lblTiempo)
+        Me.Controls.Add(Me.pbCirculoTime)
+        Me.Controls.Add(Me.pbMusicYes)
+        Me.Controls.Add(Me.pbMusicNou)
+        Me.Controls.Add(Me.lblAcertar)
+        Me.Controls.Add(Me.lblFallo)
         Me.Controls.Add(Me.txtExplicacion)
         Me.Controls.Add(Me.pb15)
         Me.Controls.Add(Me.pb40)
@@ -597,12 +638,8 @@ Partial Class AlmiPlay
         Me.Controls.Add(Me.lblNomPista)
         Me.Controls.Add(Me.lblPista)
         Me.Controls.Add(Me.lblPregunta)
-        Me.Controls.Add(Me.lblAcertar)
-        Me.Controls.Add(Me.lblFallo)
-        Me.Controls.Add(Me.lblSig)
         Me.Controls.Add(Me.pbSalir)
         Me.Controls.Add(Me.pbVolver)
-        Me.Controls.Add(Me.lblTiempo)
         Me.Controls.Add(Me.pbMitad)
         Me.Controls.Add(Me.pbPublico)
         Me.Controls.Add(Me.pbLlamada)
@@ -650,6 +687,9 @@ Partial Class AlmiPlay
         CType(Me.pb25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb40, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbCirculoTime, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMusicYes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMusicNou, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -708,4 +748,7 @@ Partial Class AlmiPlay
     Friend WithEvents op As OpenFileDialog
     Friend WithEvents txtExplicacion As TextBox
     Friend WithEvents lblSeAcabo As Label
+    Friend WithEvents pbCirculoTime As PictureBox
+    Friend WithEvents pbMusicYes As PictureBox
+    Friend WithEvents pbMusicNou As PictureBox
 End Class

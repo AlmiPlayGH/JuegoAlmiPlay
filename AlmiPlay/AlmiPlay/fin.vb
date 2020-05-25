@@ -1,9 +1,8 @@
 ﻿Public Class fin
     Private Sub fin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llamadaBBDDScore()
-        insertarScore()
+        'insertarScore()
         cambioInicio()
-        musicaStop()
         AlmiPlay.Close()
         tematica.Close()
         topDiez.Close()
@@ -15,6 +14,10 @@
         AlmiPlay.Close()
         topDiez.Close()
         tematica.Close()
+        If contSonido = 0 Then
+            musicaInicio()
+        End If
+
     End Sub
 
     Private Sub lblSalirFin_Click(sender As Object, e As EventArgs) Handles lblSalirFin.Click
@@ -68,9 +71,9 @@
         lblCorrectas.Text = contCorrectas
         lblFecha.Text = fecha
         lblPts.ForeColor = Color.White
-        lblPts.BackColor = Color.Transparent
+        lblPts.BackColor = Color.FromArgb(0, 13, 61)
         lblSeg.ForeColor = Color.White
-        lblSeg.BackColor = Color.Transparent
+        lblSeg.BackColor = Color.FromArgb(0, 10, 49)
         'num3score, contCorrectas, fecha, idUsu
     End Function
 

@@ -16,6 +16,7 @@ Public Class AlmiPlay
     Public ServerUrl As String
     Public cliente As HttpClient
     Public contLblPreg As Integer
+
     Private Sub AlmiPLay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Randomize()
         cambioColoresAP()
@@ -26,6 +27,15 @@ Public Class AlmiPlay
         cliente.BaseAddress = New Uri(ServerUrl)
         cliente.DefaultRequestHeaders.Accept.Add(New MediaTypeWithQualityHeaderValue("application/json"))
         data()
+        If contSonido = 0 Then
+            musicaPreguntaUno()
+            pbMusicYes.Show()
+            pbMusicNou.Hide()
+        End If
+        If contSonido = 1 Then
+            pbMusicYes.Hide()
+            pbMusicNou.Show()
+        End If
 
     End Sub
 
@@ -41,7 +51,6 @@ Public Class AlmiPlay
             Dim url As String
             Dim foto As String
             Dim contAux As Integer
-            musicaPreguntaUno()
 
             If selecTema = 0 Then
                 Randomize()
@@ -91,8 +100,6 @@ Public Class AlmiPlay
             'URL CON POSICION DE CAMPO ALEATORIA
             url = "http://62.117.137.221:8181/api/preguntas/" & contId
             foto = "http://62.117.137.221:8181/api/preguntas/imagen/" & contId & ".jpg"
-            'foto = "http://62.117.137.221:8181/api/preguntas/imagen/45.jpg"
-
             'SE OBITENE EL JSON EN LA VARIABLE RESPONSEBODY
             Dim response = Await cliente.GetAsync(url)
             response.EnsureSuccessStatusCode()
@@ -145,6 +152,8 @@ Public Class AlmiPlay
         num3Score = num1Score + num2Score
     End Function
     Private Sub lblA_Click(sender As Object, e As EventArgs) Handles lblA.Click
+        pbCirculoTime.Image.RotateFlip(RotateFlipType.Rotate180FlipNone)
+        pbCirculoTime.Refresh()
         musicaStop()
         lblA.Enabled = False
         lblB.Enabled = False
@@ -152,18 +161,22 @@ Public Class AlmiPlay
         lblD.Enabled = False
         mostrarExpli()
         If lblAOculto.Text = 1 Then
-            musicaAcierto()
+            If contSonido = 0 Then
+                musicaAcierto()
+            End If
             lblA.BackColor = Color.FromArgb(83, 187, 97)
-            lblAcertar.Show()
-            lblSig.Show()
-            timerLabel.Stop()
-            pbVerdeA.Show()
-            sumaScore()
-            lblScore.Text = num3Score
-            disabledComodines()
-            contCorrectas = contCorrectas + 1
-        Else lblA.BackColor = Color.FromArgb(191, 83, 83)
-            musicaError()
+                lblAcertar.Show()
+                lblSig.Show()
+                timerLabel.Stop()
+                pbVerdeA.Show()
+                sumaScore()
+                lblScore.Text = num3Score
+                disabledComodines()
+                contCorrectas = contCorrectas + 1
+            Else lblA.BackColor = Color.FromArgb(191, 83, 83)
+            If contSonido = 0 Then
+                musicaError()
+            End If
             pbRojoA.Show()
             lblFallo.Show()
             timerLabel.Stop()
@@ -199,6 +212,8 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblB_Click(sender As Object, e As EventArgs) Handles lblB.Click
+        pbCirculoTime.Image.RotateFlip(RotateFlipType.Rotate180FlipNone)
+        pbCirculoTime.Refresh()
         musicaStop()
         lblA.Enabled = False
         lblB.Enabled = False
@@ -206,7 +221,9 @@ Public Class AlmiPlay
         lblD.Enabled = False
         mostrarExpli()
         If lblBOculto.Text = 1 Then
-            musicaAcierto()
+            If contSonido = 0 Then
+                musicaAcierto()
+            End If
             lblB.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
             lblSig.Show()
@@ -217,7 +234,9 @@ Public Class AlmiPlay
             disabledComodines()
             contCorrectas = contCorrectas + 1
         Else lblB.BackColor = Color.FromArgb(191, 83, 83)
-            musicaError()
+            If contSonido = 0 Then
+                musicaError()
+            End If
             pbRojoB.Show()
             lblFallo.Show()
             timerLabel.Stop()
@@ -254,6 +273,8 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblC_Click(sender As Object, e As EventArgs) Handles lblC.Click
+        pbCirculoTime.Image.RotateFlip(RotateFlipType.Rotate180FlipNone)
+        pbCirculoTime.Refresh()
         musicaStop()
         lblA.Enabled = False
         lblB.Enabled = False
@@ -261,7 +282,9 @@ Public Class AlmiPlay
         lblD.Enabled = False
         mostrarExpli()
         If lblCOculto.Text = 1 Then
-            musicaAcierto()
+            If contSonido = 0 Then
+                musicaAcierto()
+            End If
             lblC.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
             lblSig.Show()
@@ -272,8 +295,9 @@ Public Class AlmiPlay
             disabledComodines()
             contCorrectas = contCorrectas + 1
         Else lblC.BackColor = Color.FromArgb(191, 83, 83)
-            musicaError()
-            musicaError()
+            If contSonido = 0 Then
+                musicaError()
+            End If
             pbRojoC.Show()
             timerLabel.Stop()
             disabledComodines()
@@ -308,6 +332,8 @@ Public Class AlmiPlay
     End Sub
 
     Private Sub lblD_Click(sender As Object, e As EventArgs) Handles lblD.Click
+        pbCirculoTime.Image.RotateFlip(RotateFlipType.Rotate180FlipNone)
+        pbCirculoTime.Refresh()
         musicaStop()
         lblA.Enabled = False
         lblB.Enabled = False
@@ -315,7 +341,9 @@ Public Class AlmiPlay
         lblD.Enabled = False
         mostrarExpli()
         If lblDOculto.Text = 1 Then
-            musicaAcierto()
+            If contSonido = 0 Then
+                musicaAcierto()
+            End If
             lblD.BackColor = Color.FromArgb(83, 187, 97)
             lblAcertar.Show()
             lblSig.Show()
@@ -326,7 +354,9 @@ Public Class AlmiPlay
             disabledComodines()
             contCorrectas = contCorrectas + 1
         Else lblD.BackColor = Color.FromArgb(191, 83, 83)
-            musicaError()
+            If contSonido = 0 Then
+                musicaError()
+            End If
             pbRojoD.Show()
             lblFallo.Show()
             timerLabel.Stop()
@@ -363,6 +393,9 @@ Public Class AlmiPlay
 
 
     Private Sub pbVolver_Click(sender As Object, e As EventArgs) Handles pbVolver.Click
+        If contSonido = 0 Then
+            musicaInicio()
+        End If
         Me.Close()
         login.Show()
     End Sub
@@ -382,6 +415,7 @@ Public Class AlmiPlay
             pbFoto.Show()
         End If
         If num2 < 22 Then
+            lblTiempo.Show()
             pbFoto.Hide()
         End If
 
@@ -425,21 +459,26 @@ Public Class AlmiPlay
     Private Sub lblSig_Click(sender As Object, e As EventArgs) Handles lblSig.Click
         'Me.Close()
         'imagen.Show()
+        lblTiempo.Hide()
         contLblPreg = contLblPreg + 1
         If contLblPreg < 10 Then
             lblContPreg.Text = "0" & contLblPreg
-            musicaPreguntaUno()
+            If contSonido = 0 Then
+                musicaPreguntaUno()
+            End If
         Else lblContPreg.Text = contLblPreg
-            musicaPreguntaDos()
+            If contSonido = 0 Then
+                musicaPreguntaDos()
+            End If
             'If contLblPreg > 19 Then
             '    lblSig.Text = "Finalizar"
             'End If
             If contLblPreg > 20 Then
-                    fin.Show()
-                    Me.Hide()
-                    musicaStop()
-                End If
+                musicaStop()
+                fin.Show()
+                Me.Hide()
             End If
+        End If
             tiempoTardado = tiempoTardado - 10
         totalScore = lblScore.Text
         ocultarPorcentajes()
@@ -695,7 +734,25 @@ Public Class AlmiPlay
         lblSeAcabo.Hide()
         lblSeAcabo.BackColor = Color.Transparent
         lblSeAcabo.ForeColor = Color.White
+        pbCirculoTime.BackColor = Color.Transparent
+        pbMusicNou.Hide()
+        pbMusicYes.BackColor = Color.Transparent
+        pbMusicNou.BackColor = Color.Transparent
+
+
     End Function
 
+    Private Sub pbMusic_Click(sender As Object, e As EventArgs) Handles pbMusicYes.Click
+        pbMusicNou.Show()
+        pbMusicYes.Hide()
+        musicaStop()
+        contSonido = contSonido + 1
+    End Sub
 
+    Private Sub pbMusicNO_Click(sender As Object, e As EventArgs) Handles pbMusicNou.Click
+        pbMusicNou.Hide()
+        pbMusicYes.Show()
+        musicaPreguntaUno()
+        contSonido = contSonido - 1
+    End Sub
 End Class

@@ -287,7 +287,16 @@
     <None Include="bin\Debug\musicFinJuego.wav" />
     <None Include="bin\Debug\musicFallo.wav" />
     <None Include="bin\Debug\musicAplauso.wav" />
+    <None Include="bin\Debug\circuloTime.png" />
+    <None Include="bin\Debug\circuloTime2.png" />
+    <None Include="bin\Debug\circuloTime3.png" />
+    <None Include="bin\Debug\circuloTime4.png" />
+    <None Include="bin\Debug\musicNO.png" />
+    <None Include="bin\Debug\musicSi.png" />
+    <None Include="bin\Debug\musicSi5.png" />
+    <None Include="bin\Debug\musicNO5.png" />
     <Content Include="bin\Debug\musicTemaInicio.wav" />
+    <None Include="bin\Debug\tematica3.jpg" />
     <Content Include="Resources\musicTemaInicio.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
