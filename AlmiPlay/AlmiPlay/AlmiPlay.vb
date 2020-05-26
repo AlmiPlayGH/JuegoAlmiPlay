@@ -299,6 +299,7 @@ Public Class AlmiPlay
                 musicaError()
             End If
             pbRojoC.Show()
+            lblFallo.Show()
             timerLabel.Stop()
             disabledComodines()
         End If
@@ -427,6 +428,7 @@ Public Class AlmiPlay
             musicaStop()
             musicaError()
             timerLabel.Stop()
+            mostrarExpli()
             pbLlamada.Enabled = False
             pbPublico.Enabled = False
             pbMitad.Enabled = False

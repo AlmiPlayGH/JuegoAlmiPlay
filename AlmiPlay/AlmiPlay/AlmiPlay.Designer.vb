@@ -286,7 +286,7 @@ Partial Class AlmiPlay
         '
         Me.pbFoto.BackgroundImage = Global.AlmiPlay.My.Resources.Resources.fondoAux1
         Me.pbFoto.Image = Global.AlmiPlay.My.Resources.Resources.fondoAux1
-        Me.pbFoto.Location = New System.Drawing.Point(-7, -3)
+        Me.pbFoto.Location = New System.Drawing.Point(-7, -4)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(993, 745)
         Me.pbFoto.TabIndex = 23
@@ -568,9 +568,9 @@ Partial Class AlmiPlay
         Me.lblSeAcabo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSeAcabo.Location = New System.Drawing.Point(69, 108)
         Me.lblSeAcabo.Name = "lblSeAcabo"
-        Me.lblSeAcabo.Size = New System.Drawing.Size(158, 15)
+        Me.lblSeAcabo.Size = New System.Drawing.Size(146, 15)
         Me.lblSeAcabo.TabIndex = 52
-        Me.lblSeAcabo.Text = "Se te acabó el tiempo..."
+        Me.lblSeAcabo.Text = "Se te acabó el tiempo"
         '
         'pbCirculoTime
         '

@@ -9,8 +9,8 @@ Public Class login
             musicaInicio()
             pbMusicYesLog.Show()
             pbMusicNouLog.Hide()
-        End If
-        If contSonido = 1 Then
+       
+        elseIf contSonido = 1 Then           
             pbMusicYesLog.Hide()
             pbMusicNouLog.Show()
         End If
@@ -24,7 +24,7 @@ Public Class login
         Dim idUsuCon As String
         'SI USU Y PASS NO ESTAN VACIOS, SE LE PASA LA CONSULTA AL DATADAPTER. DE AHI SE LE PASA EL DATASET A USUARIOS..    
         If txtUsuLog.Text <> "" And txtPass.Text <> "" Then
-            consulta = "select * from Usuarios where usuario='" & txtUsuLog.Text & "' and pass='" & txtPass.Text & "'"
+            consulta = "select * from Usuarios where habilitado=1 and usuario='" & txtUsuLog.Text & "' and pass='" & txtPass.Text & "'"
             dataAdapterAP = New MySqlDataAdapter(consulta, conexionAP)
             dataSetAP = New DataSet
             dataAdapterAP.Fill(dataSetAP, "Usuarios")
@@ -36,7 +36,7 @@ Public Class login
         If lista <> 0 Then
             idUsu = dataSetAP.Tables("Usuarios").Rows(0).Item("id_usuario")
             usuLog = txtUsuLog.Text
-            MsgBox("¡Hola " & txtUsuLog.Text & "!" & " Pulsa en Aceptar para empezar tu partida.")
+            MsgBox("¡ Hola " & txtUsuLog.Text &"!" & " Pulsa en Aceptar para empezar tu partida.")
             tematica.Show()
             Me.Hide()
             conexionAP.Close()

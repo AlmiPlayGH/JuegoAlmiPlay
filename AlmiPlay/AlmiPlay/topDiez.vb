@@ -18,7 +18,7 @@ Public Class topDiez
         Dim fechaJuego As Date
         Dim lista As Byte
         'consult = "select puntuacion from Puntuaciones"
-        consult = "select Usuarios.usuario, puntuacion, fecha FROM Puntuaciones INNER JOIN Usuarios ON Usuarios.id_usuario=Puntuaciones.id_usuario ORDER BY Puntuaciones.puntuacion desc LIMIT 10"
+        consult = "select Usuarios.usuario, puntuacion, fecha FROM Puntuaciones INNER JOIN Usuarios ON Usuarios.id_usuario=Puntuaciones.id_usuario WHERE habilitado=1 ORDER BY Puntuaciones.puntuacion desc LIMIT 10"
         dataAdapterAP = New MySqlDataAdapter(consult, conexionAP)
         dataSetAP = New DataSet
         dataAdapterAP.Fill(dataSetAP, "Puntuaciones")
