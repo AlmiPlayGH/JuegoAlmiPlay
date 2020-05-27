@@ -42,7 +42,7 @@ Module baseDatos
         regTotal = dataAdapterAP.Fill(dataSetAP, "Usuarios") 'EJECUTA EL SELECT
         'CARGAR LOS DATOS EN EL FORMULARIO
         If dataSetAP.Tables("Usuarios").Rows().Count() > 0 Then
-            MsgBox("Conexion exitosa")
+            'MsgBox("Conexion exitosa")
         End If
     End Function
 

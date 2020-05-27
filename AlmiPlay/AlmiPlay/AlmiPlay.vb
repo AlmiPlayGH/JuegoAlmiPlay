@@ -43,7 +43,7 @@ Public Class AlmiPlay
         'Campos JSON: respuestas, pregunta, imagen, pista
         Try
             'VARIABLES
-
+             
             Dim contId As Integer
             Dim contPregunta As Integer
             Dim responseBody As String
@@ -53,7 +53,7 @@ Public Class AlmiPlay
             Dim contAux As Integer
 
             If selecTema = 0 Then
-                Randomize()
+               
                 contId = Int((29 * Rnd()) + 1)
                 contAux = 1
                 Do
@@ -74,7 +74,7 @@ Public Class AlmiPlay
                 Loop While contAux > 0
 
 
-            Else Randomize()
+            Else 
                 contId = Int((29 * Rnd()) + 31)
                 contAux = 1
                 Do
